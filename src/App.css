@@ -1,0 +1,35 @@
+@import "variables.css";
+
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  }
+  html{
+      background-color: #454C83;
+      background-image: url("https://wallpapercave.com/wp/lqvrDeQ.jpg");
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: cover;
+  }
+body{
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+    "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  
+}
+body .row{
+  margin-left: 0;
+  margin-right: 0;
+}
+.body_Page{
+  padding-top: var(--height-header);
+}
+

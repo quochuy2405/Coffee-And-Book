@@ -1,0 +1,47 @@
+.Sliders {
+
+  position: relative;
+  width: 80%;
+  height: 500px;
+  margin: 0 auto;
+  overflow: hidden;
+  & .Slider_imgs {
+    padding: 0;
+    position: absolute;
+    display: flex;
+    width: 300%;
+    height: 100%;
+    list-style: none;
+    transition: all linear 0.4s;
+    & .Slider_img {
+      width: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  
+}
+
+
+.dots{
+  display: flex;
+  list-style: none;
+
+  z-index: 100;
+  margin: 5px 0;
+ justify-content: center;
+  & li{
+    padding: 8px 0;
+  }
+  & .dot{
+  margin: 0 3px;
+  width: 40px;
+  height: 2px;
+  background-color: rgb(71, 71, 71);
+  &.dot_active{
+    background-color: rgb(255, 255, 255);
+  }
+}
+}

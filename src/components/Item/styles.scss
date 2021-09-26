@@ -1,0 +1,42 @@
+@import "../../variables.css";
+.Item{
+    display: flex;
+    position: relative;
+
+    height: var(--height-iteam);
+    width:var(--width-iteam);
+    padding: 10px  0px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 5px 3px 30px 8px rgba(199, 199, 199, 0.356);
+    
+    
+   & .Item_img img{
+    width: 7rem;
+    border-radius: 15px;
+    height:100%;
+    padding: 5px 10px;
+    }
+    & .Item_description{
+        
+        display: flex;
+        flex-direction: column;
+        height: 100px;
+        justify-content: space-between;
+        & p{
+            margin: 0;
+        }
+    }
+    & .plus{
+        position: absolute;
+        bottom: 10px;
+        right: 20px;
+        font-size: 2rem;
+        color: rgb(255, 173, 22);
+    }
+}
+.Center_Item{
+   display: flex;
+   justify-content: center;
+}
