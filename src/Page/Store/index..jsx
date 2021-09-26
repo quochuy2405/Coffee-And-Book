@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import Header from '../../components/Header';
 
 Store.propTypes = {
     
@@ -8,7 +8,7 @@ Store.propTypes = {
 function Store(props) {
     return (
         <div>
-            <p>Store</p>
+             <Header/>
         </div>
     );
 }

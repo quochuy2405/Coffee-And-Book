@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Header from '../../components/Header';
 
 Cart.propTypes = {
     
@@ -8,7 +9,7 @@ Cart.propTypes = {
 function Cart(props) {
     return (
         <div>
-            <p>Cart</p>
+           <Header/>
         </div>
     );
 }

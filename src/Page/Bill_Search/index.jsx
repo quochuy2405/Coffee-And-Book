@@ -1,4 +1,5 @@
 import React from 'react';
+import Header from '../../components/Header';
 
 BillSeach.propTypes = {
     
@@ -7,7 +8,7 @@ BillSeach.propTypes = {
 function BillSeach(props) {
     return (
         <div>
-            <p>Bill</p>
+           <Header/>
         </div>
     );
 }
