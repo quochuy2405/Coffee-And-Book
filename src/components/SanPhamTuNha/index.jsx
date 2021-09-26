@@ -184,7 +184,7 @@ function SanPhamTuNha(props) {
     <div className="SanPhamTuNha">
       <div className="Title_Section">
         <div className="icon">
-          <i class="fas fa-trophy "></i>
+          <i class="fas fa-trophy"></i>
         </div>
         <h3>Sản Phẩm Từ Nhà</h3>
       </div>

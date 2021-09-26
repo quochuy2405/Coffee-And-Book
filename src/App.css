@@ -33,3 +33,13 @@ body .row{
   padding-top: var(--height-header);
 }
 
+@media screen and (max-width:576px) {
+  :root{
+    --width-iteam_col:8.813rem !important;
+  }
+  .SanPham .SanPhamTuNha{
+    width: 100% ;
+  }
+  
+}
+

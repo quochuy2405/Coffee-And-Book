@@ -1,11 +1,10 @@
 import React from 'react';
-import { Col } from 'react-bootstrap';
 import "./styles.scss";
 
 function Iteam(Props) {
     const {Item}=Props;
     return (
-        <Col xs={6} md={2} className="Center_Item">
+    
         <div className="Item">
             
             <div className="Item_img">
@@ -19,7 +18,7 @@ function Iteam(Props) {
                      <i class="fas fa-plus-circle"></i>
             </div>
         </div>
-        </Col>
+    
     );
 }
 

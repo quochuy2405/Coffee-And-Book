@@ -16,12 +16,12 @@
         display: flex;
         justify-content: center;
         width: 100%;
-      
-        & .Loai {
+       
+        &  .Loai {
             width: 5rem;
             height: 5rem;
             text-align: center;
-            margin: 20px;
+            margin: 20px 0;
             font-size: 0.8rem;
             & .Loai_img {
                 background-color: rgba(175, 175, 175, 0.637);
@@ -42,6 +42,7 @@
      
     }
     & .ListItems{
+        width: 100%;
         margin-top: 100px;
         display: flex;
         flex-wrap: wrap;
@@ -49,8 +50,9 @@
 
         .Item{
             display: block;
-            height: var(--height-iteam_col);
+            min-width:var(--width-iteam_col);
             width:var(--width-iteam_col);
+            height:var(--height-iteam_col);
             padding: 10px  10px;
         
            & .Item_img img{
