@@ -1,0 +1,15 @@
+@import "../../variables.css";
+.New{
+    position: relative;
+
+    min-width:var(--width-iteam_news);
+    width:var(--width-iteam_news);
+    height: var(--height-iteam_news);
+    font-size: 0.8rem;
+    & .New_img{
+        & img{
+            width:100%;
+            border-radius: 5px 5px 0 0;
+        }
+    }
+}

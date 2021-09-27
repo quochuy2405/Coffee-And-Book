@@ -1,9 +1,11 @@
 :root{
     --height-header: 5rem;
     --radial-gradient-yellow: radial-gradient(100% 1636.16% at 100% 0%,#fff2d8 0%,#ffe7ba 100%);
-    --width-iteam:17rem;
+    --width-iteam:16.3rem;
     --height-iteam:7rem;
     --width-iteam_col:10.813rem;
     --height-iteam_col:17rem;
+    --width-iteam_news:15rem;
+    --height-iteam_news:18rem;
 
 }

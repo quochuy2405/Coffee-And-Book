@@ -26,12 +26,12 @@ const List_NavLink = [
 function Header(props) {
   return (
     <div className="Header">
-      <div className="Hearder__TilteName">
+      <div  className="Hearder__TilteName">
         <Link to="/">
         <h4>THE COFFEE HOUSE</h4>
         </Link>
       </div>
-      <div className="Hearder__IpAddress d-flex">
+      <div id="Header_tran" className="Hearder__IpAddress">
         <div className="Trans__img">
           <img src="https://minio.thecoffeehouse.com/images/tch-web-order/Delivery2.png" alt="" />
         </div>
@@ -44,7 +44,7 @@ function Header(props) {
           <i class="fas fa-chevron-down"></i>
         </div>
       </div>
-      <div className="Header__NavLink">
+      <div id="Nav_Link"className="Header__NavLink">
         <ul>
           {List_NavLink.map((Item) =>
             Item.link ? (

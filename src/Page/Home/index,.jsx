@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Header from "../../components/Header";
 import ListItem from "../../components/ListItem";
+import ListItemNews from "../../components/ListItemNews";
 import SanPhamTuNha from "../../components/SanPhamTuNha";
 import Slider from "../../components/Slider";
 import "./styles.scss";
@@ -56,7 +57,9 @@ function Home() {
       </div>
      <div className="SanPham">
              <SanPhamTuNha/>
+             <ListItemNews/>
      </div>
+     
 
     </div>
   );

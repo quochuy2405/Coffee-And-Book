@@ -15,11 +15,15 @@
   width: 100%;
   height: var(--height-header);
   .Hearder__TilteName
-  { & a {
+
+  { min-width: 13rem;
+    
+    & a {
     color: aliceblue;
     text-decoration: none;
    }
     & h4 {
+      min-width: 13rem;
     line-height: var(--height-header);
   }
   }
@@ -27,6 +31,8 @@
   
 
   & .Hearder__IpAddress {
+    display: flex;
+    min-width: 300px;
     height: calc(100% - 20px);
     margin: auto 0;
     background-color: #f38f0c;
@@ -44,6 +50,7 @@
       }
     }
     & .Trans__text {
+      min-width: 200px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -98,4 +105,15 @@
     border-bottom: 2px solid white;
    
   }
+}
+
+@media screen and (max-width:768px) {
+  #Nav_Link
+  {
+    display: none;
+  }
+   #Header_tran{
+    display: none;
+  }
+  
 }

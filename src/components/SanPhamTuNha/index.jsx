@@ -192,7 +192,7 @@ function SanPhamTuNha(props) {
       <div className="List_Loai">
           <Row>
         {List_Loai.map((item, index) => (
-            <Col xs={4} md={2} >
+            <Col xs={6} md={4} lg={2} >
           <div className="Loai">
             <div className="Loai_img" onClick={() => ChangeActive(index, item.Filter)}>
               <img src={item.link_img} alt="" />

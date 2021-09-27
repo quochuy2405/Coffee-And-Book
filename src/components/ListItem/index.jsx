@@ -38,7 +38,7 @@ function ListItem(props) {
           ) : (
             List_Fillter.map((item, index) =>
               item.Filter === Filter ? (
-                <Col className="Center_Item" xs={6} sm={4} lg={2}>
+                <Col className="Center_Item" xs={6} md={6} lg={6} xl={3}>
                   {" "}
                   <Iteam Item={item} key={index} />
                 </Col>
@@ -51,7 +51,7 @@ function ListItem(props) {
           <p className="NoIteams"> Không có sản phẩm</p>
         ) : (
           List_Goiy.map((item, index) => (
-            <Col className="Center_Item" xs={12} sm={6} lg={3}>
+            <Col className="Center_Item" xs={12} sm={6}  md={6}  lg={3}>
               {" "}
               <Iteam Item={item} key={index} />
             </Col>
