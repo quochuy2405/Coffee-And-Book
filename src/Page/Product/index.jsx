@@ -1,18 +1,16 @@
 import React from 'react';
+import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import SanPhamTuNha from '../../components/SanPhamTuNha';
-
-Product.propTypes = {
-    
-};
-
+import "./styles.scss"
 function Product(props) {
     return (
-        <div>
+        <div className="Product">
                 <Header />
                 <div className="body_Page">
                 <SanPhamTuNha/>
                 </div>
+                <Footer/>
         </div>
     );
 }

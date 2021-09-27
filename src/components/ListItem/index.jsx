@@ -38,7 +38,7 @@ function ListItem(props) {
           ) : (
             List_Fillter.map((item, index) =>
               item.Filter === Filter ? (
-                <Col className="Center_Item" xs={6} md={6} lg={6} xl={3}>
+                <Col className="Center_Item" xs={6} md={6} lg={3} xl={2}>
                   {" "}
                   <Iteam Item={item} key={index} />
                 </Col>

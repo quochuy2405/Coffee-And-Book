@@ -58,7 +58,10 @@ function Home() {
       </div>
      <div className="SanPham">
              <SanPhamTuNha/>
-             <ListItemNews/>
+             <div className="TinTuc">
+                 <ListItemNews/>
+             </div>
+           
      </div>
      <div className="gg_play">
        <div className="logo"> <img src="https://www.thecoffeehouse.com/_nuxt/img/squarelogo.035676b.png" alt="" /></div>
