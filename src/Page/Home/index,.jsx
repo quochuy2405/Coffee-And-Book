@@ -22,8 +22,10 @@ function Home() {
       SetCheck(undefined);
     }
   }
+
   useEffect(() => {
-    SetCheck(undefined);
+    SetCheck(undefined); 
+    window.scrollTo(0, 0)
   }, []);
 
   return (
