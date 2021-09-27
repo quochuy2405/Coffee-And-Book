@@ -11,8 +11,8 @@ function Iteam(Props) {
                 <img src={Item.link_img} alt="" />
             </div>
             <div className="Item_description">
-                  <b>{Item.title}</b>
-                  <p>{Item.price}</p>
+                  <b className="des">{Item.title}</b>
+                  <p >{Item.price}</p>
             </div>
             <div className="plus">
                      <i class="fas fa-plus-circle"></i>

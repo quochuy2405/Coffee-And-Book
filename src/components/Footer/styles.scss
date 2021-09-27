@@ -1,0 +1,17 @@
+.footer{
+    width: 100%;
+    height: 300px;
+    background-image: url("https://www.thecoffeehouse.com/_nuxt/img/footer-desktop.727f3a2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    & .footer_logo{
+        display: flex;
+        flex-direction: column;
+        justify-content: center
+    }
+    & ul {
+        display: flex;
+        height: 100%;
+        justify-content: space-around;
+    }
+}

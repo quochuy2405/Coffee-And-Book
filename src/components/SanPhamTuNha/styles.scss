@@ -16,6 +16,7 @@
         display: flex;
         justify-content: center;
         width: 100%;
+        padding-bottom: 40px;
        
         &  .Loai {
             width: 100%;
@@ -44,7 +45,7 @@
     }
     & .ListItems{
         width: 100%;
-        margin-top: 100px;
+        padding-bottom: 40px;
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-start;

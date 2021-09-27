@@ -34,7 +34,7 @@ function ListItem(props) {
       <div className="ListItems">
         {Filter ? (
           List_Fillter.length === 0 ? (
-            <p className="NoIteams"> Không có sản phẩm</p>
+            <div className="NoIteams"> <b>Không có sản phẩm</b> </div>
           ) : (
             List_Fillter.map((item, index) =>
               item.Filter === Filter ? (
@@ -48,7 +48,7 @@ function ListItem(props) {
             )
           )
         ) : List_Goiy.length === 0 ? (
-          <p className="NoIteams"> Không có sản phẩm</p>
+          <div className="NoIteams"> <b>Không có sản phẩm</b> </div>
         ) : (
           List_Goiy.map((item, index) => (
             <Col className="Center_Item" xs={12} sm={6}  md={6}  lg={3}>

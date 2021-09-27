@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import ListItem from "../../components/ListItem";
 import ListItemNews from "../../components/ListItemNews";
@@ -59,8 +60,12 @@ function Home() {
              <SanPhamTuNha/>
              <ListItemNews/>
      </div>
+     <div className="gg_play">
+       <div className="logo"> <img src="https://www.thecoffeehouse.com/_nuxt/img/squarelogo.035676b.png" alt="" /></div>
+       <img className="img_large" src="https://www.thecoffeehouse.com/_nuxt/img/newappv6.f2e1281.png" alt="" />
+     </div>
      
-
+        <Footer/>
     </div>
   );
 }
