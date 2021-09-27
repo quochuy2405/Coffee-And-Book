@@ -40,7 +40,10 @@ function ListItemNews(props) {
   return (
   
     <div className="ListItemNews">
-       <h3 className="tiltle_ListNews">Tin Tức</h3>
+      <div className="tiltle_ListNews">
+      <i class="fas fa-newspaper"></i> <h3>Tin Tức</h3>
+      </div>
+      
     <Row id="center_item">
     
           {List_News.map((item) => (

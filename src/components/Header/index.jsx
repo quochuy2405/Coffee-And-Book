@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./styles.scss";
 const List_NavLink = [
   {
@@ -49,9 +49,9 @@ function Header(props) {
           {List_NavLink.map((Item) =>
             Item.link ? (
               <li>
-                <Link to={Item.link}>
+                <NavLink to={Item.link}>
                   <p>{Item.tilte_link}</p>
-                </Link>
+                </NavLink>
               </li>
             ) : (
               <li>

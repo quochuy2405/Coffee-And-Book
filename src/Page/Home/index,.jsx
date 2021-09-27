@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import ListItem from "../../components/ListItem";
@@ -24,6 +25,7 @@ function Home() {
   useEffect(() => {
     SetCheck(undefined);
   }, []);
+
   return (
     <div className="Home">
       <Header />
@@ -56,19 +58,52 @@ function Home() {
           )}
         </div>
       </div>
-     <div className="SanPham">
-             <SanPhamTuNha/>
-             <div className="TinTuc">
-                 <ListItemNews/>
-             </div>
-           
-     </div>
-     <div className="gg_play">
-       <div className="logo"> <img src="https://www.thecoffeehouse.com/_nuxt/img/squarelogo.035676b.png" alt="" /></div>
-       <img className="img_large" src="https://www.thecoffeehouse.com/_nuxt/img/newappv6.f2e1281.png" alt="" />
-     </div>
-     
-        <Footer/>
+      <div className="SanPham">
+        <SanPhamTuNha />
+        <div className="TinTuc">
+          <ListItemNews />
+          <Link className="News_goto" to="/News">
+            <p>Xem thêm</p> <i class="fas fa-arrow-right"></i>{" "}
+          </Link>
+        </div>
+      </div>
+      <div className="gg_play">
+        <div className="logo">
+          {" "}
+          <img src="https://www.thecoffeehouse.com/_nuxt/img/squarelogo.035676b.png" alt="" />
+        </div>
+        <img className="img_large" src="https://www.thecoffeehouse.com/_nuxt/img/newappv6.f2e1281.png" alt="" />
+      </div>
+      <div className="Search_Store">
+        <div>
+
+       
+          <div>
+            <div className="filter_store">
+              <div className="d-flex">
+                 <i class="fas fa-home color_orange"></i>
+                 <h5>Tìm Một Cửa Hàng</h5>
+              </div>
+              <Link className="d-flex color_orange all_store">
+                     <p>Xem toàn bộ cửa hàng</p>
+                     <i class="fas fa-arrow-right"></i>
+              </Link>
+         
+                 
+            </div>
+          </div>
+          <div className="input_store">
+            <select name="store" id="">
+            <option value="">Chọn Quận</option>
+              <option value="1">Quận 1</option>
+              <option value="2">Quận 2</option>
+              <option value="3">Quận 3</option>
+              <option value="4">Quận 4</option>
+            </select>
+          </div>
+          </div>
+      </div>
+      <Footer />
     </div>
   );
 }

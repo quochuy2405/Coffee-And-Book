@@ -9,8 +9,15 @@ import Product from './Page/Product';
 import Pay from './Page/Product';
 import Store from './Page/Store/index.';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
 
 function App() {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
   return (
      <div className="App">
      <Switch>
