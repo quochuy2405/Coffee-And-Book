@@ -1,6 +1,6 @@
 @import "../../variables.css";
 .Slider_Home {
-  height: 70vh;
+  height: var(--height-slider);
   width: 100%;
   background-image: linear-gradient(to right, #f7c261, #d69146);
 }
@@ -74,3 +74,9 @@
 .SanPham {
   padding-bottom: 40px;
 }
+@media screen and (max-width:576px) {
+   
+    :root{
+        --height-slider:40vh;
+    }
+  }

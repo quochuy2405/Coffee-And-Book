@@ -1,8 +1,9 @@
+@import "../../variables.css";
 .Sliders {
 
   position: relative;
   width: 80%;
-  height: calc( 70vh - 50px );
+  height: calc( var( --height-slider) - 50px );
   margin: 0 auto;
   overflow: hidden;
   & .Slider_imgs {
@@ -30,7 +31,7 @@
   list-style: none;
 
   z-index: 100;
-  margin: 5px 0;
+  margin: 5px 0 0 0;
  justify-content: center;
   & li{
     padding: 8px 0;
