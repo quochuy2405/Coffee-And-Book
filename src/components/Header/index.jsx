@@ -16,11 +16,7 @@ const List_NavLink = [
   },
   {
     tilte_link: "Khuyến mãi",
-  },
-  {
-    tilte_link: "DashBoard",
-    link: "/DashBoard",
-  },
+  }
 ];
 
 function Header(props) {
