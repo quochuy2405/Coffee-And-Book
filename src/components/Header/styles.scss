@@ -190,18 +190,25 @@
 }
 .choose_ForBuy{
   visibility: hidden;
+  opacity: 0;
+  transition: all linear 0.1s;
 }
 #check_choose:checked ~ .choose_ForBuy{
   visibility: visible;
- 
+  opacity: 1;
+  transition: all linear 0.3s;
 }
 #check_choose:checked ~  .overlay{
   visibility: visible;
+  opacity: 1;
+  transition: all linear 0.3s;
 }
 .overlay{
   width: 100%;
   visibility: hidden;
   position: absolute;
+  opacity: 0;
+  transition: all linear 0.1s;
   height: 100vh;
   background-color: #bdbdbda4;
 }
