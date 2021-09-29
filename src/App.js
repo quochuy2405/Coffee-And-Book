@@ -12,6 +12,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
+import Header from './components/Header';
 
 function App() {
   
@@ -22,6 +23,7 @@ function App() {
   }, []);
   return (
      <div className="App">
+         <Header />
      <Switch>
        <Route path="/" component={Home} exact/>
        <Route path="/Product" component={Product} exact/>

@@ -12,7 +12,7 @@ function Cart(props) {
       }, [])
     return (
         <div>
-           <Header/>
+     
         </div>
     );
 }

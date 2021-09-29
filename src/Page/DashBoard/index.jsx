@@ -5,7 +5,7 @@ import Header from '../../components/Header';
 function DashBoard(props) {
     return (
         <div>
-            <Header/>
+   
         </div>
     );
 }

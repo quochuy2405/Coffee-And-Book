@@ -1,17 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Header from '../../components/Header';
+import React from "react";
+import PropTypes from "prop-types";
+import Header from "../../components/Header";
 
-Order.propTypes = {
-    
-};
+Order.propTypes = {};
 
 function Order(props) {
-    return (
-        <div>
-           <Header/>
-        </div>
-    );
+  return <div></div>;
 }
 
 export default Order;

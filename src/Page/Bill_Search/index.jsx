@@ -11,7 +11,7 @@ function BillSeach(props) {
       }, [])
     return (
         <div>
-           <Header/>
+        
         </div>
     );
 }

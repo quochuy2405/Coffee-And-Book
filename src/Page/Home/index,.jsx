@@ -30,7 +30,6 @@ function Home() {
 
   return (
     <div className="Home">
-      <Header />
       <div className="body_Page">
         <div className="Slider_Home pt-4">
           <Slider />

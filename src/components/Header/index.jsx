@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 import "./styles.scss";
 const List_NavLink = [
@@ -24,19 +24,33 @@ function Header(props) {
 
   function ChangeActive(class_Name) {
     const Loaiactive = document.querySelector(".chon.active");
+    const changeadrss=document.querySelector(".Hearder__IpAddress")
     if (Loaiactive) {
       Loaiactive.classList.remove("active");
     }
     document.querySelector(class_Name).classList.add("active");
+    
     if(class_Name===".choose_mangdi")
     {
       document.querySelector(".choose_input_text").placeholder="Tìm cửa hàng theo quận huyện";
+      changeadrss.querySelector(".Trans__img img").src="https://minio.thecoffeehouse.com/images/tch-web-order/Pickup2.png";
+      changeadrss.querySelector(".Trans__text p:first-child").innerText ="Mang đi";
+      changeadrss.querySelector(".Trans__text p:nth-child(2)").innerText ="Tại:Tìm cửa hàng theo quận huyện";
     }
     else{
       document.querySelector(".choose_input_text").placeholder="Vui lòng nhập địa chỉ";
+      changeadrss.querySelector(".Trans__img img").src="https://minio.thecoffeehouse.com/images/tch-web-order/Delivery2.png";
+      changeadrss.querySelector(".Trans__text p:first-child").innerText ="Giao hàng";
+      changeadrss.querySelector(".Trans__text p:nth-child(2)").innerText ="Tại:Vui lòng nhập địa chỉ";
     }
 
   }
+  useEffect(() => {
+    const changeadrss=document.querySelector(".Hearder__IpAddress")
+    document.querySelector(".choose_input_text").addEventListener('input', function (evt) {
+      changeadrss.querySelector(".Trans__text p:nth-child(2)").innerText=`Tại:${this.value}`;
+  });
+  })
 
   return (
     <div className="Header">
