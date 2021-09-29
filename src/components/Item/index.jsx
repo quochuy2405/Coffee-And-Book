@@ -16,7 +16,7 @@ function Iteam(Props) {
                   <p >{Item.price}</p>
             </div>
             <div className="plus">
-                     <i class="fas fa-plus-circle"></i>
+                     <i className="fas fa-plus-circle"></i>
             </div>
         </div>
     

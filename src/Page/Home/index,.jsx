@@ -24,8 +24,8 @@ function Home() {
   }
 
   useEffect(() => {
-    SetCheck(undefined); 
-    window.scrollTo(0, 0)
+    SetCheck(undefined);
+    window.scrollTo(0, 0);
   }, []);
 
   return (
@@ -40,7 +40,7 @@ function Home() {
         <div className="Tags">
           <ul>
             <div className="icon">
-              <i class="fas fa-lightbulb"></i>
+              <i className="fas fa-lightbulb"></i>
             </div>
             <li className="Tag active goiy" onClick={() => ChangeActive(".goiy")}>
               Nhà gợi ý cho bạn
@@ -65,7 +65,7 @@ function Home() {
         <div className="TinTuc">
           <ListItemNews />
           <Link className="News_goto" to="/News">
-            <p>Xem thêm</p> <i class="fas fa-arrow-right"></i>{" "}
+            <p>Xem thêm</p> <i className="fas fa-arrow-right"></i>{" "}
           </Link>
         </div>
       </div>
@@ -78,32 +78,28 @@ function Home() {
       </div>
       <div className="Search_Store">
         <div>
-
-       
           <div>
             <div className="filter_store">
               <div className="d-flex">
-                 <i class="fas fa-home color_orange"></i>
-                 <h5>Tìm Một Cửa Hàng</h5>
+                <i className="fas fa-home color_orange"></i>
+                <h5>Tìm Một Cửa Hàng</h5>
               </div>
-              <Link className="d-flex color_orange all_store">
-                     <p>Xem toàn bộ cửa hàng</p>
-                     <i class="fas fa-arrow-right"></i>
+              <Link to="/Store" className="d-flex color_orange all_store">
+                <p>Xem toàn bộ cửa hàng</p>
+                <i className="fas fa-arrow-right"></i>
               </Link>
-         
-                 
             </div>
           </div>
           <div className="input_store">
             <select name="store" id="">
-            <option value="">Chọn Quận</option>
+              <option value="">Chọn Quận</option>
               <option value="1">Quận 1</option>
               <option value="2">Quận 2</option>
               <option value="3">Quận 3</option>
               <option value="4">Quận 4</option>
             </select>
           </div>
-          </div>
+        </div>
       </div>
       <Footer />
     </div>

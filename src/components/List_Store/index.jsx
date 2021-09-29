@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Col, Row } from 'react-bootstrap';
-import Iteam from '../Item';
-import "./styles.scss"
+import "./styles.scss";
 const List_Store=[
     {
         Country_Name:"Hà Nội",
@@ -31,8 +30,8 @@ const List_Store=[
 
 function ListStore(props) {
 
-    const [Filter, SetFilter] = useState("");
-  const [List_Fillter, SetList_Fillter] = useState();
+    // const [Filter, SetFilter] = useState("");
+//   const [List_Fillter, SetList_Fillter] = useState("");
   function ChangeActive(index, filter) {
     const Loaiactive = document.querySelector(".Store.active");
     const listLoai = document.querySelectorAll(".Store");
@@ -40,12 +39,12 @@ function ListStore(props) {
       Loaiactive.classList.remove("active");
     }
     listLoai[index].classList.add("active");
-    SetFilter(filter);
+    // SetFilter(filter);
   }
-  useEffect(() => {
-    const Temp = [];
-    SetList_Fillter(Temp);
-  }, [Filter]);
+//   useEffect(() => {
+//     // const Temp = [];
+//     // SetList_Fillter(Temp);
+//   }, [Filter]);
     return (
         <div className="List_Store">
             <div className="List_country">
@@ -59,7 +58,7 @@ function ListStore(props) {
                 <Row id="center_item">
                     {List_Store.map((item,index)=>
                     (
-                        <Col className="Center_Item" xs={12} sm={6} lg={3} > <li className="Store" onClick={()=>ChangeActive(index)}>{item.Country_Name}({item.count})</li> </Col>
+                        <Col key={index} className="Center_Item" xs={12} sm={6} lg={3} > <li className="Store" onClick={()=>ChangeActive(index)}>{item.Country_Name}({item.count})</li> </Col>
                     )
 
                     )}

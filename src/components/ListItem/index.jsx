@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Col, Row } from "react-bootstrap";
 import Iteam from "../Item";
 import "./styles.scss";
@@ -26,9 +26,6 @@ const List_Goiy = [
 ];
 function ListItem(props) {
   const { Filter, List_Fillter } = props;
-  useEffect(() => {
-    console.log(List_Fillter);
-  });
   return (
     <Row>
       <div className="ListItems">
@@ -38,12 +35,12 @@ function ListItem(props) {
           ) : (
             List_Fillter.map((item, index) =>
               item.Filter === Filter ? (
-                <Col className="Center_Item" xs={6} md={6} lg={3} xl={2}>
+                <Col  key={index} className="Center_Item" xs={6} md={6} lg={3} xl={2}>
                   {" "}
-                  <Iteam Item={item} key={index} />
+                  <Iteam Item={item} />
                 </Col>
               ) : (
-                <></>
+                <div key={index}></div>
               )
             )
           )
@@ -51,9 +48,9 @@ function ListItem(props) {
           <div className="NoIteams"> <b>Không có sản phẩm</b> </div>
         ) : (
           List_Goiy.map((item, index) => (
-            <Col className="Center_Item" xs={12} sm={6}  md={6}  lg={3}>
+            <Col  key={index} className="Center_Item" xs={12} sm={6}  md={6}  lg={3}>
               {" "}
-              <Iteam Item={item} key={index} />
+              <Iteam Item={item} />
             </Col>
           ))
         )}

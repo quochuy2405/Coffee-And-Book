@@ -47,21 +47,21 @@ function Slider() {
     <>
       <div className="Sliders">
         <ul className="Slider_imgs">
-          {ListImage.map((img) =>
+          {ListImage.map((img,index) =>
             img.link_img ? (
-              <li className="Slider_img">
+              <li className="Slider_img" key={index}>
                 {" "}
                 <img src={img.link_img} alt="" />
               </li>
             ) : (
-              ""
+              <div key={index}></div>
             )
           )}
         </ul>
       </div>
       <div className="dots">
         {ListImage.map((item, index) => (
-          <li
+          <li key={index}
             onClick={() => {
               SetCount(index);
               Settime(0);

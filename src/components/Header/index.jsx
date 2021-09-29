@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import "./styles.scss";
 const List_NavLink = [
@@ -74,21 +74,21 @@ function Header(props) {
           <p>Tại:Nhập địa chỉ giao hàng</p>
         </div>
         <div className="arrow_down">
-          <i class="fas fa-chevron-down"></i>
+          <i className="fas fa-chevron-down"></i>
         </div>
       </label>
       <div id="Nav_Link"className="Header__NavLink">
         <ul>
-          {List_NavLink.map((Item) =>
+          {List_NavLink.map((Item,index) =>
             Item.link ? (
-              <li>
+              <li key={index}>
                 <NavLink to={Item.link}>
                   <p>{Item.tilte_link}</p>
                 </NavLink>
               </li>
             ) : (
-              <li>
-                <p>{Item.tilte_link}</p>
+              <li key={index}>
+                <p >{Item.tilte_link}</p>
               </li>
             )
           )}
@@ -98,14 +98,14 @@ function Header(props) {
         <div className="icon_user">
           {" "}
           <Link to="/User">
-            <i class="far fa-user-circle"></i>{" "}
+            <i className="far fa-user-circle"></i>{" "}
           </Link>
         </div>
 
         <div className="icon_store">
           {" "}
           <Link to="/Store">
-            <i class="fas fa-shopping-basket"></i>{" "}
+            <i className="fas fa-shopping-basket"></i>{" "}
           </Link>
         </div>
       </div>

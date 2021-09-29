@@ -184,7 +184,7 @@ function SanPhamTuNha(props) {
     <div className="SanPhamTuNha">
       <div className="Title_Section">
         <div className="icon">
-          <i class="fas fa-trophy"></i>
+          <i className="fas fa-trophy"></i>
         </div>
         <h3>Sản Phẩm Từ Nhà</h3>
       </div>
@@ -192,7 +192,7 @@ function SanPhamTuNha(props) {
       <div className="List_Loai">
           <Row>
         {List_Loai.map((item, index) => (
-            <Col xs={6} md={4} lg={2} >
+            <Col xs={6} md={4} lg={2} key={index}  >
           <div data-aos="zoom-in" data-aos-duration="900" data-aos-once="true" className="Loai">
             <div className="Loai_img" onClick={() => ChangeActive(index, item.Filter)}>
               <img src={item.link_img} alt="" />
@@ -200,7 +200,8 @@ function SanPhamTuNha(props) {
             <p>{item.title}</p>
           </div>
           </Col>
-        ))}
+          
+        ) )}
         </Row>
       </div>
       <div className="List_Loai-Item">{<ListItem Filter={Filter} List_Fillter={List_Fillter} />}</div>
