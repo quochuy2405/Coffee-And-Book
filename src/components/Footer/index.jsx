@@ -27,13 +27,17 @@ function Footer(props) {
                 <li className="col-12 col-md-6 col-lg-3">
                   <div className="footer_navbar_item">
                     <div
+                    
+                    className="changeplus"
                       data-toggle="collapse"
+                        
                       data-target="#footer_navbar_1"
                       aria-expanded="false"
                       aria-controls="footer_navbar_1"
                     >
                       <span className="icon mr-1">
                         <i className="fa fa-plus" aria-hidden="true"></i>
+                        <i className="fas fa-minus"></i>
                       </span>
                       <span> Thông tin website</span>
                     </div>
@@ -61,14 +65,17 @@ function Footer(props) {
                 </li>
                 <li className="col-12 col-md-6 col-lg-3">
                   <div className="footer_navbar_item">
+                    
                     <div
                       data-toggle="collapse"
+                          className="changeplus"
                       data-target="#footer_navbar_2"
                       aria-expanded="false"
                       aria-controls="footer_navbar_2"
                     >
                       <span className="icon mr-1">
                         <i className="fa fa-plus" aria-hidden="true"></i>
+                        <i className="fas fa-minus"></i>
                       </span>
                       <span> Điều khoản sử dụng</span>
                     </div>
@@ -87,14 +94,17 @@ function Footer(props) {
                 </li>
                 <li className="col-12 col-md-6 col-lg-3">
                   <div className="footer_navbar_item">
+                    
                     <div
                       data-toggle="collapse"
+                          className="changeplus"
                       data-target="#footer_navbar_3"
                       aria-expanded="false"
                       aria-controls="footer_navbar_3"
                     >
                       <span className="icon mr-1">
                         <i className="fa fa-plus" aria-hidden="true"></i>
+                        <i className="fas fa-minus"></i>
                       </span>
                       <span> Hotline</span>
                     </div>
@@ -113,14 +123,17 @@ function Footer(props) {
                 </li>
                 <li className="col-12 col-md-6 col-lg-3">
                   <div className="footer_navbar_item">
+                    
                     <div
                       data-toggle="collapse"
+                          className="changeplus"
                       data-target="#footer_navbar_4"
                       aria-expanded="false"
                       aria-controls="footer_navbar_4"
                     >
                       <span className="icon mr-1">
                         <i className="fa fa-plus" aria-hidden="true"></i>
+                        <i className="fas fa-minus"></i>
                       </span>
                       <span> Liên hệ</span>
                     </div>

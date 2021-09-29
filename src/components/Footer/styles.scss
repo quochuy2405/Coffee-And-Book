@@ -56,3 +56,11 @@
     }
   }
 }
+.changeplus[aria-expanded=true] .icon>.fa-plus
+{
+    display: none;
+}
+.changeplus[aria-expanded=false] .icon>.fa-minus
+{
+    display: none;
+}
