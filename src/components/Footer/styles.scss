@@ -5,21 +5,27 @@
     margin: 0;
     padding: 0;
     width: 100%;
+    height: 325px;
     background-color: black;
+    & .container_ {
+        background-image: url(https://www.thecoffeehouse.com/_nuxt/img/footer-desktop.727f3a2.png);
+        height: 240px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        
+        & .row{
+            margin-top: 10px;
+        }
+    }
 }
-.footer .container_ {
-    background-image: url("https://www.thecoffeehouse.com/_nuxt/img/footer-desktop.727f3a2.png");
-    height: 150px;
-    width: 100%;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
+
 .footer_navbar_item{
     border-bottom: 2px solid white;
 }
-.footer .container_ .row {
-    
-}
+
 .footer .container_ .row .footer_logo{
     padding-top: 5%;
     margin-left: 30px;
