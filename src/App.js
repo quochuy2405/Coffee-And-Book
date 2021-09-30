@@ -13,6 +13,7 @@ import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
 import Header from './components/Header';
+import Checkout from './Page/Checkout';
 
 function App() {
   
@@ -31,6 +32,7 @@ function App() {
        <Route path="/News" component={News} exact/>
        <Route path="/Store" component={Store}exact/>
        <Route path="/Bill_Seach" component={BillSeach}exact/>
+       <Route path="/Checkout" component={Checkout}exact/>
        <Route path="/DashBoard" component={DashBoard}exact/>
        <Route path="/:slug" component={NotFound}/>
        

@@ -85,7 +85,7 @@ function Header(props) {
 
         <div className="Trans__text">
           <p>Giao Hàng</p>
-          <p>Tại:Nhập địa chỉ giao hàng</p>
+          <p className="address">Tại:Nhập địa chỉ giao hàng</p>
         </div>
         <div className="arrow_down">
           <i className="fas fa-chevron-down"></i>

@@ -33,6 +33,7 @@
   & .Hearder__IpAddress {
     display: flex;
     min-width: 300px;
+    max-width: 300px;
     height: calc(100% - 20px);
     margin: auto 0;
     background-color: #f38f0c;
@@ -57,6 +58,13 @@
       & p {
         margin: 0;
       }
+     & .address
+     {
+      white-space: nowrap; 
+      width: 200px; 
+      overflow: hidden;
+      text-overflow: ellipsis; 
+     }
     }
     & .arrow_down {
       line-height: calc(var(--height-header) - 20px);

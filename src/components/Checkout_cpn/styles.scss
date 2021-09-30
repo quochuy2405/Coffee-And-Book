@@ -1,0 +1,220 @@
+.Checkout_com {
+  & p {
+    margin: 0;
+  }
+  padding: 150px 0;
+  & .Checkout_com_Title {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+
+    & .fa-file {
+      line-height: 2rem;
+      font-size: 1.3rem;
+      padding: 0 5px;
+      color: rgb(255, 194, 81);
+    }
+  }
+  & .checkout__body {
+    width: 80%;
+    display: flex;
+    margin: 0 auto;
+    & .body__Pay {
+      flex: 1;
+      margin: 0 40px;
+      & .type_buy {
+        & .type {
+          display: flex;
+          justify-content: space-between;
+          margin: 0 5px;
+        }
+      }
+
+      & .input_address {
+        width: 90%;
+        margin: 0 auto;
+        & .input_info {
+          border: 1px solid rgb(202, 200, 200);
+          margin: 5px 0;
+          & input {
+            display: block;
+            width: 90%;
+            height: 35px;
+            margin: 5px auto;
+            border: none;
+            background: none;
+            outline: none;
+          }
+        }
+      }
+      & .info_type {
+        display: flex;
+
+        & .info_imgType {
+          width: 200px;
+
+          & img {
+            width: 100%;
+            border-top: 2px solid orange;
+          }
+        }
+        & .info_des {
+          & .location {
+            border-bottom: 1px solid rgba(196, 196, 196, 0.356);
+          }
+        }
+      }
+    }
+    & .body__bill {
+      position: relative;
+      flex: 1;
+      box-shadow: 2px 0px 15px 5px rgb(228, 227, 227);
+      border-radius: 20px;
+      & .bill {
+        display: flex;
+        justify-content: space-between;
+        margin: 5px 10px;
+      }
+      & .list__bill {
+        padding: 0;
+        height: 290px;
+        overflow-y: scroll;
+        & .list__bill-Iteam {
+          display: flex;
+          justify-content: space-around;
+          padding: 10px 0;
+          border-bottom: 1px solid rgba(204, 204, 204, 0.342);
+          cursor: pointer;
+
+          & .list_price,
+          .list_fix {
+            line-height: 75px;
+            padding: 0 20px;
+            color: orange;
+          }
+
+          & .list_text {
+            width: 325px;
+            max-width: 325px;
+            white-space: nowrap;
+            width: 325px;
+            max-width: 325px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+        }
+      }
+    }
+    & .Total {
+      margin: 0 20px;
+      & .thanhtien {
+        padding: 25px 0;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid rgba(204, 204, 204, 0.651);
+        color: orange;
+      }
+    }
+    & .khuyenmai {
+      height: 60px;
+      line-height: 60px;
+      & i {
+        line-height: 60px;
+      }
+    }
+    & .dathang {
+      background-color: rgb(255, 174, 23);
+      position: absolute;
+      height: 90px;
+      font-weight: bold;
+      width: 100%;
+      color: white;
+      left: 0;
+      bottom: 0;
+      border-radius: 0 0 10px 10px;
+      & .btn_dathang {
+        background-color: white;
+        width: 100px;
+        height: 40px;
+        margin: auto 0;
+        border-radius: 20px;
+        text-align: center;
+        border: 2px solid rgb(190, 190, 190);
+        color: rgb(155, 155, 155);
+        font-weight: 500;
+        cursor: pointer;
+        &:hover {
+          color: rgb(0, 0, 0);
+        }
+      }
+    }
+  }
+  & p.type_Name,
+  p.bill_Name {
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+  & .pay_for {
+    margin-bottom: 60px;
+    .checkpay {
+      height: 40px;
+      line-height: 40px;
+      display: flex;
+      & input {
+        margin: auto 0;
+        width: 15px;
+        height: 15px;
+        filter: orange;
+      }
+
+      & label {
+        flex: 1;
+        border-bottom: 1px solid rgba(187, 187, 187, 0.301);
+      }
+      & img {
+        width: 20px;
+        height: 20px;
+        margin: auto 20px;
+      }
+    }
+  }
+  & .agree {
+    font-size: 1rem;
+    & a {
+      color: orange;
+    }
+  }
+}
+.change_type,
+.add_item {
+  & p {
+    margin: 0;
+    padding: 6px;
+    border: 1px solid black;
+    border-radius: 50px;
+    &:hover {
+      background-color: rgb(90, 90, 90);
+      color: white;
+    }
+  }
+}
+.list__bill::-webkit-scrollbar {
+  border-radius: 20px;
+  width: 4px;
+}
+
+/* Track */
+.list__bill::-webkit-scrollbar-track {
+  border-radius: 1px;
+}
+
+/* Handle */
+.list__bill::-webkit-scrollbar-thumb {
+  background: rgb(255, 205, 129);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.list__bill::-webkit-scrollbar-thumb:hover {
+  background: rgb(255, 205, 129);
+}
