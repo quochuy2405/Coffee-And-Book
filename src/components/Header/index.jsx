@@ -118,7 +118,7 @@ function Header(props) {
 
         <div className="icon_store">
           {" "}
-          <Link to="/Store">
+          <Link to="/Checkout">
             <i className="fas fa-shopping-basket"></i>{" "}
           </Link>
         </div>
