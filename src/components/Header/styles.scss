@@ -12,7 +12,10 @@
 
 
   & .icon_store{
-    font-size: 1.4rem;
+    font-size: 1.6rem;
+    & .icon_checkout{
+      margin-top: -8px;
+    }
     & .MuiBadge-badge{
       top:30px ;
     }

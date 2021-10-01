@@ -140,7 +140,7 @@ function Header(props) {
 
         <div className="icon_store">
           {" "}
-              <StyledBadge badgeContent={4} color="secondary">
+              <StyledBadge badgeContent={10} color="secondary" className="icon_checkout">
           <Link to="/Checkout">
             
               <i class="fas fa-shopping-cart"></i></Link>
