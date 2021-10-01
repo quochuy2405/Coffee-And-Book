@@ -1,7 +1,12 @@
+import { useSnackbar } from 'notistack';
 import React from 'react';
 import "./styles.scss";
 
 function Iteam(Props) {
+    const {enqueueSnackbar}=useSnackbar();
+    const handleSuccess=()=>{
+      enqueueSnackbar("Thêm vào giỏ hàng thành công",{variant:"success"});
+    }
     const {Item}=Props;
     return (
     
@@ -15,7 +20,7 @@ function Iteam(Props) {
                   <b className="des">{Item.title}</b>
                   <p >{Item.price}</p>
             </div>
-            <div className="plus">
+            <div className="plus" onClick={handleSuccess}>
                      <i className="fas fa-plus-circle"></i>
             </div>
         </div>

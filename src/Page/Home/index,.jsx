@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Footer from "../../components/Footer";
-import Header from "../../components/Header";
 import ListItem from "../../components/ListItem";
 import ListItemNews from "../../components/ListItemNews";
 import SanPhamTuNha from "../../components/SanPhamTuNha";
@@ -9,7 +8,9 @@ import Slider from "../../components/Slider";
 import "./styles.scss";
 
 function Home() {
-  const [check, SetCheck] = useState();
+
+  const [check, SetCheck] = useState();  
+ 
   function ChangeActive(tem) {
     const Tagactive = document.querySelector(".Tag.active");
     if (Tagactive) {
