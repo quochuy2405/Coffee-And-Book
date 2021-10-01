@@ -1,8 +1,8 @@
 import Badge from "@mui/material/Badge";
-import IconButton from "@mui/material/IconButton";
 import { styled } from "@mui/material/styles";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import Login from "../../Page/Login";
 import "./styles.scss";
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
@@ -32,6 +32,12 @@ const List_NavLink = [
 ];
 
 function Header(props) {
+  const [open, setOpen] = useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
   function ChangeActive(class_Name) {
     const Loaiactive = document.querySelector(".chon.active");
     const changeadrss = document.querySelector(".Hearder__IpAddress");
@@ -54,6 +60,8 @@ function Header(props) {
       changeadrss.querySelector(".Trans__text p:nth-child(2)").innerText = "Tại:Vui lòng nhập địa chỉ";
     }
   }
+
+
   useEffect(() => {
     const changeadrss = document.querySelector(".Hearder__IpAddress");
     document.querySelector(".choose_input_text").addEventListener("input", function (evt) {
@@ -129,15 +137,15 @@ function Header(props) {
             )
           )}
         </ul>
-      </div>
+      </div>    
+      <Login open={open} setOpen={setOpen}/>
       <div className="Header__User_Store">
-        <div className="icon_user">
-          {" "}
-          <Link to="/User">
-            <i className="far fa-user-circle"></i>{" "}
-          </Link>
-        </div>
+        <div className="icon_user" onClick={handleClickOpen} >
 
+      
+            <i className="far fa-user-circle"></i>
+        </div>
+       
         <div className="icon_store">
           {" "}
               <StyledBadge badgeContent={10} color="secondary" className="icon_checkout">

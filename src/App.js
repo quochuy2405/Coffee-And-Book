@@ -15,6 +15,8 @@ import 'aos/dist/aos.css';
 import Header from './components/Header';
 import Checkout from './Page/Checkout';
 import Button from '@restart/ui/esm/Button';
+import { LinearProgress } from '@mui/material';
+import Login from './Page/Login';
 
 function App() {
   
@@ -25,7 +27,8 @@ function App() {
   }, []);
   return (
      <div className="App">
-         <Header />
+
+         <Header /> 
      <Switch>
        <Route path="/" component={Home} exact/>
        <Route path="/Product" component={Product} exact/>
