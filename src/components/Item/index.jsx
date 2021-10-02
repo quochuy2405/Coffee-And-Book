@@ -1,21 +1,15 @@
-import { useSnackbar } from 'notistack';
-import React from 'react';
+import React, { useState } from 'react';
+import CustomizedDialogs from '../ItemDetails';
 import "./styles.scss";
-import { useSelector ,useDispatch} from 'react-redux'
-import { decrease, increase } from './Counter';
-import { increaseBill } from '../../app/CounterBill';
 function Iteam(Props) {
-    const dispatch = useDispatch();
-    const counter = useSelector((state) => state.counter)
-    const {enqueueSnackbar}=useSnackbar();
-    const handleSuccess=()=>{
-        dispatch(increaseBill());
-      enqueueSnackbar("Thêm vào giỏ hàng thành công",{variant:"success"});
-      
+    const [ open, setOpen]=useState(false)
+    const handleOpen=()=>{
+  
+      setOpen(true);
     }
     const {Item}=Props;
     return (
-          
+          <>
         <div data-aos="zoom-out-left" data-aos-delay="50"
         data-aos-duration="900" data-aos-once="true"  className="Item">
             
@@ -24,12 +18,15 @@ function Iteam(Props) {
             </div>
             <div className="Item_description">
                   <b className="des">{Item.title}</b>
-                  <p >{Item.price}</p>
+                  <p >{(Item.price*1).toLocaleString(undefined,{ minimumFractionDigits: 0 })}đ</p>
             </div>
-            <div className="plus" onClick={handleSuccess} >
+            <div className="plus" onClick={handleOpen}>
                      <i className="fas fa-plus-circle"></i>
             </div>
         </div>
+        <CustomizedDialogs Item={Item}  open= {open} setOpen={setOpen}/>
+        </>
+
     
     );
 }

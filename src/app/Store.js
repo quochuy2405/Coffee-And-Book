@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import Counter from "../components/Item/Counter"
+import Counter from "../components/ItemDetails/Counter"
 import CounterBill from "./CounterBill"
 const rootReducer={
   counter:Counter,

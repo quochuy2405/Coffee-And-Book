@@ -6,22 +6,22 @@ const List_Goiy = [
   {
     link_img: "https://tubikitchen.com/wp-content/uploads/2019/01/banh-bong-lan-cam-orange-chiffon-000.jpg",
     title: "Chà Bông Phô Mai",
-    price: "45,000đ",
+    price: "45000",
   },
   {
     link_img: "https://tubikitchen.com/wp-content/uploads/2019/01/banh-bong-lan-cam-orange-chiffon-000.jpg",
     title: "Chà Bông Phô Mai",
-    price: "45,000đ",
+    price: "45000",
   },
   {
     link_img: "https://tubikitchen.com/wp-content/uploads/2019/01/banh-bong-lan-cam-orange-chiffon-000.jpg",
     title: "Chà Bông Phô Mai",
-    price: "45,000đ",
+    price: "45000",
   },
   {
     link_img: "https://tubikitchen.com/wp-content/uploads/2019/01/banh-bong-lan-cam-orange-chiffon-000.jpg",
     title: "Chà Bông Phô Mai",
-    price: "45,000đ",
+    price: "45000",
   },
 ];
 function ListItem(props) {
