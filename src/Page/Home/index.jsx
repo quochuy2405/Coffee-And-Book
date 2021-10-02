@@ -35,6 +35,7 @@ function Home() {
         <div className="Slider_Home pt-4">
           <Slider />
         </div>
+        
       </div>
       <div className="GoiY">
         <div className="Tags">

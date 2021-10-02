@@ -3,6 +3,7 @@ import { styled } from "@mui/material/styles";
 import React, { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import Login from "../../Page/Login";
+import {useSelector} from "react-redux"
 import "./styles.scss";
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
@@ -33,8 +34,9 @@ const List_NavLink = [
 
 function Header(props) {
   const [open, setOpen] = useState(false);
-
+const counterBill = useSelector(state => state.counterBill)
   const handleClickOpen = () => {
+    console.log(counterBill)
     setOpen(true);
   };
 
@@ -148,7 +150,7 @@ function Header(props) {
        
         <div className="icon_store">
           {" "}
-              <StyledBadge badgeContent={10} color="secondary" className="icon_checkout">
+              <StyledBadge badgeContent={counterBill} color="secondary" className="icon_checkout">
           <Link to="/Checkout">
             
               <i class="fas fa-shopping-cart"></i></Link>

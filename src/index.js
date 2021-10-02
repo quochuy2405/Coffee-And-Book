@@ -3,15 +3,19 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { Provider } from 'react-redux'
 import { BrowserRouter } from 'react-router-dom';
 import { SnackbarProvider } from 'notistack';
+import store from './app/Store';
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-    <SnackbarProvider  autoHideDuration={1500}  maxSnack={2} anchorOrigin={{vertical:'top',horizontal:'right'}}>
+    <Provider store={store}>
+    <SnackbarProvider  autoHideDuration={1500}  maxSnack={2} anchorOrigin={{vertical:'bottom',horizontal:'right'}}>
     <App /> 
     </SnackbarProvider>
+    </Provider>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
