@@ -4,28 +4,24 @@ import { Link } from "react-router-dom";
 import { decreaseBill, reset } from "../../app/CounterBill";
 import "./styles.scss";
 function Checkout_com(props) {
-   const [get,SetGet]=useState(JSON.parse(localStorage.getItem("LISTBILL") || "[]"));
-  var Total=0;
+  const [get, SetGet] = useState(JSON.parse(localStorage.getItem("LISTBILL") || "[]"));
+  var Total = 0;
   const dispatch = useDispatch();
-  get.forEach(element => {
-    Total=Total+element.price;
+  get.forEach((element) => {
+    Total = Total + element.price;
     return Total;
   });
-  function removeItem(index)
-  {
-    SetGet(JSON.parse(localStorage.getItem("LISTBILL"))||[]);
-    if(get.length)
-    {
-      const a= get.slice(0,index);
-      const b= get.slice(index+1,JSON.parse(localStorage.getItem("LISTBILL")).length);
-      localStorage.setItem("LISTBILL",JSON.stringify([...a,...b])) 
+  function removeItem(index) {
+    SetGet(JSON.parse(localStorage.getItem("LISTBILL")) || []);
+    if (get.length) {
+      const a = get.slice(0, index);
+      const b = get.slice(index + 1, JSON.parse(localStorage.getItem("LISTBILL")).length);
+      localStorage.setItem("LISTBILL", JSON.stringify([...a, ...b]));
       SetGet(JSON.parse(localStorage.getItem("LISTBILL")));
-      dispatch(decreaseBill())
+      dispatch(decreaseBill());
     }
-  
-   
   }
- 
+
   return (
     <div className="Checkout_com">
       <div className="Checkout_com_Title">
@@ -141,63 +137,63 @@ function Checkout_com(props) {
             <p className="bill_Name">Các món đã chọn</p>
             <div className="add_item">
               <Link to="/Product">
-              <p>Thêm món</p>
+                <p>Thêm món</p>
               </Link>
             </div>
           </div>
           <ul className="list__bill">
-            {
-              get.map((item,index)=>(
-            
-                <li key={index} className="list__bill-Iteam">
+            {get.map((item, index) => (
+              <li key={index} className="list__bill-Iteam">
                 <div className="list_fix">
                   <i className="fa fa-pen"></i>
                 </div>
                 <div className="list_text">
                   <b className="tilte_item">{item.title} </b>
-  
+
                   <p className="size">{item.size}</p>
-                  <p className="btn_delete" onClick={()=>removeItem(index)}>Xóa</p>
+                  <p className="btn_delete" onClick={() => removeItem(index)}>
+                    Xóa
+                  </p>
                 </div>
                 <div className="list_price">
-                  <p>{(item.price).toLocaleString(undefined,{ minimumFractionDigits: 0 })}đ</p>
+                  <p>{item.price.toLocaleString(undefined, { minimumFractionDigits: 0 })}đ</p>
                 </div>
               </li>
-            
-              ))
-            }
-         
-        
-         
-          
+            ))}
           </ul>
           <div className="Total">
             <p className="bill_Name">Tổng cộng</p>
             <div className="thanhtien">
               <p>Thành tiền</p>
-              <p className="price_total">{(Total).toLocaleString(undefined,{ minimumFractionDigits: 0 })}đ</p>
+              <p className="price_total">{Total.toLocaleString(undefined, { minimumFractionDigits: 0 })}đ</p>
             </div>{" "}
             <div className="khuyenmai d-flex justify-content-between">
               <p>Khuyến mãi</p>
               <i className="fa fa-chevron-right"></i>
             </div>{" "}
             <div className="dathang d-flex justify-content-between p-2 lh-3">
-               <div className="thanhtien_main d-flex flex-column justify-content-center">
-                 <p>Thành tiền</p>
-                 <p className="price_total">{(Total).toLocaleString(undefined,{ minimumFractionDigits: 0 })}đ</p>
-               </div>
-               <div className="btn_dathang d-flex flex-column justify-content-center ">
-                 <p>Đặt hàng</p>
-               </div>
+              <div className="thanhtien_main d-flex flex-column justify-content-center">
+                <p>Thành tiền</p>
+                <p className="price_total">{Total.toLocaleString(undefined, { minimumFractionDigits: 0 })}đ</p>
+              </div>
+              <div className="btn_dathang d-flex flex-column justify-content-center ">
+                <p>Đặt hàng</p>
+              </div>
             </div>
           </div>
-          <div className="delete_Bill" >
-             <p onClick={()=>{localStorage.removeItem("LISTBILL");SetGet([]);dispatch(reset());}}>Xóa tất cả</p> 
-             </div>
+          <div className="delete_Bill">
+            <p
+              onClick={() => {
+                localStorage.removeItem("LISTBILL");
+                SetGet([]);
+                dispatch(reset());
+              }}
+            >
+              Xóa tất cả
+            </p>
+          </div>
         </div>
-        
       </div>
-
     </div>
   );
 }

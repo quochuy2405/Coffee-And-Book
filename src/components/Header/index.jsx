@@ -3,7 +3,7 @@ import { styled } from "@mui/material/styles";
 import React, { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import Login from "../../Page/Login";
-import {useSelector} from "react-redux"
+import { useSelector } from "react-redux";
 import "./styles.scss";
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
@@ -35,7 +35,7 @@ const List_NavLink = [
 function Header(props) {
   const [open, setOpen] = useState(false);
 
-  var counterBill=useSelector(state => state.counterBill);
+  var counterBill = useSelector((state) => state.counterBill);
   const handleClickOpen = () => {
     setOpen(true);
   };
@@ -106,7 +106,6 @@ function Header(props) {
       <div className="Hearder__TilteName">
         <Link to="/">
           <h4>THE COFFEE HOUSE</h4>
-         
         </Link>
       </div>
       <label htmlFor="check_choose" id="Header_tran" className="Hearder__IpAddress">
@@ -138,32 +137,28 @@ function Header(props) {
             )
           )}
         </ul>
-      </div>    
-      <Login open={open} setOpen={setOpen}/>
+      </div>
+      <Login open={open} setOpen={setOpen} />
       <div className="Header__User_Store">
         <div className="homeIcon">
-        <Link to="/">
-        <i class="fas fa-home"></i>
-        </Link>
+          <Link to="/">
+            <i class="fas fa-home"></i>
+          </Link>
         </div>
-        <div className="icon_user" onClick={handleClickOpen} >
+        <div className="icon_user" onClick={handleClickOpen}>
+          <i className="far fa-user-circle"></i>
+        </div>
 
-      
-            <i className="far fa-user-circle"></i>
-        </div>
-       
         <div className="icon_store">
           {" "}
-              <StyledBadge badgeContent={counterBill} color="secondary" className="icon_checkout">
-              <Link to="/Checkout">
-            
-              <i class="fas fa-shopping-cart"></i></Link>
-              </StyledBadge>
-       
-          
+          <StyledBadge badgeContent={counterBill} color="secondary" className="icon_checkout">
+            <Link to="/Checkout">
+              <i class="fas fa-shopping-cart"></i>
+            </Link>
+          </StyledBadge>
         </div>
         <div>
-        <i class="fas fa-hamburger hamber"></i>
+          <i class="fas fa-hamburger hamber"></i>
         </div>
       </div>
     </div>

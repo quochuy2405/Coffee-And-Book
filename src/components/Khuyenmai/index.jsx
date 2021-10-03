@@ -1,15 +1,13 @@
-import React from 'react';
+import React from "react";
 
-KhuyenMai.propTypes = {
-    
-};
+KhuyenMai.propTypes = {};
 
 function KhuyenMai(props) {
-    return (
-        <div>
-            <p>show</p>
-        </div>
-    );
+  return (
+    <div>
+      <p>show</p>
+    </div>
+  );
 }
 
 export default KhuyenMai;
