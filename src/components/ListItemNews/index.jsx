@@ -46,7 +46,7 @@ function ListItemNews(props) {
     <Row id="center_item">
     
           {List_News.map((item,index) => (
-            <Col key={index} className="Center_Item" xs={12} sm={6} lg={4} > <ItemNews Item={item} /> </Col>
+            <Col key={index} className="Center_Item" xs={12} sm={6} lg={4} xl={3} > <ItemNews Item={item} /> </Col>
           ))}
     
     </Row>  
