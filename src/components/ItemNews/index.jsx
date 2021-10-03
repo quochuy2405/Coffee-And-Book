@@ -4,7 +4,7 @@ import "./styles.scss"
 function ItemNews(props) {
     const {Item}=props;
     return (
-        <div data-aos="flip-right" data-aos-duration="900" data-aos-once="true" className="New">
+        <div data-aos="zoom-in-down" data-aos-duration="800" data-aos-once="true" className="New">
             <div className="New_img">
                 <img src={Item.link_img} alt="" />
             </div>
