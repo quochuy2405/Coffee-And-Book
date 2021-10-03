@@ -43,4 +43,7 @@
     .App .bodyDetails{
         display: block;
     }
+    .App .Header .hamber{
+        visibility: visible;
+    }
   }

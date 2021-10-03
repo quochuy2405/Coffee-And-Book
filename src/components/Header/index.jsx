@@ -150,12 +150,15 @@ function Header(props) {
         <div className="icon_store">
           {" "}
               <StyledBadge badgeContent={counterBill} color="secondary" className="icon_checkout">
-          <Link to="/Checkout">
+              <Link to="/Checkout">
             
               <i class="fas fa-shopping-cart"></i></Link>
               </StyledBadge>
        
           
+        </div>
+        <div>
+        <i class="fas fa-hamburger hamber"></i>
         </div>
       </div>
     </div>
