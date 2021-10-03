@@ -3,12 +3,6 @@ import { Link } from "react-router-dom";
 import "./styles.scss";
 
 function Footer(props) {
-
-  useEffect(() => {
-    const footerClick = document.querySelectorAll(".footer_navbar_item > div");
-   console.log(footerClick);
-       
-  })
   return (
     <div className="footer">
       <div className="footer_top">
