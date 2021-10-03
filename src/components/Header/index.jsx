@@ -106,7 +106,7 @@ function Header(props) {
       <div className="Hearder__TilteName">
         <Link to="/">
           <h4>THE COFFEE HOUSE</h4>
-          <i class="fas fa-home"></i>
+         
         </Link>
       </div>
       <label htmlFor="check_choose" id="Header_tran" className="Hearder__IpAddress">
@@ -141,6 +141,11 @@ function Header(props) {
       </div>    
       <Login open={open} setOpen={setOpen}/>
       <div className="Header__User_Store">
+        <div className="homeIcon">
+        <Link to="/">
+        <i class="fas fa-home"></i>
+        </Link>
+        </div>
         <div className="icon_user" onClick={handleClickOpen} >
 
       

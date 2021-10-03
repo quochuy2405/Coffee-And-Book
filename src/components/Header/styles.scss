@@ -25,7 +25,7 @@
   height: var(--height-header);
   .Hearder__TilteName
 
-  { min-width: 13rem;
+  { 
     
     & a {
     color: aliceblue;
@@ -35,7 +35,9 @@
      display: none;
    }
     & h4 {
-      min-width: 13rem;
+      font-size: 1.1rem;
+      min-width: 212px;
+      text-align: center;
     line-height: var(--height-header);
   }
   }
@@ -44,8 +46,8 @@
 
   & .Hearder__IpAddress {
     display: flex;
-    min-width: 300px;
-    max-width: 300px;
+    min-width: 240px;
+    max-width: 240px;
     height: calc(100% - 20px);
     margin: auto 0;
     background-color: #f38f0c;
@@ -63,7 +65,6 @@
       }
     }
     & .Trans__text {
-      min-width: 200px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -73,7 +74,7 @@
      & .address
      {
       white-space: nowrap; 
-      width: 200px; 
+      width: 150px;
       overflow: hidden;
       text-overflow: ellipsis; 
      }
@@ -104,7 +105,8 @@
 .Header__NavLink ul {
   display: flex;
   list-style: none;
-  color: white;
+  color: white; 
+  margin-right: -50px;
   font-weight: 600;
   line-height: var(--height-header);
   & a {
@@ -115,8 +117,10 @@
     padding: 0 10px;
     line-height: var(--height-header);
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+      flex-direction: column;
+     justify-content: center;
+    text-align: center;
+    white-space: nowrap;
     & .active p{
       padding: 5px 0;
       line-height: normal;
@@ -238,14 +242,6 @@
   color: white;
 margin-top: -2px;
 }
-
-@media screen and (max-width:1024px) {
-  #Nav_Link
-  {
-    display: none;
-  }
-   #Header_tran{
-    display: none;
-  }
-  
+.homeIcon{
+  visibility: hidden;
 }

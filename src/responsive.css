@@ -23,25 +23,32 @@
         padding: 20px 0;
     }
     .App .Header .Hearder__TilteName{
-        min-width: 0;
-        flex: 0;
+      display: none;
     }
-    .App .Header .Hearder__TilteName h4{
-        display: none;
-    }
-    .App .Header .Hearder__TilteName i{
-        display: block;
+    .App .homeIcon{
+        visibility: visible;
         line-height:var(--height-header);
         font-size: 25px;
     }
     .App .Header .Header__User_Store {
-        flex: 0.5555555;
+        flex: 1 1;
+        justify-content: center;
     }
     .App .Header .Header__User_Store div {
         margin: 0px 27px;
     }
     .App .bodyDetails{
         display: block;
+    }
+   
+  }
+  @media screen and (max-width:1024px) {
+    #Nav_Link
+    {
+      display: none;
+    }
+     #Header_tran{
+      display: none;
     }
     .App .Header .hamber{
         visibility: visible;
