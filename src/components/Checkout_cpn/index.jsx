@@ -18,6 +18,7 @@ function Checkout_com(props) {
       const a= get.splice(0,index);
       const b= get.splice(index+1,get.length);
       SetGet([...a,...b]);
+      localStorage.setItem("LISTBILL",JSON.stringify([...a,...b])) 
       dispatch(decreaseBill())
     }
    
