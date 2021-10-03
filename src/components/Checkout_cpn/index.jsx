@@ -1,19 +1,27 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import { decreaseBill, reset } from "../../app/CounterBill";
 import "./styles.scss";
-import {useSelector} from "react-redux"
-import { reset } from "../../app/CounterBill";
 function Checkout_com(props) {
    const [get,SetGet]=useState(JSON.parse(localStorage.getItem("LISTBILL") || "[]"));
-   var counterBill=useSelector(state => state.counterBill);
   var Total=0;
   const dispatch = useDispatch();
   get.forEach(element => {
     Total=Total+element.price;
     return Total;
   });
-  
+  function removeItem(index)
+  {
+    if(get.length)
+    {
+      const a= get.splice(0,index);
+      const b= get.splice(index+1,get.length);
+      SetGet([...a,...b]);
+      dispatch(decreaseBill())
+    }
+   
+  }
  
   return (
     <div className="Checkout_com">
@@ -144,7 +152,7 @@ function Checkout_com(props) {
                   <b className="tilte_item">{item.title} </b>
   
                   <p className="size">{item.size}</p>
-                  <p className="btn_delete">Xóa</p>
+                  <p className="btn_delete" onClick={()=>removeItem(index)}>Xóa</p>
                 </div>
                 <div className="list_price">
                   <p>{(item.price).toLocaleString(undefined,{ minimumFractionDigits: 0 })}đ</p>
