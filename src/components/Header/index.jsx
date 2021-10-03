@@ -35,6 +35,10 @@ const List_NavLink = [
 function Header(props) {
   const [open, setOpen] = useState(false);
 const counterBill = useSelector(state => state.counterBill)
+
+ localStorage.setItem("counterBill",counterBill?counterBill:localStorage.getItem("counterBill"));
+
+
   const handleClickOpen = () => {
     console.log(counterBill)
     setOpen(true);
@@ -150,7 +154,7 @@ const counterBill = useSelector(state => state.counterBill)
        
         <div className="icon_store">
           {" "}
-              <StyledBadge badgeContent={counterBill} color="secondary" className="icon_checkout">
+              <StyledBadge badgeContent={localStorage.getItem("counterBill")} color="secondary" className="icon_checkout">
           <Link to="/Checkout">
             
               <i class="fas fa-shopping-cart"></i></Link>

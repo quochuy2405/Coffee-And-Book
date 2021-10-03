@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./styles.scss";
 
 function Checkout_com(props) {
+
+  var get = JSON.parse(localStorage.getItem("LISTBILL") || "[]");
+  var Total=0;
+  get.forEach(element => {
+    Total=Total+element.price;
+    return Total;
+  })
   return (
     <div className="Checkout_com">
       <div className="Checkout_com_Title">
@@ -121,81 +128,36 @@ function Checkout_com(props) {
             </div>
           </div>
           <ul className="list__bill">
-            <li className="list__bill-Iteam">
-              <div className="list_fix">
-                <i className="fa fa-pen"></i>
-              </div>
-              <div className="list_text">
-                <b className="tilte_item">10 x Cà Phê Peak Flavor Hương Thơm Đỉnh </b>
-
-                <p className="size">Vừa, 1 x Vừa</p>
-                <p className="btn_delete">Xóa</p>
-              </div>
-              <div className="list_price">
-                <p>900.000đ</p>
-              </div>
-            </li>
-            <li className="list__bill-Iteam">
-              <div className="list_fix">
-                <i className="fa fa-pen"></i>
-              </div>
-              <div className="list_text">
-                <b className="tilte_item">10 x Cà Phê Peak Flavor Hương Thơm Đỉnh </b>
-
-                <p className="size">Vừa, 1 x Vừa</p>
-                <p className="btn_delete">Xóa</p>
-              </div>
-              <div className="list_price">
-                <p>900.000đ</p>
-              </div>
-            </li>
-            <li className="list__bill-Iteam">
-              <div className="list_fix">
-                <i className="fa fa-pen"></i>
-              </div>
-              <div className="list_text">
-                <b className="tilte_item">10 x Cà Phê Peak Flavor Hương Thơm Đỉnh </b>
-
-                <p className="size">Vừa, 1 x Vừa</p>
-                <p className="btn_delete">Xóa</p>
-              </div>
-              <div className="list_price">
-                <p>900.000đ</p>
-              </div>
-            </li>
-            <li className="list__bill-Iteam">
-              <div className="list_fix">
-                <i className="fa fa-pen"></i>
-              </div>
-              <div className="list_text">
-                <b className="tilte_item">10 x Cà Phê Peak Flavor Hương Thơm Đỉnh </b>
-
-                <p className="size">Vừa, 1 x Vừa</p>
-                <p className="btn_delete">Xóa</p>
-              </div>
-              <div className="list_price">
-                <p>900.000đ</p>
-              </div>
-            </li>     <li className="list__bill-Iteam">
-              <div className="list_fix">
-                <i className="fa fa-pen"></i>
-              </div>
-              <div className="list_text">
-                <b className="tilte_item">10 x Cà Phê Peak Flavor Hương Thơm Đỉnh </b>
-
-                <p className="size">Vừa, 1 x Vừa</p>
-                <p className="btn_delete">Xóa</p>
-              </div>
-              <div className="list_price">
-                <p>900.000đ</p>
-              </div>
-            </li>
+            {
+              get.map((item,index)=>(
+            
+                <li key={index} className="list__bill-Iteam">
+                <div className="list_fix">
+                  <i className="fa fa-pen"></i>
+                </div>
+                <div className="list_text">
+                  <b className="tilte_item">{item.title} </b>
+  
+                  <p className="size">{item.size}</p>
+                  <p className="btn_delete">Xóa</p>
+                </div>
+                <div className="list_price">
+                  <p>{(item.price).toLocaleString(undefined,{ minimumFractionDigits: 0 })}đ</p>
+                </div>
+              </li>
+            
+              ))
+            }
+         
+        
+         
+          
           </ul>
           <div className="Total">
             <p className="bill_Name">Tổng cộng</p>
             <div className="thanhtien">
               <p>Thành tiền</p>
-              <p className="price_total">100.000đ</p>
+              <p className="price_total">{(Total).toLocaleString(undefined,{ minimumFractionDigits: 0 })}đ</p>
             </div>{" "}
             <div className="khuyenmai d-flex justify-content-between">
               <p>Khuyến mãi</p>
@@ -204,7 +166,7 @@ function Checkout_com(props) {
             <div className="dathang d-flex justify-content-between p-2 lh-3">
                <div className="thanhtien_main d-flex flex-column justify-content-center">
                  <p>Thành tiền</p>
-                 <p className="price_total">100.000đ</p>
+                 <p className="price_total">{(Total).toLocaleString(undefined,{ minimumFractionDigits: 0 })}đ</p>
                </div>
                <div className="btn_dathang d-flex flex-column justify-content-center ">
                  <p>Đặt hàng</p>

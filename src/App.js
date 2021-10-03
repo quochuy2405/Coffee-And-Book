@@ -15,7 +15,6 @@ import { default as Pay, default as Product } from './Page/Product';
 import Store from './Page/Store/index.';
 
 function App() {
-  
   useEffect(() => {
     AOS.init();
     AOS.refresh();

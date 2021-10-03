@@ -59,6 +59,18 @@ export default function CustomizedDialogs(props) {
     dispatch(increaseBill());
     setOpen(false);
     enqueueSnackbar("Thêm vào giỏ hàng thành công", { variant: "success" });
+    const temp={
+       title:`${count}x ${Item.title}` ,
+       size:size?`Vừa,x${count}`:`Nhỏ,x${count}`,
+       price:count*Item.price+size
+    };
+
+    var get = JSON.parse(localStorage.getItem("LISTBILL") || "[]");
+   get.push(temp)
+   localStorage.setItem("LISTBILL",JSON.stringify(get)) 
+   console.log(get)
+
+  
   }
 
   return (
