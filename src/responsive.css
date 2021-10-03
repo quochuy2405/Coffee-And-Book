@@ -37,8 +37,14 @@
     .App .Header .Header__User_Store div {
         margin: 0px 27px;
     }
-    .App .bodyDetails{
+   .MuiDialogContent-dividers .bodyDetails{
         display: block;
+    }
+    .MuiDialogContent-dividers  .bodyDetails .imgDetail img{
+      display: block;
+      width: 85%;
+      margin: 0 auto;
+      height: 252px;
     }
    
   }

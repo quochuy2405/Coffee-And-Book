@@ -78,7 +78,7 @@ export default function CustomizedDialogs(props) {
   setcount(count+1)
 }
   return (
-    <div>
+    <div className="ItemDetails">
       <BootstrapDialog onClose={handleClose} aria-labelledby="customized-dialog-title" open={open}>
         <BootstrapDialogTitle
           id="customized-dialog-title"
