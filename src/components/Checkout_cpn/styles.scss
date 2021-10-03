@@ -130,15 +130,15 @@
       }
     }
     & .dathang {
-      background-color: rgb(255, 174, 23);
-      position: absolute;
-      height: 90px;
-      font-weight: bold;
-      width: 100%;
-      color: white;
-      left: 0;
-      bottom: 0;
-      border-radius: 0 0 10px 10px;
+      background-color: #ffae17;
+    position: relative;
+    height: 90px;
+    font-weight: bold;
+    width: calc( 100% + 40px);
+    color: white;
+    left: -20px;
+    bottom: -5px;
+    border-radius: 0 0 10px 10px;
       & .btn_dathang {
         background-color: white;
         width: 100px;
