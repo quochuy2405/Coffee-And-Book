@@ -140,7 +140,9 @@ function Checkout_com(props) {
           <div className="bill">
             <p className="bill_Name">Các món đã chọn</p>
             <div className="add_item">
+              <Link to="/Product">
               <p>Thêm món</p>
+              </Link>
             </div>
           </div>
           <ul className="list__bill">

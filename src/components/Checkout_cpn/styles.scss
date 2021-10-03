@@ -208,6 +208,10 @@
 }
 .change_type,
 .add_item {
+  & a{
+    text-decoration: none;
+    color: black;
+  }
   & p {
     margin: 0;
     padding: 6px;
