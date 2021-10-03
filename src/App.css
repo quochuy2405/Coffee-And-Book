@@ -1,7 +1,5 @@
 @import "variables.css";
 
-
-
 *{
   padding: 0;
   margin: 0;
@@ -62,13 +60,5 @@ html::-webkit-scrollbar-thumb {
 html::-webkit-scrollbar-thumb:hover {
   background: rgb(255, 205, 129);
 }
-@media screen and (max-width:576px) {
-  :root{
-    --width-iteam_col:8.813rem !important;
-  }
-  .SanPham .SanPhamTuNha{
-    width: 100% ;
-  }
-  
-}
+
 

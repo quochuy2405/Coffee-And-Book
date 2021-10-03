@@ -1,0 +1,46 @@
+@import "variables.css";
+@media screen and (max-width:576px) {
+    :root{
+      --width-iteam_col:8.813rem !important;
+    }
+    .App .SanPhamTuNha{
+         width: 100% ;
+    }
+
+    .App .Checkout_com .checkout__body {
+        width: 100%;
+        display: block;
+    }
+    .App .Checkout_com{
+        display: block;
+    }
+    .App .Checkout_com .checkout__body .body__Pay{
+        margin:0 0  40px 0;
+        
+    }
+    .App .Checkout_com .checkout__body .Total .thanhtien {
+        margin: 0 0 30px 0; 
+        padding: 20px 0;
+    }
+    .App .Header .Hearder__TilteName{
+        min-width: 0;
+        flex: 0;
+    }
+    .App .Header .Hearder__TilteName h4{
+        display: none;
+    }
+    .App .Header .Hearder__TilteName i{
+        display: block;
+        line-height:var(--height-header);
+        font-size: 25px;
+    }
+    .App .Header .Header__User_Store {
+        flex: 0.5555555;
+    }
+    .App .Header .Header__User_Store div {
+        margin: 0px 27px;
+    }
+    .App .bodyDetails{
+        display: block;
+    }
+  }

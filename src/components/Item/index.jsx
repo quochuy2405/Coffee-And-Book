@@ -10,8 +10,8 @@ function Iteam(Props) {
     const {Item}=Props;
     return (
           <>
-        <div data-aos="zoom-out-left" data-aos-delay="50"
-        data-aos-duration="900" data-aos-once="true"  className="Item">
+        <div data-aos="zoom-in-up" data-aos-delay="50"
+        data-aos-duration="700" data-aos-once="true"  className="Item">
             
             <div className="Item_img">
                 <img src={Item.link_img} alt="" />

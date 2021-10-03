@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { useEffect } from 'react';
 import { Route, Switch } from 'react-router';
 import './App.css';
+import './responsive.css';
 import Header from './components/Header';
 import BillSeach from './Page/Bill_Search';
 import Checkout from './Page/Checkout';
