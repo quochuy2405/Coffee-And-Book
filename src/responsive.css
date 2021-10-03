@@ -7,10 +7,7 @@
          width: 100% ;
     }
 
-    .App .Checkout_com .checkout__body {
-        width: 100%;
-        display: block;
-    }
+ 
     .App .Checkout_com{
         display: block;
     }
@@ -58,5 +55,10 @@
     }
     .App .Header .hamber{
         visibility: visible;
+    }
+    .App .Checkout_com .checkout__body {
+      width: 93%;
+      margin: 0 auto;
+        display: block;
     }
   }
