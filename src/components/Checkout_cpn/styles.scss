@@ -71,6 +71,7 @@
       box-shadow: 2px 0px 15px 5px rgb(228, 227, 227);
       border-radius: 20px;
       & .btn_delete{
+        width: fit-content;
         color: orange;
         &:hover{
           color: orangered;
