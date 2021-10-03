@@ -4,9 +4,8 @@ import Button from "@restart/ui/esm/Button";
 import { useSnackbar } from "notistack";
 import { useState } from "react";
 import { propTypes } from "react-bootstrap/esm/Image";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { increaseBill } from "../../app/CounterBill";
-import { decrease, increase } from "./Counter";
 import "./styles.scss";
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   "& .MuDialogContent-root": {
@@ -49,7 +48,7 @@ BootstrapDialogTitle.propTypes = {
 export default function CustomizedDialogs(props) {
   const { open, setOpen, Item } = props;
   const [size,Setsize]=useState(0)
-  const count = useSelector((state) => state.counter);
+  const [count,setcount]=useState(1)
   const dispatch = useDispatch();
   const { enqueueSnackbar } = useSnackbar();
   const handleClose = () => {
@@ -68,11 +67,16 @@ export default function CustomizedDialogs(props) {
     var get = JSON.parse(localStorage.getItem("LISTBILL") || "[]");
    get.push(temp)
    localStorage.setItem("LISTBILL",JSON.stringify(get)) 
-   console.log(get)
 
-  
   }
-
+ function decrease(){
+   setcount(count-1)
+   if(count<2)
+   setcount(1)
+ }
+ function increase(){
+  setcount(count+1)
+}
   return (
     <div>
       <BootstrapDialog onClose={handleClose} aria-labelledby="customized-dialog-title" open={open}>
@@ -94,9 +98,9 @@ export default function CustomizedDialogs(props) {
             <div className="price_number d-flex justify-content-left">
               <p className="price">{(Item.price*1).toLocaleString(undefined,{ minimumFractionDigits: 0 })}đ</p>
               <div className="btn_number d-flex justify-content-around">
-                <i class="fas fa-minus-circle" onClick={() => dispatch(decrease())}></i>
+                <i class="fas fa-minus-circle" onClick={ decrease}></i>
                 <p>{count}</p>
-                <i class="fas fa-plus-circle" onClick={() => dispatch(increase())}></i>
+                <i class="fas fa-plus-circle" onClick={increase}></i>
               </div>
             </div>
           </div>

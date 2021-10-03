@@ -34,16 +34,11 @@ const List_NavLink = [
 
 function Header(props) {
   const [open, setOpen] = useState(false);
-const counterBill = useSelector(state => state.counterBill)
 
- localStorage.setItem("counterBill",counterBill?counterBill:localStorage.getItem("counterBill"));
-
-
+  var counterBill=useSelector(state => state.counterBill);
   const handleClickOpen = () => {
-    console.log(counterBill)
     setOpen(true);
   };
-
   function ChangeActive(class_Name) {
     const Loaiactive = document.querySelector(".chon.active");
     const changeadrss = document.querySelector(".Hearder__IpAddress");
@@ -66,7 +61,6 @@ const counterBill = useSelector(state => state.counterBill)
       changeadrss.querySelector(".Trans__text p:nth-child(2)").innerText = "Tại:Vui lòng nhập địa chỉ";
     }
   }
-
 
   useEffect(() => {
     const changeadrss = document.querySelector(".Hearder__IpAddress");
@@ -154,7 +148,7 @@ const counterBill = useSelector(state => state.counterBill)
        
         <div className="icon_store">
           {" "}
-              <StyledBadge badgeContent={localStorage.getItem("counterBill")} color="secondary" className="icon_checkout">
+              <StyledBadge badgeContent={counterBill} color="secondary" className="icon_checkout">
           <Link to="/Checkout">
             
               <i class="fas fa-shopping-cart"></i></Link>

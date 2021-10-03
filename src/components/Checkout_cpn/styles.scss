@@ -184,6 +184,20 @@
       color: orange;
     }
   }
+  & .delete_Bill {
+    position: absolute;
+    bottom: -50px;
+    width: 100%;
+    color: orange;
+    &>p{
+      width: fit-content;
+      margin: 0 auto;
+    
+      &:hover {
+        color: rgb(255, 81, 0);
+      }
+    }
+  }
 }
 .change_type,
 .add_item {

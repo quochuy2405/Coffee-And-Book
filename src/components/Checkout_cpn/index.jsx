@@ -1,15 +1,20 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import "./styles.scss";
-
+import {useSelector} from "react-redux"
+import { reset } from "../../app/CounterBill";
 function Checkout_com(props) {
-
-  var get = JSON.parse(localStorage.getItem("LISTBILL") || "[]");
+   const [get,SetGet]=useState(JSON.parse(localStorage.getItem("LISTBILL") || "[]"));
+   var counterBill=useSelector(state => state.counterBill);
   var Total=0;
+  const dispatch = useDispatch();
   get.forEach(element => {
     Total=Total+element.price;
     return Total;
-  })
+  });
+  
+ 
   return (
     <div className="Checkout_com">
       <div className="Checkout_com_Title">
@@ -173,8 +178,13 @@ function Checkout_com(props) {
                </div>
             </div>
           </div>
+          <div className="delete_Bill" >
+             <p onClick={()=>{localStorage.removeItem("LISTBILL");SetGet([]);dispatch(reset());}}>Xóa tất cả</p> 
+             </div>
         </div>
+        
       </div>
+
     </div>
   );
 }

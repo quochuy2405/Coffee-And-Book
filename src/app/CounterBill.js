@@ -2,8 +2,11 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const CounterBill= createSlice({
     name:"CounterBill",
-    initialState:0,
+    initialState:localStorage.getItem("LISTBILL")?JSON.parse(localStorage.getItem("LISTBILL")).length:0,
     reducers:{
+        reset(state) {
+            return state-state;
+          },
         increaseBill(state) {
             return state + 1;
           },
@@ -17,5 +20,5 @@ const CounterBill= createSlice({
     }
 });
 const {actions,reducer}=CounterBill;
-export const {increaseBill,decreaseBill } = actions;
+export const {increaseBill,decreaseBill,reset } = actions;
 export default reducer;
