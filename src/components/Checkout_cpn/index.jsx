@@ -13,14 +13,17 @@ function Checkout_com(props) {
   });
   function removeItem(index)
   {
-    console.log(index)
     SetGet(JSON.parse(localStorage.getItem("LISTBILL"))||[]);
     if(get.length)
-    {
-      const a= get.splice(0,index);
-      const b= get.splice(index+1,JSON.parse(localStorage.getItem("LISTBILL")).length);
+    { console.log(JSON.parse(localStorage.getItem("LISTBILL")).length)
+      const a= get.slice(0,index);
+      const b= get.slice(index+1,JSON.parse(localStorage.getItem("LISTBILL")).length);
       localStorage.setItem("LISTBILL",JSON.stringify([...a,...b])) 
       SetGet(JSON.parse(localStorage.getItem("LISTBILL")));
+      console.log(b)
+      console.log(JSON.parse(localStorage.getItem("LISTBILL")).length)
+      console.log(JSON.parse(localStorage.getItem("LISTBILL")))
+     
       dispatch(decreaseBill())
     }
   
