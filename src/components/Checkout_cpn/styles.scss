@@ -97,7 +97,12 @@
           .list_fix {
             line-height: 75px;
             padding: 0 20px;
+          
             color: orange;
+          }
+          & .list_fix
+          {
+            font-size: 2rem;
           }
 
           & .list_text {

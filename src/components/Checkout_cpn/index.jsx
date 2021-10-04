@@ -147,7 +147,7 @@ function Checkout_com(props) {
             {get.map((item, index) => (
               <li key={index} className="list__bill-Iteam">
                 <div className="list_fix">
-                  <i className="fa fa-pen"></i>
+                <i class="fas fa-shield-virus"></i>
                 </div>
                 <div className="list_text">
                   <b className="tilte_item">{item.title} </b>
