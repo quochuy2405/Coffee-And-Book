@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 import { decreaseBill, reset } from "../../app/CounterBill";
 import { actionKM } from "../../app/KMOpen";
 import "./styles.scss";
-function Checkout_com(props) {
+function CheckoutCom(props) {
   const [get, SetGet] = useState(JSON.parse(localStorage.getItem("LISTBILL") || "[]"));
   var Total = 0;
-  const KMOpen = useSelector(state => state.KMOpen)
+  const KMOpen = useSelector((state) => state.KMOpen);
   const dispatch = useDispatch();
   get.forEach((element) => {
     Total = Total + element.price;
@@ -147,7 +147,7 @@ function Checkout_com(props) {
             {get.map((item, index) => (
               <li key={index} className="list__bill-Iteam">
                 <div className="list_fix">
-                <i class="fas fa-shield-virus"></i>
+                  <i class="fas fa-shield-virus"></i>
                 </div>
                 <div className="list_text">
                   <b className="tilte_item">{item.title} </b>
@@ -169,7 +169,7 @@ function Checkout_com(props) {
               <p>Thành tiền</p>
               <p className="price_total">{Total.toLocaleString(undefined, { minimumFractionDigits: 0 })}đ</p>
             </div>{" "}
-            <div className="khuyenmai d-flex justify-content-between" onClick={()=> dispatch(actionKM(KMOpen))}>
+            <div className="khuyenmai d-flex justify-content-between" onClick={() => dispatch(actionKM(KMOpen))}>
               <p>Khuyến mãi</p>
               <i className="fa fa-chevron-right"></i>
             </div>{" "}
@@ -200,4 +200,4 @@ function Checkout_com(props) {
   );
 }
 
-export default Checkout_com;
+export default CheckoutCom;

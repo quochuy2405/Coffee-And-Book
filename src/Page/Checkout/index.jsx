@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { Redirect } from 'react-router';
-import Checkout_com from '../../components/Checkout_cpn';
+import CheckoutCom from '../../components/CheckoutCom';
 import Footer from '../../components/Footer';
 function Checkout(props) {
     var counterBill=useSelector(state => state.counterBill);
@@ -12,7 +12,7 @@ function Checkout(props) {
         <> 
         {
          counterBill===0?<Redirect to="/Product"/>: <div className="body_Page">
-         <Checkout_com/>
+         <CheckoutCom />
          <Footer/>
      </div>
         }
