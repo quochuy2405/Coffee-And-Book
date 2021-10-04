@@ -3,8 +3,10 @@ import { styled } from "@mui/material/styles";
 import React, { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import Login from "../../Page/Login";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import "./styles.scss";
+import ListTicket from "../listTicket";
+import { actionKM } from "../../app/KMOpen";
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
   "& .MuiBadge-badge": {
@@ -29,15 +31,20 @@ const List_NavLink = [
   },
   {
     tilte_link: "Khuyến mãi",
+    strick:1
   },
 ];
 
 function Header(props) {
   const [open, setOpen] = useState(false);
-
+const KMOpen = useSelector(state => state.KMOpen)
+const dispatch = useDispatch();
   var counterBill = useSelector((state) => state.counterBill);
   const handleClickOpen = () => {
     setOpen(true);
+  };
+  const handleClickOpenKM = () => {
+      dispatch(actionKM(true))
   };
   function ChangeActive(class_Name) {
     const Loaiactive = document.querySelector(".chon.active");
@@ -125,13 +132,13 @@ function Header(props) {
         <ul>
           {List_NavLink.map((Item, index) =>
             Item.link ? (
-              <li key={index}>
+              <li key={index} >
                 <NavLink to={Item.link}>
                   <p>{Item.tilte_link}</p>
                 </NavLink>
               </li>
             ) : (
-              <li key={index}>
+              <li key={index} onClick={handleClickOpenKM} >
                 <p>{Item.tilte_link}</p>
               </li>
             )
@@ -139,6 +146,7 @@ function Header(props) {
         </ul>
       </div>
       <Login open={open} setOpen={setOpen} />
+      <ListTicket open={KMOpen}/>
       <div className="Header__User_Store">
         <div className="homeIcon">
           <Link to="/">

@@ -1,11 +1,13 @@
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { decreaseBill, reset } from "../../app/CounterBill";
+import { actionKM } from "../../app/KMOpen";
 import "./styles.scss";
 function Checkout_com(props) {
   const [get, SetGet] = useState(JSON.parse(localStorage.getItem("LISTBILL") || "[]"));
   var Total = 0;
+  const KMOpen = useSelector(state => state.KMOpen)
   const dispatch = useDispatch();
   get.forEach((element) => {
     Total = Total + element.price;
@@ -167,7 +169,7 @@ function Checkout_com(props) {
               <p>Thành tiền</p>
               <p className="price_total">{Total.toLocaleString(undefined, { minimumFractionDigits: 0 })}đ</p>
             </div>{" "}
-            <div className="khuyenmai d-flex justify-content-between">
+            <div className="khuyenmai d-flex justify-content-between" onClick={()=> dispatch(actionKM(KMOpen))}>
               <p>Khuyến mãi</p>
               <i className="fa fa-chevron-right"></i>
             </div>{" "}

@@ -14,6 +14,7 @@ import News from './Page/News';
 import NotFound from './Page/NotFound';
 import { default as Pay, default as Product } from './Page/Product';
 import Store from './Page/Store/index.';
+import Cart from './Page/Cart';
 
 function App() {
 
@@ -34,6 +35,7 @@ function App() {
        <Route path="/Bill_Seach" component={BillSeach}exact/>
        <Route path="/Checkout" component={Checkout}exact/>
        <Route path="/DashBoard" component={DashBoard}exact/>
+       <Route path="/test" component={Cart}exact/>
        <Route path="/:slug" component={NotFound}/>
        
      </Switch>

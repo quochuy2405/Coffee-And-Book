@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
-import PropTypes from 'prop-types';
-import Header from '../../components/Header';
+import ListTicket from '../../components/listTicket';
 
 Cart.propTypes = {
     
@@ -11,8 +10,8 @@ function Cart(props) {
         window.scrollTo(0, 0)
       }, [])
     return (
-        <div>
-     
+        <div className="body_Page">
+         <ListTicket/>
         </div>
     );
 }

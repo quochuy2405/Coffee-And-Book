@@ -39,25 +39,25 @@ body .row{
 .body_Page{
   padding-top: var(--height-header);
 }
-html::-webkit-scrollbar {
+*::-webkit-scrollbar {
   border-radius: 20px;
   width: 3.5px;
   background-color: white;
 }
 
 /* Track */
-html::-webkit-scrollbar-track {
+*::-webkit-scrollbar-track {
   border-radius: 1px;
 }
 
 /* Handle */
-html::-webkit-scrollbar-thumb {
+*::-webkit-scrollbar-thumb {
   background: rgb(255, 205, 129);
   border-radius: 10px;
 }
 
 /* Handle on hover */
-html::-webkit-scrollbar-thumb:hover {
+*::-webkit-scrollbar-thumb:hover {
   background: rgb(255, 205, 129);
 }
 
