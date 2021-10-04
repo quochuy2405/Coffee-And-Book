@@ -1,6 +1,6 @@
 .Checkout_com {
   & p {
-    margin: 0;
+    margin: 6px 0;
   }
   padding: 150px 0;
   & .Checkout_com_Title {
@@ -81,6 +81,7 @@
         display: flex;
         justify-content: space-between;
         margin: 5px 10px;
+        padding: 5px 0;
       }
       & .list__bill {
         padding: 0;
@@ -132,6 +133,9 @@
       line-height: 60px;
       & i {
         line-height: 60px;
+      }
+      &:hover{
+        color: #ffae17;
       }
     }
     & .dathang {
