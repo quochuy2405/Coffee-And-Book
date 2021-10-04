@@ -70,10 +70,10 @@
       flex: 1;
       box-shadow: 2px 0px 15px 5px rgb(228, 227, 227);
       border-radius: 20px;
-      & .btn_delete{
+      & .btn_delete {
         width: fit-content;
         color: orange;
-        &:hover{
+        &:hover {
           color: orangered;
         }
       }
@@ -87,6 +87,9 @@
         padding: 0;
         height: 290px;
         overflow-y: scroll;
+        border-top: 1px solid;
+        border-bottom: 1px solid;
+        border-color: #ffb936a3;
         & .list__bill-Iteam {
           display: flex;
           justify-content: space-around;
@@ -98,11 +101,10 @@
           .list_fix {
             line-height: 75px;
             padding: 0 20px;
-          
+
             color: orange;
           }
-          & .list_fix
-          {
+          & .list_fix {
             font-size: 2rem;
           }
 
@@ -134,20 +136,20 @@
       & i {
         line-height: 60px;
       }
-      &:hover{
+      &:hover {
         color: #ffae17;
       }
     }
     & .dathang {
       background-color: #ffae17;
-    position: relative;
-    height: 90px;
-    font-weight: bold;
-    width: calc( 100% + 40px);
-    color: white;
-    left: -20px;
-    bottom: -5px;
-    border-radius: 0 0 10px 10px;
+      position: relative;
+      height: 90px;
+      font-weight: bold;
+      width: calc(100% + 40px);
+      color: white;
+      left: -20px;
+      bottom: -5px;
+      border-radius: 0 0 10px 10px;
       & .btn_dathang {
         background-color: white;
         width: 100px;
@@ -205,10 +207,10 @@
     bottom: -50px;
     width: 100%;
     color: orange;
-    &>p{
+    & > p {
       width: fit-content;
       margin: 0 auto;
-    
+
       &:hover {
         color: rgb(255, 81, 0);
       }
@@ -217,7 +219,7 @@
 }
 .change_type,
 .add_item {
-  & a{
+  & a {
     text-decoration: none;
     color: black;
   }
