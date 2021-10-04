@@ -1,13 +1,15 @@
 .Sale_Card {
   display: flex;
-
+  margin: 20px 0;
   width: 310px;
+
+  box-shadow: 10px 7px 13px 4px #cecece;
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url(https://www.thecoffeehouse.com/_nuxt/img/card_voucher.321d7af.png);
-  margin: 20px 0;
+
   & .img_Card img {
-      padding: 10px;
+    padding: 10px;
     width: 100px;
     height: 100px;
     margin: auto;
@@ -26,16 +28,16 @@
     display: flex;
     justify-content: center;
     flex: 2;
-    &>div{
-        width: 80%;
-        margin: 0 auto;
+    & > div {
+      width: 80%;
+      margin: 0 auto;
     }
     & .due_date {
-        color: #979696;
+      color: #979696;
     }
-    & .use_now{
-        color: orange;
-        cursor: pointer;
+    & .use_now {
+      color: orange;
+      cursor: pointer;
     }
   }
 }
