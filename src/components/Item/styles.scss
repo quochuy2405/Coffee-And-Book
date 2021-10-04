@@ -44,6 +44,10 @@
         right: 20px;
         font-size: 2rem;
         color: rgb(255, 173, 22);
+        &:hover{
+            cursor: pointer;
+            color: orangered;
+        }
     }
 }
 .Center_Item{

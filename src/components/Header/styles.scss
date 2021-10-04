@@ -101,7 +101,12 @@
     }
   }
 }
-
+.icon_user{
+  &:hover{
+    opacity: 0.7;
+    cursor: pointer;
+  }
+}
 .Header__NavLink ul {
   display: flex;
   list-style: none;
