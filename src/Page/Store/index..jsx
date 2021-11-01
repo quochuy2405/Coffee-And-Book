@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import Header from "../../components/Header";
 import ListStore from "../../components/List_Store";
 import Slider from "../../components/Slider";
 

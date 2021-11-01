@@ -6,19 +6,16 @@ import { actionKM } from "../../app/KMOpen";
 import "./styles.scss";
 function CheckoutCom(props) {
   const [get, SetGet] = useState(JSON.parse(localStorage.getItem("LISTBILL") || "[]"));
-  var Total = 0;
   const KMOpen = useSelector((state) => state.KMOpen);
   const dispatch = useDispatch();
-  get.forEach((element) => {
-    Total = Total + element.price;
-    return Total;
-  });
+  var Total= get.reduce((total,item)=>{
+     return total+item.price;
+  },0)
   function removeItem(index) {
     SetGet(JSON.parse(localStorage.getItem("LISTBILL")) || []);
     if (get.length) {
-      const a = get.slice(0, index);
-      const b = get.slice(index + 1, JSON.parse(localStorage.getItem("LISTBILL")).length);
-      localStorage.setItem("LISTBILL", JSON.stringify([...a, ...b]));
+      SetGet(get.splice(index,1))
+      localStorage.setItem("LISTBILL", JSON.stringify(get));
       SetGet(JSON.parse(localStorage.getItem("LISTBILL")));
       dispatch(decreaseBill());
     }

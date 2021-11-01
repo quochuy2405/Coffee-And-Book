@@ -7,6 +7,7 @@ import { propTypes } from "react-bootstrap/esm/Image";
 import { useDispatch } from "react-redux";
 import { increaseBill } from "../../app/CounterBill";
 import "./styles.scss";
+import { PropTypes } from 'prop-types';
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   "& .MuDialogContent-root": {
     padding: theme.spacing(2),
@@ -44,9 +45,17 @@ BootstrapDialogTitle.propTypes = {
   children: propTypes.node,
   onClose: propTypes.func,
 };
-
-export default function CustomizedDialogs(props) {
-  const { open, setOpen, Item } = props;
+CustomizedDialogs.propTypes={
+  Item:PropTypes.object.isRequired,
+  setOpen:PropTypes.func,
+  open:PropTypes.func,
+}
+CustomizedDialogs.defaultProps={
+  setOpen:null,
+  open:null,
+}
+export default function CustomizedDialogs(Props) {
+  const { open, setOpen, Item } = Props;
   const [size,Setsize]=useState(0)
   const [count,setcount]=useState(1)
   const dispatch = useDispatch();
@@ -61,7 +70,7 @@ export default function CustomizedDialogs(props) {
     const temp={
        title:`${count}x ${Item.title}` ,
        size:size?`Vừa,x${count}`:`Nhỏ,x${count}`,
-       price:count*Item.price+size
+       price:count*Item.price+(size*count)
     };
 
     var get = JSON.parse(localStorage.getItem("LISTBILL") || "[]");
@@ -129,7 +138,7 @@ export default function CustomizedDialogs(props) {
         <DialogActions>
           <Button autoFocus onClick={AddItems_Success} className="btn_choose">
             {" "}
-            {(count*Item.price+size).toLocaleString(undefined,{ minimumFractionDigits: 0 })}đ- Thêm vào giỏ hàng
+            {(count*Item.price+size*count).toLocaleString(undefined,{ minimumFractionDigits: 0 })}đ- Thêm vào giỏ hàng
           </Button>
         </DialogActions>
       </BootstrapDialog>

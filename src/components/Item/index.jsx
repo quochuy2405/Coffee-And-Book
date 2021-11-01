@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
 import CustomizedDialogs from '../ItemDetails';
 import "./styles.scss";
+import { PropTypes } from 'prop-types';
+Iteam.propTypes={
+    Item:PropTypes.array.isRequired,
+  }
+
 function Iteam(Props) {
     const [ open, setOpen]=useState(false)
     const handleOpen=()=>{

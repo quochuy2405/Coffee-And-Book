@@ -203,7 +203,7 @@ function SanPhamTuNha(props) {
   }
   useEffect(() => {
     const Temp = [];
-    List_Item.map((item) => {
+    List_Item.forEach((item) => {
       if (item.Filter === Filter) {
         Temp.push(item);
       }

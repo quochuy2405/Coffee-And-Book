@@ -1,5 +1,10 @@
 import React from "react";
 import "./styles.scss";
+import { PropTypes } from 'prop-types';
+
+Ticket.propTypes={
+  item:PropTypes.array.isRequired,
+}
 function Ticket(props) {
     const {item}=props;
   return (

@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import Footer from "../../components/Footer";
-import Header from "../../components/Header";
 import SanPhamTuNha from "../../components/SanPhamTuNha";
 import "./styles.scss";
 function Product(props) {
