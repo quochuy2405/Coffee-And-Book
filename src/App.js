@@ -15,7 +15,7 @@ import NotFound from './Page/NotFound';
 import { default as Pay, default as Product } from './Page/Product';
 import Store from './Page/Store/index.';
 import Cart from './Page/Cart';
-
+import MessengerCustomerChat from 'react-messenger-customer-chat';
 function App() {
 
   useEffect(() => {
@@ -25,7 +25,7 @@ function App() {
   return (
      <div className="App">
 
-         <Header /> 
+     <Header /> 
      <Switch>
        <Route path="/" component={Home} exact/>
        <Route path="/Product" component={Product} exact/>
@@ -37,8 +37,11 @@ function App() {
        <Route path="/DashBoard" component={DashBoard}exact/>
        <Route path="/test" component={Cart}exact/>
        <Route path="/:slug" component={NotFound}/>
-       
      </Switch>
+     <MessengerCustomerChat
+        pageId="111223271362400"
+        appId="477337363536411"
+  />,
      </div>
   );
 }
