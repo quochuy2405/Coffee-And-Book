@@ -7,6 +7,7 @@ import { useDispatch } from "react-redux";
 import { actionKM } from "../../app/KMOpen";
 import Ticket from "../Ticket";
 import "./styles.scss";
+import data from"../../data"
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   "& .MuDialogContent-root": {
     padding: theme.spacing(2),
@@ -15,43 +16,12 @@ const BootstrapDialog = styled(Dialog)(({ theme }) => ({
     padding: theme.spacing(1),
   },
 }));
-const List_Ticket = [
-  {
-    link_img: "https://minio.thecoffeehouse.com/image/admin/storage/852__C4_90o_CC_82_CC_80ng-gia_CC_81-29K_coupon.jpg",
-    title: "Đồng giá 29k Caramel",
-    text_size: "Macchiato Đá (M)",
-    due_to: "Hết hạn 31/10/2021",
-  },
-  {
-    link_img: "https://minio.thecoffeehouse.com/image/admin/Coupondelivery30_684527.jpg",
-    title: "Ưu đãi 30% (tối đa 35k) đơn từ 2 món bất kỳ",
-    text_size: "Macchiato Đá (M)",
-    due_to: "Hết hạn 31/10/2021",
-  },
-  {
-    link_img: "https://minio.thecoffeehouse.com/image/admin/storage/696_Coupon_20Pickup_2020_.jpg",
-    title: "Ưu đãi 20% đơn Pickup 2 món bất kỳ",
-    text_size: "Macchiato Đá (M)",
-    due_to: "Hết hạn 31/10/2021",
-  },
-  {
-    link_img: "https://minio.thecoffeehouse.com/image/admin/Coupondelivery30_684527.jpg",
-    title: "Ưu đãi 30% (tối đa 35k) đơn từ 2 món bất kỳ",
-    text_size: "Macchiato Đá (M)",
-    due_to: "Hết hạn 31/10/2021",
-  },
-  {
-    link_img: "https://minio.thecoffeehouse.com/image/admin/storage/696_Coupon_20Pickup_2020_.jpg",
-    title: "Ưu đãi 20% đơn Pickup 2 món bất kỳ",
-    text_size: "Macchiato Đá (M)",
-    due_to: "Hết hạn 31/10/2021",
-  },
-];
+const List_Ticket =data.Tickets;
 const BootstrapDialogTitle = (props) => {
   const { children, onClose, ...other } = props;
 
   return (
-    <DialogTitle sx={{ m: 0, p: 2 }} {...other}>
+    <DialogTitle sx={{ m: 0, p: 3, minWidth:400, }} {...other}>
       {children}
       {onClose ? (
         <IconButton

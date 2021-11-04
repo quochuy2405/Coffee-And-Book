@@ -2,28 +2,9 @@ import React from "react";
 import { Col, Row } from "react-bootstrap";
 import Iteam from "../Item";
 import "./styles.scss";
-const List_Goiy = [
-  {
-    link_img: "https://tubikitchen.com/wp-content/uploads/2019/01/banh-bong-lan-cam-orange-chiffon-000.jpg",
-    title: "Chà Bông Phô Mai",
-    price: "45000",
-  },
-  {
-    link_img: "https://tubikitchen.com/wp-content/uploads/2019/01/banh-bong-lan-cam-orange-chiffon-000.jpg",
-    title: "Chà Bông Phô Mai",
-    price: "45000",
-  },
-  {
-    link_img: "https://tubikitchen.com/wp-content/uploads/2019/01/banh-bong-lan-cam-orange-chiffon-000.jpg",
-    title: "Chà Bông Phô Mai",
-    price: "45000",
-  },
-  {
-    link_img: "https://tubikitchen.com/wp-content/uploads/2019/01/banh-bong-lan-cam-orange-chiffon-000.jpg",
-    title: "Chà Bông Phô Mai",
-    price: "45000",
-  },
-];
+import data from"../../data"
+import { memo } from "react";
+const List_Goiy =data.GoiY;
 function ListItem(props) {
   const { Filter, List_Fillter } = props;
   return (
@@ -59,4 +40,4 @@ function ListItem(props) {
   );
 }
 
-export default ListItem;
+export default memo(ListItem);

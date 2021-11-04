@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import "./styles.scss";
 import ListTicket from "../listTicket";
 import { actionKM } from "../../app/KMOpen";
+import { memo } from "react";
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
   "& .MuiBadge-badge": {
@@ -173,4 +174,4 @@ const dispatch = useDispatch();
   );
 }
 
-export default Header;
+export default memo(Header);

@@ -1,40 +1,9 @@
-import React from "react";
+import React ,{memo}from "react";
 import { Col, Row } from "react-bootstrap";
 import ItemNews from "../ItemNews";
 import "./styles.scss";
-const List_News = [
-  {
-    link_img: "https://feed.thecoffeehouse.com/content/images/2021/08/img_8668_grande.jpg",
-    title: "Nghệ thuật pha chế - Cold Brew",
-    description: "Bạn mua 5 ly cà phê - Nhà tặng thêm 2 (Hạn sử dụng 10 ngày kể từ ngày mua).",
-  },
-  {
-    link_img: "https://feed.thecoffeehouse.com/content/images/2021/08/img_8430_grande-1.jpg",
-    title: "Nghệ thuật pha chế - Espresso",
-    description: "Bạn mua 5 ly cà phê - Nhà tặng thêm 2 (Hạn sử dụng 10 ngày kể từ ngày mua).",
-  },
-  {
-    link_img: "https://feed.thecoffeehouse.com/content/images/2021/08/img_8668_grande.jpg",
-    title: "Nghệ thuật pha chế - Cold Brew",
-    description: "Bạn mua 5 ly cà phê - Nhà tặng thêm 2 (Hạn sử dụng 10 ngày kể từ ngày mua).",
-  },
-  {
-    link_img: "https://feed.thecoffeehouse.com/content/images/2021/08/img_8430_grande-1.jpg",
-    title: "Nghệ thuật pha chế - Espresso",
-    description: "Bạn mua 5 ly cà phê - Nhà tặng thêm 2 (Hạn sử dụng 10 ngày kể từ ngày mua).",
-  },
-  {
-    link_img: "https://feed.thecoffeehouse.com/content/images/2021/08/img_8668_grande.jpg",
-    title: "Nghệ thuật pha chế - Cold Brew",
-    description: "Bạn mua 5 ly cà phê - Nhà tặng thêm 2 (Hạn sử dụng 10 ngày kể từ ngày mua).",
-  },
-  {
-    link_img: "https://feed.thecoffeehouse.com/content/images/2021/08/img_8430_grande-1.jpg",
-    title: "Nghệ thuật pha chế - Espresso",
-    description: "Bạn mua 5 ly cà phê - Nhà tặng thêm 2 (Hạn sử dụng 10 ngày kể từ ngày mua).",
-  },
-];
-
+import data from"../../data"
+const List_News = data.listBao;
 function ListItemNews(props) {
   return (
     <div className="ListItemNews">
@@ -54,4 +23,4 @@ function ListItemNews(props) {
   );
 }
 
-export default ListItemNews;
+export default memo(ListItemNews);

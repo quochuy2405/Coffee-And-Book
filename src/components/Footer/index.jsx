@@ -1,6 +1,7 @@
-import React from "react";
+import React,{memo} from "react";
 import { Link } from "react-router-dom";
 import "./styles.scss";
+
 
 function Footer(props) {
   return (
@@ -165,4 +166,4 @@ function Footer(props) {
   );
 }
 
-export default Footer;
+export default memo(Footer);
