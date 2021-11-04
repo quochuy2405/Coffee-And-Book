@@ -1,7 +1,7 @@
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { useEffect } from 'react';
+import { memo, useEffect } from 'react';
 import { Route, Switch } from 'react-router';
 import './App.css';
 import './responsive.css';
@@ -24,10 +24,7 @@ function App() {
   }, []);
   return (
      <div className="App">
-  <MessengerCustomerChat
-        pageId="111223271362400"
-        appId="477337363536411"
-     />
+   
      <Header /> 
      <Switch>
        <Route path="/" component={Home} exact/>
@@ -41,9 +38,12 @@ function App() {
        <Route path="/test" component={Cart}exact/>
        <Route path="/:slug" component={NotFound}/>
      </Switch>
-   
+     <MessengerCustomerChat
+        pageId="111223271362400"
+        appId="477337363536411"
+     />
      </div>
   );
 }
 
-export default App;
+export default memo(App);
