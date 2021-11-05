@@ -1,3 +1,5 @@
+
+@import "../../variables.css";
 .bodyDetails{
     display: flex;
 
@@ -24,7 +26,7 @@
    }
    & i{
       font-size: 1.5rem;
-       color: rgb(255, 192, 74);
+       color:  var(--color-main);
        &:hover{
            color: orangered;
        }
@@ -56,7 +58,7 @@
    background: none;
    border: none;
    outline: none;
-   background-color: rgb(255, 176, 30);
+   background-color:  var(--color-main);
    color: white;
    border-radius:30px ;
    height: 50px;

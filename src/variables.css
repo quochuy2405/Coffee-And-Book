@@ -1,6 +1,8 @@
 :root{
     
-    --color-main:#119155;
+    /* --color-main:#f38f0c;
+    --color-image-main:linear-gradient(to right, #faad47, #ff9e37); */
+    --color-main:#01a156;
     --color-image-main:linear-gradient(to right, #1fb870, #acda64);
  
     --height-header: 4.8rem;

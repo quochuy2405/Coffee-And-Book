@@ -12,7 +12,7 @@
       line-height: 2rem;
       font-size: 1.3rem;
       padding: 0 5px;
-      color: rgb(255, 194, 81);
+      color:  var(--color-main);
     }
   }
   & .checkout__body {
@@ -55,7 +55,7 @@
 
           & img {
             width: 100%;
-            border-top: 2px solid orange;
+            border-top: 2px solid  var(--color-main);
           }
         }
         & .info_des {
@@ -72,7 +72,7 @@
       border-radius: 20px;
       & .btn_delete {
         width: fit-content;
-        color: orange;
+        color:  var(--color-main);
         &:hover {
           color: orangered;
         }
@@ -102,7 +102,7 @@
             line-height: 75px;
             padding: 0 20px;
 
-            color: orange;
+            color:  var(--color-main);
           }
           & .list_fix {
             font-size: 2rem;
@@ -127,7 +127,7 @@
         display: flex;
         justify-content: space-between;
         border-bottom: 1px solid rgba(204, 204, 204, 0.651);
-        color: orange;
+        color:  var(--color-main);
       }
     }
     & .khuyenmai {
@@ -137,11 +137,11 @@
         line-height: 60px;
       }
       &:hover {
-        color: #ffae17;
+        color:  var(--color-main);
       }
     }
     & .dathang {
-      background-color: #ffae17;
+      background-color:  var(--color-main);
       position: relative;
       height: 100px;
       font-weight: bold;
@@ -182,7 +182,7 @@
         margin: auto 0;
         width: 15px;
         height: 15px;
-        filter: orange;
+        filter:  var(--color-main);
       }
 
       & label {
@@ -199,14 +199,14 @@
   & .agree {
     font-size: 1rem;
     & a {
-      color: orange;
+      color:  var(--color-main);
     }
   }
   & .delete_Bill {
     position: absolute;
     bottom: -50px;
     width: 100%;
-    color: orange;
+    color:  var(--color-main);
     & > p {
       width: fit-content;
       margin: 0 auto;
@@ -246,11 +246,13 @@
 
 /* Handle */
 .list__bill::-webkit-scrollbar-thumb {
-  background: rgb(255, 205, 129);
+  background:  var(--color-main);
+  opacity: 0.8;
   border-radius: 10px;
 }
 
 /* Handle on hover */
 .list__bill::-webkit-scrollbar-thumb:hover {
-  background: rgb(255, 205, 129);
+  background:  var(--color-main);
+  opacity: 0.8;
 }
