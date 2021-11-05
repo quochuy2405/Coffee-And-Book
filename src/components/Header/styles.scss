@@ -92,7 +92,7 @@
       & a {
         color: white;
       }
-      &:hover a {
+      &:hover .fa-shopping-cart {
         opacity: 0.7;
         transition: all linear 0.1s;
       }
@@ -103,7 +103,6 @@
 }
 .icon_user{
   &:hover{
-    opacity: 0.7;
     cursor: pointer;
   }
 }

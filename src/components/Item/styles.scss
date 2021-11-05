@@ -1,23 +1,24 @@
 @import "../../variables.css";
 .Item{
+
     display: flex;
     position: relative;
 
     height: var(--height-iteam);
-    min-width:var(--width-iteam);
     width:var(--width-iteam);
+    min-width:calc(var(--width-iteam) - 30px);
     padding: 10px  0px;
-    margin: 20px;
     background-color: white;
     border-radius: 1rem;
     box-shadow: 5px 3px 30px 8px rgba(199, 199, 199, 0.356);
-    
+    margin: 10px;
     
    & .Item_img img{
     width: 7rem;
     border-radius: 15px;
     height:100%;
     padding: 5px 10px;
+    object-fit: cover;
     }
     & .Item_description{
         
@@ -52,5 +53,6 @@
 }
 .Center_Item{
    display: flex;
+   flex-wrap: nowrap;
    justify-content: center;
 }

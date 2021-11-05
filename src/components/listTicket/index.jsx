@@ -21,7 +21,7 @@ const BootstrapDialogTitle = (props) => {
   const { children, onClose, ...other } = props;
 
   return (
-    <DialogTitle sx={{ m: 0, p: 3, minWidth:400, }} {...other}>
+    <DialogTitle sx={{ m: 0, p: 3 }} {...other}>
       {children}
       {onClose ? (
         <IconButton
@@ -49,7 +49,7 @@ function ListTicket(props) {
   };
 
   return (
-    <div>
+    <div style={{width:'400px'}}>
       <BootstrapDialog onClose={handleClose} aria-labelledby="customized-dialog-title" open={open}>
         <BootstrapDialogTitle id="customized-dialog-title" className="d-flex justify-content-center" onClose={handleClose}>
          <b className="font_km">Khuyến mãi</b>
