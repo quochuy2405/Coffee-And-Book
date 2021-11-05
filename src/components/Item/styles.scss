@@ -44,10 +44,11 @@
         bottom: 10px;
         right: 20px;
         font-size: 2rem;
-        color: rgb(255, 173, 22);
+        color: var(--color-main);
+        opacity: 0.8;
         &:hover{
             cursor: pointer;
-            color: orangered;
+            color: orangered !important;
         }
     }
 }

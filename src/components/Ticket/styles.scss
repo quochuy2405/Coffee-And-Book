@@ -36,7 +36,7 @@
       color: #979696;
     }
     & .use_now {
-      color: orange;
+      color: var(--color-main);
       cursor: pointer;
     }
   }

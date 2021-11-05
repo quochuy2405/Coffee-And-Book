@@ -3,14 +3,16 @@
     height: 406px;
    & .Store{
     list-style: none;
-    color: rgb(255, 166, 0);
+    color: var(--color-main);
+    opacity: 0.8;
     height: 40px;
     line-height: 40px;
     border-radius: 30px;
     padding: 0 20px;
     cursor: pointer;
     &.active{
-        background-color: rgb(255, 205, 96);
+        background-color:var(--color-main);
+        opacity: 0.9;
         color: white;
     }
    }

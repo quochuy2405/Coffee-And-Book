@@ -6,7 +6,7 @@
   justify-content: space-around;
   position: fixed;
   z-index: 999;
-  background-image: linear-gradient(to right, #faad47, #ff9e37);
+  background-image: var( --color-image-main);
   color: white;
   & .btn.btn-outline-success{
     width: 110px;
@@ -52,7 +52,7 @@
     max-width: 260px;
     height: calc(100% - 20px);
     margin: auto 0;
-    background-color: #f38f0c;
+    background-color: var(--color-main);
     border-radius: 40px;
     justify-content: space-between;
 
@@ -189,7 +189,7 @@
 
     border-radius: 30px;
     background-color: white;
-   border: 2px #f38f0c dashed ;
+   border: 2px var(--color-main) dashed ;
      & .choose_img{
       width: 57px;
       height: 57px;
@@ -198,7 +198,7 @@
      }
      & .choose_text{
        font-size: 0.9rem;
-       color: #f38f0c;
+       color: var(--color-main);
        line-height: 57px;
      }
      & .choose_giaohang , .choose_mangdi{
@@ -212,7 +212,8 @@
        background-color: white;  
        border-radius: 35px;
       &.active{
-        background-color: rgb(248, 160, 60);
+        background-color: var(--color-main);
+        opacity: 0.8;
         
         & .choose_text{color: white;}
       }

@@ -1,4 +1,8 @@
 :root{
+    
+    --color-main:#119155;
+    --color-image-main:linear-gradient(to right, #1fb870, #acda64);
+ 
     --height-header: 4.8rem;
     --radial-gradient-yellow: radial-gradient(100% 1636.16% at 100% 0%,#fff2d8 0%,#ffe7ba 100%);
     --width-iteam:16.3rem;

@@ -2,7 +2,7 @@
 .Slider_Home {
   height: var(--height-slider);
   width: 100%;
-  background-image: linear-gradient(to right, #f7c261, #d69146);
+  background-image: linear-gradient(to right, #198754, #84d343);
 }
 .GoiY {
   background: var(--radial-gradient-yellow);
@@ -17,7 +17,7 @@
       font-size: 1.5rem;
       line-height: 40px;
       margin-right: 5px;
-      color: #faaf4c;
+      color: var(--color-main);
     }
     & .Tag {
       margin-right: 40px;
@@ -29,7 +29,7 @@
   }
   & .active {
     color: black !important;
-    border-bottom: 4px solid #f8a539;
+    border-bottom: 4px solid var(--color-main);
   }
 }
 .Btn_Login {
@@ -46,7 +46,7 @@
     border-radius: 35px;
 
     text-align: center;
-    background-color: #f06135;
+    background-color: var(--color-main);
     font-weight: bold;
     color: white;
     cursor: pointer;
@@ -58,7 +58,7 @@
 }
 
 .gg_play {
-  background-color: #d69146;
+  background-color: var(--color-main);
   & .img_large {
     width: 100%;
   }
@@ -75,16 +75,17 @@
 }
 .News_goto {
   display: flex;
-  color: #ffad56;
+  color: var(--color-main);
   text-decoration: none;
   width: fit-content;
   margin: 0 auto;
+  opacity: 0.8;
   & i {
     line-height: 24px;
     padding: 0 5px;
   }
   &:hover {
-    color: #fc8200;
+    color: var(--color-main);
   }
 }
 .SanPham {
@@ -95,7 +96,7 @@
   }
 }
 .color_orange{
-  color: #fcbd49;
+  color:var(--color-main);
   
 }
 .Search_Store {
@@ -107,7 +108,7 @@
     padding: 0 10px;
   }
   & a:hover {
-    color: #ff9419;
+    color: var(--color-main);
   }
   & .all_store{
     text-decoration: none;

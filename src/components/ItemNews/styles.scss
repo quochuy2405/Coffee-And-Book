@@ -35,7 +35,7 @@
         right: 10px;
         bottom: 10px;
     
-        background-image: linear-gradient(to right , orange,rgb(248, 178, 48));
+        background-image: var(--color-image-main);
         border-radius: 1rem;
         & p{
             text-align: center;
