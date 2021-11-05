@@ -8,7 +8,9 @@
   z-index: 999;
   background-image: linear-gradient(to right, #faad47, #ff9e37);
   color: white;
-
+  & .btn.btn-outline-success{
+    width: fit-content;
+  }
   & .hamber{
     visibility: hidden;
   }
