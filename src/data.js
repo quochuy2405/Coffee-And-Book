@@ -60,27 +60,27 @@ const data = {
   ],
   Stores: [
     {
-      Country_Name: "Hà Nội",
+      City_Name: "Hà Nội",
       count: 49,
     },
     {
-      Country_Name: "Hồ Chí Minh ",
+      City_Name: "Hồ Chí Minh ",
       count: 4,
     },
     {
-      Country_Name: "Hải Phòng ",
+      City_Name: "Hải Phòng ",
       count: 9,
     },
     {
-      Country_Name: "Đà Nẵng ",
+      City_Name: "Đà Nẵng ",
       count: 19,
     },
     {
-      Country_Name: "Đồng Nai",
+      City_Name: "Đồng Nai",
       count: 39,
     },
     {
-      Country_Name: "Bà Rịa Vũng Tàu",
+      City_Name: "Bà Rịa Vũng Tàu",
       count: 109,
     },
   ],

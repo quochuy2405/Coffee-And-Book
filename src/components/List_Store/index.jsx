@@ -36,7 +36,7 @@ function ListStore(props) {
               <Col key={index} className="Center_Item" xs={12} sm={6} lg={3}>
                 {" "}
                 <li className="Store" onClick={() => ChangeActive(index)}>
-                  {item.Country_Name}({item.count})
+                  {item.City_Name}({item.count})
                 </li>{" "}
               </Col>
             ))}
