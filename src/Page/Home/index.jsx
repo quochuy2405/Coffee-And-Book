@@ -54,7 +54,7 @@ function Home() {
         <div className="Subject_Tag">
           {check ? (
             <div className="Btn_Login">
-              <p>Đăng Nhập</p>
+              <Link to="/login">Đăng Nhập</Link>
             </div>
           ) : (
             <ListItem />
