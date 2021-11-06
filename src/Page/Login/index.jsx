@@ -1,7 +1,8 @@
 import React from 'react';
 import './styles.scss';
-import { Link } from 'react-router-dom';
+import { Link ,useHistory} from 'react-router-dom';
 export default function Login(props) {
+ 
   return (
     <div className='body_Page'>
       <div className='Login'>
@@ -15,7 +16,7 @@ export default function Login(props) {
             />
           </div>
           <div className='login'>
-            <form action='/auth/admin' method='POST'>
+            <form action="/auth/admin" >
               <h2 className='title'>Đăng nhập</h2>
               <div className='input_login input_username'>
                 <i className='fas fa-user-astronaut'></i>
@@ -24,16 +25,18 @@ export default function Login(props) {
                   id='username'
                   name='username'
                   placeholder='Tên đăng nhập'
+                  required
                 />
               </div>
 
               <div className='input_login input_password'>
                 <i className='fas fa-lock'></i>
                 <input
-                  type='text'
+                  type='password'
                   className='input_password'
                   name='password'
                   placeholder='Mật khẩu'
+                  required
                 />
               </div>
 

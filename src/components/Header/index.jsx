@@ -194,7 +194,7 @@ function Header(props) {
         </div>
         <div className='icon_user'>
           <Link to='/login'>
-            <button type='button' className='btn btn-success'>
+            <button className='btn btn-success'>
               {LoginSign}
             </button>
           </Link>
