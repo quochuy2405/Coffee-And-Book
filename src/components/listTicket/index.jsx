@@ -40,9 +40,9 @@ const BootstrapDialogTitle = (props) => {
     </DialogTitle>
   );
 };
-
+const List_Ticket =[data.Tickets];
 function ListTicket(props) {
-  const List_Ticket =[data.Tickets];
+
   const {open} = props;
   const dispatch = useDispatch();
   const handleClose = () => {
