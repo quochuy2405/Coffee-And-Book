@@ -1,5 +1,6 @@
 import React from 'react';
 import './styles.scss';
+import { Link } from 'react-router-dom';
 export default function Login(props) {
   return (
     <div className='body_Page'>
@@ -17,7 +18,7 @@ export default function Login(props) {
             <form action='#' method='POST'>
               <h2 className='title'>Đăng nhập</h2>
               <div className='input_login input_username'>
-                <i class='fas fa-user-astronaut'></i>
+                <i className='fas fa-user-astronaut'></i>
                 <input
                   type='text'
                   id='username'
@@ -27,7 +28,7 @@ export default function Login(props) {
               </div>
 
               <div className='input_login input_password'>
-                <i class='fas fa-lock'></i>
+                <i className='fas fa-lock'></i>
                 <input
                   type='text'
                   className='input_password'
@@ -36,14 +37,14 @@ export default function Login(props) {
                 />
               </div>
 
-              <button type='submit' class='btn btn-success'>
+              <button type='submit' className='btn btn-success'>
                 <b>Đăng nhập</b>
               </button>
             </form>
-            <a href='#' className='forgot_pass'>
+            <Link href='#' className='forgot_pass'>
               {' '}
               Quên mật khẩu ?
-            </a>
+            </Link>
           </div>
 
           <div className='dot'></div>

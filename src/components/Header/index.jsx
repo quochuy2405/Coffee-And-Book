@@ -1,12 +1,12 @@
 import Badge from '@mui/material/Badge';
 import { styled } from '@mui/material/styles';
-import React, { memo, useContext, useEffect, useLayoutEffect } from 'react';
+import React, { memo, useContext, useLayoutEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { actionKM } from '../../app/KMOpen';
 import ListTicket from '../listTicket';
-import './styles.scss';
 import { HandleLoginSign } from './../../app/LoginOrSignUp';
+import './styles.scss';
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
   '& .MuiBadge-badge': {
@@ -19,15 +19,15 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 const List_NavLink = [
   {
     tilte_link: 'Đặt Hàng',
-    link: '/Product',
+    link: '/product',
   },
   {
     tilte_link: 'Tin tức',
-    link: '/News',
+    link: '/news',
   },
   {
     tilte_link: 'Cửa Hàng',
-    link: '/Store',
+    link: '/store',
   },
   {
     tilte_link: 'Khuyến mãi',
@@ -46,7 +46,6 @@ function Header(props) {
   };
   const matchLogin = () => {
     const pathname = window.location.pathname;
-    console.log(pathname);
     if (pathname.includes('/login')) {
       setLoginSign('Đăng Ký');
     } else {
@@ -190,12 +189,12 @@ function Header(props) {
       <div className='Header__User_Store'>
         <div className='homeIcon'>
           <Link to='/'>
-            <i class='fas fa-home'></i>
+            <i className='fas fa-home'></i>
           </Link>
         </div>
         <div className='icon_user'>
           <Link to='/login'>
-            <button type='button' class='btn btn-success'>
+            <button type='button' className='btn btn-success'>
               {LoginSign}
             </button>
           </Link>
@@ -208,12 +207,12 @@ function Header(props) {
             color='secondary'
             className='icon_checkout'>
             <Link to='/Checkout'>
-              <i class='fas fa-shopping-cart'></i>
+              <i className='fas fa-shopping-cart'></i>
             </Link>
           </StyledBadge>
         </div>
         <div>
-          <i class='fas fa-hamburger hamber'></i>
+          <i className='fas fa-hamburger hamber'></i>
         </div>
       </div>
     </div>

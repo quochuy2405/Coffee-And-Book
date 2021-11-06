@@ -16,7 +16,7 @@ const BootstrapDialog = styled(Dialog)(({ theme }) => ({
     padding: theme.spacing(1),
   },
 }));
-const List_Ticket =data.Tickets;
+
 const BootstrapDialogTitle = (props) => {
   const { children, onClose, ...other } = props;
 
@@ -42,6 +42,7 @@ const BootstrapDialogTitle = (props) => {
 };
 
 function ListTicket(props) {
+  const List_Ticket =[data.Tickets];
   const {open} = props;
   const dispatch = useDispatch();
   const handleClose = () => {

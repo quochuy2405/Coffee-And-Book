@@ -1,0 +1,98 @@
+.Admin {
+  font-size: 1.1rem;
+  font-weight: bold;
+  font-family: 'Segoe UI', 'Arial';
+  box-sizing: border-box;
+  & .header {
+    & .background-top,
+    .nav-top {
+      height: 70px;
+    }
+    & .background-top {
+        position: relative;
+      background-image: linear-gradient(to right, #3f435c, #7f8085);
+   
+      & .logo_text{
+        line-height: 80px;
+        font-size: 1.3em;
+        margin-left: 4%;
+        font-family: cursive,"Arial";
+        color: white;
+    }
+    }
+    & .nav-top {
+        // background-image: linear-gradient(to left, #e0f3ffcc, #ffffff);
+      box-shadow: 5px 5px 10px rgb(192, 192, 192);
+      position: relative;
+    
+      & .img_user img {
+        width: 50px;
+        height: 50px;
+      
+        border-radius: 50%;
+        border: 2px solid #868686;
+
+      }
+      & .logo {
+        position: absolute;
+        left: 4%;
+        top: 0;
+        margin-top: -5px;
+      }
+      & .logo svg {
+        width: fit-content;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      & .img_user {
+        color: rgb(116, 116, 116);
+        text-transform: uppercase;
+       font-size: 1rem;
+        position: absolute;
+        right: 10%;
+        top: 50%;
+        transform: translateY(-50%);
+        & span {
+          padding: 0 5px;
+        }
+      }
+     
+    }
+  }
+  & .Admin_main {
+    display: flex;
+    position: relative;
+    & .main_menu {
+      padding: 2% 2% 2% 1%;
+      flex: 1;
+      background-color: #ffffff;
+      height: calc(100vh - 140px);
+      box-shadow: 5px 5px 10px rgb(192, 192, 192);
+      & .icon {
+        padding: 0 5px;
+      }
+      & .Title_Section {
+        opacity: 0.7;
+      }
+      & ul {
+        list-style: none;
+        padding-left: 30px;
+        & .tag_menu {
+          color: #436ed9;
+          &.active {
+            background-color: #e0f3ff;
+          }
+        }
+        & li {
+          border-radius: 5px;
+          padding: 5px 5px 5px 30px;
+          margin-top: 2px;
+        }
+      }
+    }
+    & .body_render {
+      flex: 5;
+    }
+  }
+}
