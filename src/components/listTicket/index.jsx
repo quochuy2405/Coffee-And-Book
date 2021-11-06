@@ -8,6 +8,7 @@ import { actionKM } from "../../app/KMOpen";
 import Ticket from "../Ticket";
 import "./styles.scss";
 import data from"../../data"
+
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   "& .MuDialogContent-root": {
     padding: theme.spacing(2),
@@ -40,7 +41,7 @@ const BootstrapDialogTitle = (props) => {
     </DialogTitle>
   );
 };
-const List_Ticket =[data.Tickets];
+const List_Ticket =data.Tickets;
 function ListTicket(props) {
 
   const {open} = props;
