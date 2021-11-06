@@ -15,7 +15,7 @@ export default function Login(props) {
             />
           </div>
           <div className='login'>
-            <form action='#' method='POST'>
+            <form action='/auth/admin' method='POST'>
               <h2 className='title'>Đăng nhập</h2>
               <div className='input_login input_username'>
                 <i className='fas fa-user-astronaut'></i>
