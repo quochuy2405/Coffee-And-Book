@@ -1,9 +1,10 @@
 import React from 'react';
+import Admin_Item_Table from '../Admin_Item_Table';
 
 function Minimal(props) {
     return (
         <div>
-            <h1>Minimal</h1>
+         <Admin_Item_Table/>
         </div>
     );
 }

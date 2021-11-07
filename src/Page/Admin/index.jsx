@@ -1,9 +1,9 @@
 import React, { useEffect, useLayoutEffect, useState } from 'react';
-import Analytis from '../../components/Analytis';
-import Commerce from '../../components/Commerce';
-import Minimal from '../../components/Minimal';
-import Sales from '../../components/Sales';
+import Analytis from '../../components/Admin_Components/Analytis';
+import Commerce from '../../components/Admin_Components/Commerce';
 import './styles.scss';
+import Sales from './../../components/Admin_Components/Sales/index';
+import Minimal from './../../components/Admin_Components/Minimal/index';
 
 function Admin(props) {
   const [fitter_admin, setfiller_admin] = useState("0");

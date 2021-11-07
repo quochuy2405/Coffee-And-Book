@@ -1,3 +1,4 @@
+@import "../../variables.css";
 .Admin {
   font-size: 1.1rem;
   font-weight: bold;
@@ -93,6 +94,9 @@
     }
     & .body_render {
       flex: 5;
+      position: relative;
+      width: 100%;
+      height: calc(100vh - 215px);
     }
   }
 }

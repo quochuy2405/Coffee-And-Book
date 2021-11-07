@@ -1,4 +1,40 @@
 const data = {
+  Analytis_data:[
+    {
+        invoice: "NV_01",
+        name: "Bùi Quốc Huy",
+        company: "UIT",
+        amount: "$9.38",
+        status: "Đang giao",
+        id: "abcd",
+      },
+      {
+        invoice: "NV_02",
+        name: "Bùi Quốc Huy",
+        company: "UIT",
+        amount: "$9.38",
+        status: "Hoàn Thành",
+        id: "abcd",
+      },
+      {
+        invoice: "NV_03",
+        name: "Bùi Quốc Huy",
+        company: "UIT",
+        amount: "$9.38",
+        status: "Hủy",
+        id: "abcd",
+      },
+      {
+        invoice: "NV_04",
+        name: "Bùi Quốc Huy",
+        company: "UIT",
+        amount: "$9.38",
+        status: "Hoàn Thành",
+        id: "abcd",
+      },
+
+     
+],
     GoiY:[
         {
             link_img: "https://tubikitchen.com/wp-content/uploads/2019/01/banh-bong-lan-cam-orange-chiffon-000.jpg",

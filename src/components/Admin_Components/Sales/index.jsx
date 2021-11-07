@@ -1,9 +1,10 @@
 import React from 'react';
+import Admin_Item_Table from '../Admin_Item_Table/index';
 
 function Sales(props) {
     return (
         <div>
-            <h1>Sales</h1>
+              <Admin_Item_Table/>
         </div>
     );
 }
