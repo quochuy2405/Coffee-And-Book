@@ -36,11 +36,10 @@
    & i {
      display: none;
    }
-    & h4 {
-      font-size: 1.1rem;
-      min-width: 212px;
-      text-align: center;
-    line-height: var(--height-header);
+    & svg {
+     width: 205px;
+     height: 85px;
+     border-radius: 30px;
   }
   }
   
