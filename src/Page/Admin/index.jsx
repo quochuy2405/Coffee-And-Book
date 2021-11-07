@@ -4,6 +4,7 @@ import Commerce from '../../components/Admin_Components/Commerce';
 import './styles.scss';
 import Sales from './../../components/Admin_Components/Sales/index';
 import Minimal from './../../components/Admin_Components/Minimal/index';
+import "bootstrap";
 
 function Admin(props) {
   const [fitter_admin, setfiller_admin] = useState("0");
@@ -74,8 +75,15 @@ function Admin(props) {
       <div className='Admin_main'>
         <div className='main_menu'>
           <div>
-            <p className="Title_Section"><i class="icon fas fa-rocket"></i>DashBoard</p>
-            <ul>
+            <div className="Title_Section" 
+            data-toggle='collapse'
+            data-target='#dashboard'
+            aria-expanded='false'
+            aria-controls='dashboard'
+            ><i class="icon fas fa-rocket"></i>DashBoard
+            <i class="fas fa-chevron-right"></i>
+            </div>
+            <ul className="collapse" id='dashboard'>
               <li className='tag_menu active' data-set="0">
                 Analytics
               </li>
@@ -91,8 +99,17 @@ function Admin(props) {
             </ul>
           </div>
           <div>
-            <p className="Title_Section"><i class="icon fas fa-calendar-week"></i>Details</p>
-            <ul>
+            <div className="Title_Section"
+             data-toggle='collapse'
+             data-target='#details'
+             aria-expanded='false'
+             aria-controls='details'
+             ><i class="icon fas fa-calendar-week"></i>Details
+             
+             
+             <i class="fas fa-chevron-right"></i>
+             </div>
+            <ul className="collapse" id='details'>
               <li className='tag_menu' data-set="4">
                 Products
               </li>
