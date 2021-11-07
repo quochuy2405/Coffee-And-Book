@@ -58,12 +58,14 @@ body .row {
   .App .ListItems {
     width: 75%;
   }
-  .App .ListTicket {
-    width: 400px;
-  }
+
 }
+
 @media screen and (max-width: 600px) {
   .App .ListItems {
     width: 75%;
+  }
+  .App .ListTicket {
+    width: 80vw;
   }
 }
