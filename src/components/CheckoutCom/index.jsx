@@ -35,7 +35,10 @@ function CheckoutCom(props) {
             <div className='type'>
               <p className='type_Name'>Giao Hàng</p>
               <div className='change_type'>
-                <p>Đổi phương thức</p>
+                <label htmlFor='check_choose'>
+                  {' '}
+                  <p>Đổi phương thức</p>
+                </label>
               </div>
             </div>
             <div className='info_type'>
@@ -84,7 +87,7 @@ function CheckoutCom(props) {
                 />
               </div>
               <div className='input_info'>
-                <input type='text' name='' id='' required />
+                <input type='text' name='' id='' required  placeholder="Số điện thoại"/>
               </div>
               <div className='input_info'>
                 <input

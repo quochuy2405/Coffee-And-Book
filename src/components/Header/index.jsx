@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { actionKM } from '../../app/KMOpen';
 import ListTicket from '../listTicket';
-import { HandleLoginSign } from './../../app/LoginOrSignUp';
+import { HandleLogin } from './../../app/Login';
 import './styles.scss';
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
@@ -36,7 +36,7 @@ const List_NavLink = [
 ];
 
 function Header(props) {
-  const [LoginSign, setLoginSign] = useContext(HandleLoginSign);
+  const [LoginSign, setLoginSign] = useContext(HandleLogin);
   const KMOpen = useSelector((state) => state.KMOpen);
   var counterBill = useSelector((state) => state.counterBill);
   const dispatch = useDispatch();
@@ -47,9 +47,17 @@ function Header(props) {
   const matchLogin = () => {
     const pathname = window.location.pathname;
     if (pathname.includes('/login')) {
-      setLoginSign('Đăng Ký');
+      setLoginSign({
+        name:'Đăng Ký',
+        value:0
+      
+      });
     } else {
-      setLoginSign('Đăng Nhập');
+      setLoginSign({
+        name:'Đăng Nhập',
+        value:1
+      
+      });
     }
   };
 
@@ -98,7 +106,6 @@ function Header(props) {
 
   return (
     <div className='Header'>
-      <label htmlFor='check_choose'></label>
       <input
         id='check_choose'
         type='checkbox'
@@ -193,9 +200,9 @@ function Header(props) {
           </Link>
         </div>
         <div className='icon_user'>
-          <Link to='/login'>
+          <Link to={LoginSign.value?'/login':'/signin'}>
             <button className='btn btn-success'>
-              {LoginSign}
+              {LoginSign.name}
             </button>
           </Link>
         </div>

@@ -5,14 +5,14 @@ import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import AuthContextProvider from './app/AuthContext';
-import LoginSign from './app/LoginOrSignUp';
+import Login from './app/Login';
 import store from './app/Store';
 import './index.css';
 
 ReactDOM.render(
   <React.StrictMode>
     <AuthContextProvider>
-    <LoginSign>
+    <Login>
     <BrowserRouter>
     <Provider store={store}>
     <SnackbarProvider  autoHideDuration={1500}  maxSnack={2} anchorOrigin={{vertical:'bottom',horizontal:'right'}}>
@@ -20,7 +20,7 @@ ReactDOM.render(
     </SnackbarProvider>
     </Provider>
     </BrowserRouter>
-    </LoginSign>
+    </Login>
     </AuthContextProvider>
   </React.StrictMode>,
   document.getElementById('root')

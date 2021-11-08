@@ -16,6 +16,7 @@ import NotFound from './Page/NotFound';
 import { default as Product } from './Page/Product';
 import Store from './Page/Store/index.';
 import './responsive.css';
+import SignIn from './Page/SignIn/index';
 
 function App() {
   useEffect(() => {
@@ -33,6 +34,7 @@ function App() {
         <Route path='/bill_seach' component={BillSeach} exact />
         <Route path='/checkout' component={Checkout} exact />
         <Route path='/login' component={Login} exact />
+        <Route path='/signin' component={SignIn} exact />
         <Route path='/auth/admin' component={Admin} exact />
         <Route path='/:slug' component={NotFound} />
       </Switch>
