@@ -35,8 +35,9 @@
         right: 10px;
         bottom: 10px;
     
-        background-image: var(--color-image-main);
+        background-color: var(--color-main);
         border-radius: 1rem;
+        cursor: pointer;
         & p{
             text-align: center;
             line-height: 2rem;

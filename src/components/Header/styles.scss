@@ -55,6 +55,12 @@
     background-color: var(--color-main);
     border-radius: 40px;
     justify-content: space-between;
+    cursor: pointer;
+    transition: all linear 0.2s;
+    &:hover{
+      transition: all linear 0.2s;
+      background-color: var(--color-main-act);
+    }
 
     & .Trans__img {
       display: flex;
@@ -127,6 +133,7 @@
      justify-content: center;
     text-align: center;
     white-space: nowrap;
+    
     & .active p{
       padding: 5px 0;
       line-height: normal;

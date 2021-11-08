@@ -28,6 +28,9 @@
       font-weight: bold;
       color: #797979;
       cursor: pointer;
+      &:hover{
+        color: black;
+      }
     }
   }
   & .active {
@@ -88,7 +91,7 @@
     padding: 0 5px;
   }
   &:hover {
-    color: var(--color-main);
+    color: var(--color-main-act);
   }
 }
 .SanPham {

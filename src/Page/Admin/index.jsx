@@ -124,7 +124,34 @@ function Admin(props) {
               </li>
             </ul>
           </div>
+          <div>
+            <div className="Title_Section"
+             data-toggle='collapse'
+             data-target='#products'
+             aria-expanded='false'
+             aria-controls='products'
+             ><i class="icon fab fa-product-hunt"></i>Products
+             
+             
+             <i class="fas fa-chevron-right"></i>
+             </div>
+            <ul className="collapse" id='products'>
+              <li className='tag_menu' data-set="4">
+                Products
+              </li>
+              <li className='tag_menu' data-set="5">
+                Stock
+              </li>
+              <li className='tag_menu' data-set="6">
+                Customers
+              </li>
+              <li className='tag_menu' data-set="7">
+                Other
+              </li>
+            </ul>
+          </div>
         </div>
+      
         <div className='body_render'>
                  {body_admin}
         </div>
