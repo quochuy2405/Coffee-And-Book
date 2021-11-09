@@ -14,30 +14,30 @@ function AddProduct(props) {
     }
     const HandleUpload=()=>{
         if(image)
-        {
-            const UploadTask = storage.ref(`imageProducts/${image.name}`).put(image);
-            UploadTask.on(
-                "state_changed",
-                snapshot =>{},
-                error =>{
-                    console.log(error);
-                },
-                ()=>{
-                    storage
-                    .ref("imageProducts")
-                    .child(image.name)
-                    .getDownloadURL()
-                    .then(url=>{
-                      setUrlimage(url)
-                      console.log("Image:",urlImage)
-                      enqueueSnackbar('Tải lên thành công', { variant: 'success' });
-                    })
-                    .catch((error)=>{
-                      enqueueSnackbar('Tải lên thất bại', { variant: 'error' });
+        {      enqueueSnackbar('Tải lên thành công', { variant: 'success' });
+            // const UploadTask = storage.ref(`imageProducts/${image.name}`).put(image);
+            // UploadTask.on(
+            //     "state_changed",
+            //     snapshot =>{},
+            //     error =>{
+            //         console.log(error);
+            //     },
+            //     ()=>{
+            //         storage
+            //         .ref("imageProducts")
+            //         .child(image.name)
+            //         .getDownloadURL()
+            //         .then(url=>{
+            //           setUrlimage(url)
+            //           console.log("Image:",urlImage)
+            //           enqueueSnackbar('Tải lên thành công', { variant: 'success' });
+            //         })
+            //         .catch((error)=>{
+            //           enqueueSnackbar('Tải lên thất bại', { variant: 'error' });
       
-                    })
-                }
-            )
+            //         })
+            //     }
+            // )
         }
         else{
             enqueueSnackbar('Hãy chọn tệp tin', { variant: 'warning' });
