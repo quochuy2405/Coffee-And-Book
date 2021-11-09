@@ -136,7 +136,7 @@ function Admin(props) {
              ><i className="icon fad fa-store-alt"></i>Products
              
              
-             <i classNames="fas fa-chevron-right"></i>
+             <i className="icon fas fa-chevron-right"></i>
              </div>
             <ul className="collapse" id='products'>
               <li className='tag_menu' data-set="8">
