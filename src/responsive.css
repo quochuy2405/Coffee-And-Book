@@ -60,13 +60,9 @@
       margin: 0 auto;
         display: block;
     }
-  }
-
+  } 
 
 @media screen and (max-width: 600px) {
-  .App .ListItems {
-    width: 75%;
-  }
   .App .ListTicket {
     width: 80vw;
   }
