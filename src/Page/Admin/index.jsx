@@ -5,6 +5,7 @@ import './styles.scss';
 import Sales from './../../components/Admin_Components/Sales/index';
 import Minimal from './../../components/Admin_Components/Minimal/index';
 import "bootstrap";
+import ProductUpload from './../../components/Admin_Components/ProductUpload/index';
 
 function Admin(props) {
   const [fitter_admin, setfiller_admin] = useState("0");
@@ -46,7 +47,9 @@ function Admin(props) {
           case "3": {
             return <Minimal />;
           }
-          
+          case "9": {
+            return <ProductUpload />;
+          }
           default:{
             return <Analytis />;
           }
@@ -136,17 +139,14 @@ function Admin(props) {
              <i class="fas fa-chevron-right"></i>
              </div>
             <ul className="collapse" id='products'>
-              <li className='tag_menu' data-set="4">
-                Products
+              <li className='tag_menu' data-set="8">
+                Danh sách
               </li>
-              <li className='tag_menu' data-set="5">
-                Stock
+              <li className='tag_menu' data-set="9">
+                Thêm sản phẩm
               </li>
-              <li className='tag_menu' data-set="6">
-                Customers
-              </li>
-              <li className='tag_menu' data-set="7">
-                Other
+              <li className='tag_menu' data-set="10">
+                Chỉnh sửa sản phẩm
               </li>
             </ul>
           </div>
