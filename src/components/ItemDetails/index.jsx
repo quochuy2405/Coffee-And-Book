@@ -117,9 +117,9 @@ export default function CustomizedDialogs(Props) {
                   đ
                 </p>
                 <div className='btn_number d-flex justify-content-around'>
-                  <i class='fas fa-minus-circle' onClick={decrease}></i>
+                  <i className='fas fa-minus-circle' onClick={decrease}></i>
                   <p>{count}</p>
-                  <i class='fas fa-plus-circle' onClick={increase}></i>
+                  <i className='fas fa-plus-circle' onClick={increase}></i>
                 </div>
               </div>
             </div>

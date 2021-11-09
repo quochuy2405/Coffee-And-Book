@@ -10,18 +10,6 @@ import 'firebase/storage';
     appId: '1:820137042225:web:70ed2e330abe1317c7d010',
     measurementId: 'G-LYGWFXB5RT',
   };
-  const firebaseConfig_login = {
-    apiKey: "AIzaSyAJBnJGtaLGyct6EJPFDr6EaFlTQ0Rt3JM",
-    authDomain: "loginfb-5b94a.firebaseapp.com",
-    projectId: "loginfb-5b94a",
-    storageBucket: "loginfb-5b94a.appspot.com",
-    messagingSenderId: "305410042006",
-    appId: "1:305410042006:web:34a77c6aa7b719eb693ab7",
-    measurementId: "G-KWDN1YFHS3"
-  };
- 
-   firebase.initializeApp(firebaseConfig_uploadImg);
+  firebase.initializeApp(firebaseConfig_uploadImg);
   const storage = firebase.storage()
-
-
 export {storage};

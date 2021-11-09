@@ -35,7 +35,7 @@ function SanPhamTuNha(props) {
     <div className="SanPhamTuNha">
       <div className="Title_Section">
         <div className="icon">
-        <i class="fad fa-trophy-alt"></i>
+        <i className="fad fa-trophy-alt"></i>
         </div>
         <h3>Sản Phẩm Từ Nhà</h3>
       </div>

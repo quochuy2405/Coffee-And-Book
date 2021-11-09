@@ -1,18 +1,18 @@
+import "bootstrap";
 import React, { useEffect, useLayoutEffect, useState } from 'react';
 import Analytis from '../../components/Admin_Components/Analytis';
 import Commerce from '../../components/Admin_Components/Commerce';
-import './styles.scss';
-import Sales from './../../components/Admin_Components/Sales/index';
 import Minimal from './../../components/Admin_Components/Minimal/index';
-import "bootstrap";
 import ProductUpload from './../../components/Admin_Components/ProductUpload/index';
+import Sales from './../../components/Admin_Components/Sales/index';
+import './styles.scss';
 
 function Admin(props) {
   const [fitter_admin, setfiller_admin] = useState("0");
   const [body_admin, setbody_admin] = useState(undefined);
-  const listTag = document.querySelectorAll('.tag_menu');
+  const ListTag = document.querySelectorAll('.tag_menu');
   useEffect(() => {
-    listTag.forEach((item) => {
+    ListTag.forEach((item) => {
       item.addEventListener('click', () => {
         const valueData = item.getAttribute('data-set');
         setfiller_admin(valueData);
@@ -23,7 +23,7 @@ function Admin(props) {
     document.querySelector('#root .App .Header').style.display = `none`;
   }, []);
   useEffect(() => {
-    listTag.forEach((item) => {
+    ListTag.forEach((item) => {
       const valueData = item.getAttribute('data-set');
       if (fitter_admin === valueData) {
         item.classList.add('active');
@@ -83,8 +83,8 @@ function Admin(props) {
             data-target='#dashboard'
             aria-expanded='false'
             aria-controls='dashboard'
-            ><i class="icon fad fa-rocket"></i>DashBoard
-            <i class="fas fa-chevron-right"></i>
+            ><i className="icon fad fa-rocket"></i>DashBoard
+            <i className="fas fa-chevron-right"></i>
             </div>
             <ul className="collapse" id='dashboard'>
               <li className='tag_menu active' data-set="0">
@@ -107,10 +107,10 @@ function Admin(props) {
              data-target='#details'
              aria-expanded='false'
              aria-controls='details'
-             ><i class="icon fad fa-calendar-week"></i>Details
+             ><i className="icon fad fa-calendar-week"></i>Details
              
              
-             <i class="fas fa-chevron-right"></i>
+             <i className="fas fa-chevron-right"></i>
              </div>
             <ul className="collapse" id='details'>
               <li className='tag_menu' data-set="4">
@@ -133,10 +133,10 @@ function Admin(props) {
              data-target='#products'
              aria-expanded='false'
              aria-controls='products'
-             ><i class="icon fad fa-store-alt"></i>Products
+             ><i className="icon fad fa-store-alt"></i>Products
              
              
-             <i class="fas fa-chevron-right"></i>
+             <i classNames="fas fa-chevron-right"></i>
              </div>
             <ul className="collapse" id='products'>
               <li className='tag_menu' data-set="8">

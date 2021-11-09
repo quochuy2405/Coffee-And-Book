@@ -41,7 +41,7 @@ function Home() {
         <div className="Tags">
           <ul>
             <div className="icon">
-            <i class="fad fa-lightbulb"></i>
+            <i className="fad fa-lightbulb"></i>
             </div>
             <li className="Tag active goiy" onClick={() => ChangeActive(".goiy")}>
               Nhà gợi ý cho bạn

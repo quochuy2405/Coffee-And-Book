@@ -40,7 +40,7 @@ export default function Admin_Item_Table(props) {
               <td>
                 <button
                   type='button'
-                  class='btn btn-danger'
+                  className='btn btn-danger'
                   data-set={item.id}
                   onClick={() => HandleDelete(item.id)}>
                   Delete
@@ -49,7 +49,7 @@ export default function Admin_Item_Table(props) {
               <td>
                 <button
                   type='button'
-                  class='btn btn-warning'
+                  className='btn btn-warning'
                   data-set={item.id}>
                   Update
                 </button>
