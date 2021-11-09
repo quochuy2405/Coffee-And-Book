@@ -26,7 +26,7 @@ function CheckoutCom(props) {
   return (
     <div className='Checkout_com'>
       <div className='Checkout_com_Title'>
-        <i className='fa fa-file'></i>
+      <i class="fad fa-file"></i>
         <h3>Xác nhận đơn hàng</h3>
       </div>
       <div className='checkout__body'>
@@ -170,7 +170,7 @@ function CheckoutCom(props) {
             {get.map((item, index) => (
               <li key={index} className='list__bill-Iteam'>
                 <div className='list_fix'>
-                  <i class='fas fa-shield-virus'></i>
+                <i class="fad fa-acorn"></i>
                 </div>
                 <div className='list_text'>
                   <b className='tilte_item'>{item.title} </b>

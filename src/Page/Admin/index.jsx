@@ -80,21 +80,21 @@ function Admin(props) {
             data-target='#dashboard'
             aria-expanded='false'
             aria-controls='dashboard'
-            ><i class="icon fas fa-rocket"></i>DashBoard
+            ><i class="icon fad fa-rocket"></i>DashBoard
             <i class="fas fa-chevron-right"></i>
             </div>
             <ul className="collapse" id='dashboard'>
               <li className='tag_menu active' data-set="0">
-                Analytics
+                Đơn hàng
               </li>
               <li className='tag_menu' data-set="1">
-                Commerce
+                Khách hàng
               </li>
               <li className='tag_menu' data-set="2">
-                Sales
+                Nhân viên
               </li>
               <li className='tag_menu' data-set="3">
-                Minimal
+                Tài Khoản
               </li>
             </ul>
           </div>
@@ -104,20 +104,20 @@ function Admin(props) {
              data-target='#details'
              aria-expanded='false'
              aria-controls='details'
-             ><i class="icon fas fa-calendar-week"></i>Details
+             ><i class="icon fad fa-calendar-week"></i>Details
              
              
              <i class="fas fa-chevron-right"></i>
              </div>
             <ul className="collapse" id='details'>
               <li className='tag_menu' data-set="4">
-                Products
+                Sản phầm
               </li>
               <li className='tag_menu' data-set="5">
-                Stock
+                Thông tin kho
               </li>
               <li className='tag_menu' data-set="6">
-                Customers
+                Doanh thu
               </li>
               <li className='tag_menu' data-set="7">
                 Other
@@ -130,7 +130,7 @@ function Admin(props) {
              data-target='#products'
              aria-expanded='false'
              aria-controls='products'
-             ><i class="icon fab fa-product-hunt"></i>Products
+             ><i class="icon fad fa-store-alt"></i>Products
              
              
              <i class="fas fa-chevron-right"></i>

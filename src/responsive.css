@@ -66,4 +66,7 @@
   .App .ListTicket {
     width: 80vw;
   }
+  :root{
+    --height-iteam_col:16rem;
+  }
 }
