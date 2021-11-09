@@ -196,7 +196,7 @@ function Header(props) {
       <div className='Header__User_Store'>
         <div className='homeIcon'>
           <Link to='/'>
-            <i className='fas fa-home'></i>
+          <i class="fad fa-home"></i>
           </Link>
         </div>
         <div className='icon_user'>
@@ -214,12 +214,12 @@ function Header(props) {
             color='secondary'
             className='icon_checkout'>
             <Link to='/Checkout'>
-              <i className='fas fa-shopping-cart'></i>
+            <i class="fad fa-shopping-cart"></i>
             </Link>
           </StyledBadge>
         </div>
         <div>
-          <i className='fas fa-hamburger hamber'></i>
+        <i class="hamber fad fa-bars"></i>
         </div>
       </div>
     </div>

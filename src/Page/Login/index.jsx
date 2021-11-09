@@ -38,7 +38,7 @@ export default function Login(props) {
             <form action="/auth/admin"  > {/* onSubmit={Login} */}
               <h2 className='title'>Đăng nhập</h2>
               <div className='input_login input_username'>
-                <i className='fas fa-user-astronaut'></i>
+              <i className='fas fa-user-astronaut'></i>
                 <input
                   type='text'
                   id='username'
@@ -51,7 +51,7 @@ export default function Login(props) {
               </div>
 
               <div className='input_login input_password'>
-                <i className='fas fa-lock'></i>
+              <i class="fal fa-lock-alt"></i>
                 <input
                   type='password'
                   className='input_password'

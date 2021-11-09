@@ -54,18 +54,3 @@ body .row {
 *::-webkit-scrollbar-thumb:hover {
   background: rgb(255, 205, 129);
 }
-@media screen and (min-width: 1280px) {
-  .App .ListItems {
-    width: 75%;
-  }
-
-}
-
-@media screen and (max-width: 600px) {
-  .App .ListItems {
-    width: 75%;
-  }
-  .App .ListTicket {
-    width: 80vw;
-  }
-}

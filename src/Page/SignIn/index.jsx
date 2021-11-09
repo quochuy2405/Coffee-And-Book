@@ -66,7 +66,7 @@ export default function SignIn(props) {
                 />
               </div>
               <div className='input_signin input_username'>
-                <i className='fas fa-user-astronaut'></i>
+              <i class="fas fa-mobile-alt"></i>
                 <input
                   type='text'
                   id='sdt'
@@ -78,7 +78,7 @@ export default function SignIn(props) {
                 />
               </div>
               <div className='input_signin input_password'>
-                <i className='fas fa-lock'></i>
+              <i class="fal fa-lock-alt"></i>
                 <input
                   type='password'
                   className='input_password'
@@ -90,7 +90,7 @@ export default function SignIn(props) {
                 />
               </div>
               <div className='input_signin input_password'>
-                <i className='fas fa-lock'></i>
+              <i class="far fa-check-circle"></i>
                 <input
                   type='password'
                   className='input_password'
