@@ -1,22 +1,20 @@
 import React from 'react';
 import data from '../../../data';
-import Table_Account from '../Table_Account';
-
-function Sales(props) {
+import Table_Person from './../Table_Person/index';
+function Customers(props) {
     const List_Title_Head=[
         
         {Name:"Mã số"},
         {Name:"Họ tên"},
-        {Name:"Gmail"},
+        {Name:"Địa chỉ"},
         {Name:"Số điện thoại"},
         {Name:"Xóa"},
         {Name:"Cập nhật"},   
 ]
 
         return (    
-                <Table_Account List={data.Employees_data} List_Title_Head={List_Title_Head}/>
+                <Table_Person List={data.Cutomers_data} List_Title_Head={List_Title_Head}/>
         );
 }
 
-
-export default Sales;
+export default Customers;

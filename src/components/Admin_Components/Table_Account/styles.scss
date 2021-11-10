@@ -1,14 +1,15 @@
 .body_page {
-  background: white;
-  height: fit-content;
-  box-shadow: 0px 5px 10px #999999;
-  border-radius: 10px;
-  width: 95%;
   margin: 40px auto;
   /* position: absolute; */
   padding: 20px;
+  width: 95%;
+  height: fit-content;
+  max-height: calc( 100% - 85px);
+  box-shadow: 0px 5px 10px #999999;
+  border-radius: 10px;
+  background: white;
   text-align: center;
-
+  overflow-y: scroll;
   .itemTable {
     border-radius: 10px;
     border: 2px solid rgb(223, 221, 221);

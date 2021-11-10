@@ -105,6 +105,11 @@ function Header(props) {
   }, []);
 
   return (
+    <>
+         <input type="checkbox" name="" id="nav_hamber" />
+      <div className="main_navhamber">
+           âssasas
+      </div>
     <div className='Header'>
       <input
         id='check_choose'
@@ -192,7 +197,7 @@ function Header(props) {
           )}
         </ul>
       </div>
-      <ListTicket open={KMOpen} />
+     
       <div className='Header__User_Store'>
         <div className='homeIcon'>
           <Link to='/'>
@@ -219,10 +224,16 @@ function Header(props) {
           </StyledBadge>
         </div>
         <div>
-        <i className="hamber fad fa-bars"></i>
+    
+         <label htmlFor="nav_hamber"><i className="hamber fad fa-bars"></i></label>
+        
         </div>
       </div>
+      
     </div>
+     <ListTicket open={KMOpen} />
+   
+     </>
   );
 }
 

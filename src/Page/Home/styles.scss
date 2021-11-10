@@ -1,6 +1,6 @@
 @import "../../variables.css";
 .Slider_Home {
-  height: var(--height-slider);
+  height: fit-content;
   width: 100%;
   //  background-image:linear-gradient(90deg, rgb(186, 163, 201) 0%, rgb(214, 206, 173) 46%, rgb(98, 189, 223) 100%);
   background-image: linear-gradient(to right, #198754, #b4cf81);

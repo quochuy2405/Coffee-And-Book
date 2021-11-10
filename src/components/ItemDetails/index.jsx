@@ -101,7 +101,7 @@ export default function CustomizedDialogs(Props) {
           onClose={handleClose}>
           Thêm món mới
         </BootstrapDialogTitle>
-        <DialogContent dividers>
+        <DialogContent dividers className="Width_details">
           <div className='bodyDetails'>
             <div className='imgDetail'>
               <img src={Item.link_img} alt='' />

@@ -1,11 +1,12 @@
 import "bootstrap";
 import React, { useEffect, useLayoutEffect, useState } from 'react';
-import Analytis from '../../components/Admin_Components/Analytis';
-import Commerce from '../../components/Admin_Components/Commerce';
-import Minimal from './../../components/Admin_Components/Minimal/index';
+import Analytis from "../../components/Admin_Components/Bill_Order";
+import Account from '../../components/Admin_Components/Account/index';
+import Customers from '../../components/Admin_Components/Customers/index';
 import ProductUpload from './../../components/Admin_Components/ProductUpload/index';
 import Sales from './../../components/Admin_Components/Sales/index';
 import './styles.scss';
+import Product_List from "../../components/Admin_Components/Product_Ad";
 
 function Admin(props) {
   const [fitter_admin, setfiller_admin] = useState("0");
@@ -39,15 +40,18 @@ function Admin(props) {
             return <Analytis />;
           }
           case "1": {
-            return <Commerce />;
+            return <Customers />;
           }
           case "2": {
             return <Sales />;
           }
           case "3": {
-            return <Minimal />;
+            return <Account />;
           }
-          case "9": {
+          case "6": {
+            return <Product_List />;
+          }
+          case "7": {
             return <ProductUpload />;
           }
           default:{
@@ -114,17 +118,12 @@ function Admin(props) {
              </div>
             <ul className="collapse" id='details'>
               <li className='tag_menu' data-set="4">
-                Sản phầm
-              </li>
-              <li className='tag_menu' data-set="5">
                 Thông tin kho
               </li>
-              <li className='tag_menu' data-set="6">
+              <li className='tag_menu' data-set="5">
                 Doanh thu
               </li>
-              <li className='tag_menu' data-set="7">
-                Other
-              </li>
+
             </ul>
           </div>
           <div>
@@ -139,15 +138,13 @@ function Admin(props) {
              <i className="icon fas fa-chevron-right"></i>
              </div>
             <ul className="collapse" id='products'>
-              <li className='tag_menu' data-set="8">
+              <li className='tag_menu' data-set="6">
                 Danh sách
               </li>
-              <li className='tag_menu' data-set="9">
+              <li className='tag_menu' data-set="7">
                 Thêm sản phẩm
               </li>
-              <li className='tag_menu' data-set="10">
-                Chỉnh sửa sản phẩm
-              </li>
+
             </ul>
           </div>
         </div>

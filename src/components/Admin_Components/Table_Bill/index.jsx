@@ -2,31 +2,34 @@ import './styles.scss';
 import React from 'react';
 import PropTypes from 'prop-types';
 
-Admin_Item_Table.propTypes = {
+Table_Bill.propTypes = {
   List: PropTypes.array,
+  List_Title_Head:PropTypes.array,
 };
-Admin_Item_Table.defaultProps = {
+Table_Bill.defaultProps = {
   List: [],
+  List_Title_Head:[]
 };
-export default function Admin_Item_Table(props) {
+export default function Table_Bill(props) {
   const HandleDelete = async (id) => {
     if (window.confirm('Bạn đã chắc chắn muốn xóa?')) {
       await document.getElementById(`${id}`).remove();
     }
   };
-  const { List } = props;
+  const { List,List_Title_Head } = props;
   return (
     <div className='body_page'>
       <table className='itemTable'>
         <thead className='headerTable'>
           <tr>
-            <th>Invoice</th>
-            <th>Name</th>
-            <th>Company</th>
-            <th>Amount</th>
-            <th>Status</th>
-            <th>Delete</th>
-            <th>Update</th>
+            {
+                List_Title_Head.map((item,index)=>(
+
+                 <th key={index}>{item.Name}</th>
+
+                ))
+            }
+          
           </tr>
         </thead>
         <tbody>
@@ -43,7 +46,7 @@ export default function Admin_Item_Table(props) {
                   className='btn btn-danger'
                   data-set={item.id}
                   onClick={() => HandleDelete(item.id)}>
-                  Delete
+                  Hủy
                 </button>
               </td>
               <td>
@@ -51,7 +54,7 @@ export default function Admin_Item_Table(props) {
                   type='button'
                   className='btn btn-warning'
                   data-set={item.id}>
-                  Update
+                  Hoàn Tất
                 </button>
               </td>
             </tr>
