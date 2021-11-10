@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { memo, useEffect } from "react";
 import MessengerCustomerChat from "react-messenger-customer-chat";
 import ListStore from "../../components/List_Store";
 import Slider from "../../components/Slider";
@@ -22,4 +22,4 @@ function Store(props) {
   );
 }
 
-export default Store;
+export default memo(Store);

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { memo, useEffect } from 'react';
 import MessengerCustomerChat from 'react-messenger-customer-chat';
 import ListTicket from '../../components/listTicket';
 
@@ -18,4 +18,4 @@ function Cart(props) {
     );
 }
 
-export default Cart;
+export default memo(Cart);

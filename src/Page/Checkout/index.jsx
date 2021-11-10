@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { memo, useEffect } from 'react';
 import MessengerCustomerChat from 'react-messenger-customer-chat';
 import { useSelector } from 'react-redux';
 import { Redirect } from 'react-router';
@@ -23,4 +23,4 @@ function Checkout(props) {
     );
 }
 
-export default Checkout;
+export default memo(Checkout);

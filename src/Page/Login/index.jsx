@@ -1,9 +1,9 @@
-import React, { useContext, useState } from 'react';
+import React, { memo, useContext, useState } from 'react';
 import MessengerCustomerChat from 'react-messenger-customer-chat/lib/MessengerCustomerChat';
 import { Link } from 'react-router-dom';
 import { AuthContext } from './../../app/AuthContext';
 import './styles.scss';
-export default function Login(props) {
+ function Login(props) {
   const [dataFrom, setDataform] = useState({
     username: '',
     password: '',
@@ -81,3 +81,4 @@ export default function Login(props) {
     </div>
   );
 }
+export default memo(Login);

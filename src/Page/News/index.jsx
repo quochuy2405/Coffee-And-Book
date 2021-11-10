@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { memo, useEffect } from "react";
 import Footer from "../../components/Footer";
 import ListItemNews from "../../components/ListItemNews";
 import "./styles.scss";
@@ -21,4 +21,4 @@ function News(props) {
   );
 }
 
-export default News;
+export default memo(News);

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { memo, useEffect } from 'react'
 
 function NotFound() {
 
@@ -12,4 +12,4 @@ function NotFound() {
     );
 }
 
-export default NotFound;
+export default memo(NotFound);

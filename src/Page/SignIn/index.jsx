@@ -1,10 +1,10 @@
 import { useSnackbar } from 'notistack';
-import React, { useContext, useState } from 'react';
+import React, { memo, useContext, useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { AuthContext } from './../../app/AuthContext';
 import './styles.scss';
 import MessengerCustomerChat  from 'react-messenger-customer-chat';
-export default function SignIn(props) {
+ function SignIn(props) {
   const { enqueueSnackbar } = useSnackbar();
   const [dataFrom, setDataform] = useState({
     username: '',
@@ -117,3 +117,4 @@ export default function SignIn(props) {
     </div>
   );
 }
+export default memo(SignIn);

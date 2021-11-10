@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { memo, useEffect } from "react";
 import Footer from "../../components/Footer";
 import SanPhamTuNha from "../../components/SanPhamTuNha";
 import "./styles.scss";
@@ -18,4 +18,4 @@ function Product(props) {
   );
 }
 
-export default Product;
+export default memo(Product);
