@@ -1,7 +1,7 @@
 .AddProduct {
     width: 60%;
-    height: 70%;
-    margin:5% 20%;
+    height: fit-content;
+    margin:3% 20%;
     box-shadow:  0px 5px 10px rgb(150, 149, 149);
     padding: 20px;
     position: absolute;
@@ -12,6 +12,7 @@
         "h5 h5";
     gap: 20px;
     font-weight: 700;
+    border-radius: 10px;
     & .title{
         grid-area: h1;
     }

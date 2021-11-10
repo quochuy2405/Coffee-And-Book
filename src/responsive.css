@@ -108,6 +108,22 @@
   .App .Checkout_com .checkout__body .body__bill {
     margin: 20px 0;
   }
+  .App .Admin .Admin_main .main_menu{
+    position: absolute;
+    transform: translateX(-100%);
+    z-index: 999;
+    width: 30%;
+    transition: transform ease 0.3s;
+  }
+  .App .Admin .Admin_main .close_admin {
+    visibility: visible;
+  }
+  .App .body_page .text_over{
+    max-width: 70px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
 @media screen and (max-width: 992px) and (min-width: 601px) {
   .App .Checkout_com .checkout__body {
@@ -117,6 +133,26 @@
   }
   .App .Checkout_com .checkout__body .body__bill {
     margin: 20px 0;
+  }
+  .App .Admin .Admin_main .main_menu{
+    position: absolute;
+    transform: translateX(-100%);
+    z-index: 999;
+    width: 30%;
+    transition: transform ease 0.3s;
+  }
+  .App .Admin .Admin_main .close_admin {
+    visibility: visible;
+  }
+  .App .Admin_main .body_render{
+    min-width: 500px;
+
+  }
+  .App .body_page .titlePro{
+    max-width: 75px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
 @media screen and (max-width: 1056px) and (min-width: 601px) {

@@ -36,9 +36,9 @@ export default function Table_Person(props) {
           {List.map((item, index) => (
             <tr key={index} id={item.id}>
               <td>{item.invoice}</td>
-              <td>{item.name}</td>
+              <td className="text_over">{item.name}</td>
               <td>{item.company}</td>
-              <td>{item.phone}</td>
+              <td className="text_over">{item.phone}</td>
 
               <td>
                 <button

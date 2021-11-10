@@ -39,7 +39,7 @@ export default function Table_Product(props) {
           {List.map((item, index) => (
             <tr key={index} id={item.id}>
               <td>{item.id}</td>
-              <td>{item.title}</td>
+              <td className="text_over">{item.title}</td>
               <td>$ {item.price}</td>
               <td>{item.origin}</td>
               <td>{item.rate}</td>

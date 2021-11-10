@@ -10,7 +10,7 @@
   background: white;
   text-align: center;
   overflow-y: scroll;
-  .itemTable {
+  & .itemTable {
     border-radius: 10px;
     border: 2px solid rgb(223, 221, 221);
     height: fit-content;

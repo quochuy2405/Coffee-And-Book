@@ -63,10 +63,42 @@
   & .Admin_main {
     display: flex;
     position: relative;
+    & #nav_admin{
+      display: none;
+    }
+    & #nav_admin:checked ~ .main_menu{
+      transform: translateX(0%);
+      transition: transform ease 0.3s;
+    }
+    & .bar_admin{
+      position: absolute;
+      z-index: 99;
+      width: 40px;
+      height: 40px;
+      background-color: white;
+      box-shadow: 5px 5px 10px rgb(134, 134, 134);
+      border-radius: 10px;
+      font-size: 1.4rem;
+      display: flex;
+      margin: 5px;
+      justify-content: center;
+      line-height: 40px;
 
+    }
+
+    & .close_admin{
+      visibility: hidden;
+      position: absolute;
+      top:0px;
+      right: 5px;
+        & p{
+     
+        font-size: 1.3rem;
+        }
+    }
     & .main_menu {
       
-      padding: 2% 2% 2% 1%;
+      padding: 5% 2% 2% 1%;
       flex: 1;
       overflow-y: scroll;
       background-color: #ffffff;

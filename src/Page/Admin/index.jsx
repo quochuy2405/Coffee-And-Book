@@ -80,7 +80,16 @@ function Admin(props) {
         </div>
       </div>
       <div className='Admin_main'>
+      <input type="checkbox" id="nav_admin"  />
+      <div className="bar_admin">
+        <label htmlFor="nav_admin"><i class="fad fa-bars"></i></label>
+         
+      </div>
+       
         <div className='main_menu'>
+        <label htmlFor='nav_admin' className='close_admin'>
+          <p id='nav_X_admin'>&#x2715;</p>
+        </label>
           <div>
             <div className="Title_Section" 
             data-toggle='collapse'
@@ -112,8 +121,6 @@ function Admin(props) {
              aria-expanded='false'
              aria-controls='details'
              ><i className="icon fad fa-calendar-week"></i>Details
-             
-             
              <i className="fas fa-chevron-right"></i>
              </div>
             <ul className="collapse" id='details'>
@@ -133,9 +140,7 @@ function Admin(props) {
              aria-expanded='false'
              aria-controls='products'
              ><i className="icon fad fa-store-alt"></i>Products
-             
-             
-             <i className="icon fas fa-chevron-right"></i>
+            <i className=" fas fa-chevron-right"></i>
              </div>
             <ul className="collapse" id='products'>
               <li className='tag_menu' data-set="6">

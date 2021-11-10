@@ -36,9 +36,9 @@ export default function Table_Account(props) {
           {List.map((item, index) => (
             <tr key={index} id={item.id}>
               <td>{item.id}</td>
-              <td>{item.name}</td>
-              <td>{item.gmail}</td>
-              <td>{item.phone}</td>
+              <td className="text_over">{item.name}</td>
+              <td className="text_over">{item.gmail}</td>
+              <td className="text_over">{item.phone}</td>
               <td>
                 <button
                   type='button'

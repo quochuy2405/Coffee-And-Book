@@ -6,6 +6,7 @@ const data = {
       company: 'UIT',
       amount: '$9.38',
       status: 'Đang giao',
+      id:'KH_01'
     },
     {
       invoice: 'KH_02',
@@ -13,6 +14,7 @@ const data = {
       company: 'UIT',
       amount: '$9.38',
       status: 'Hoàn Thành',
+      id:'KH_02'
     },
     {
       invoice: 'KH_03',
@@ -20,6 +22,7 @@ const data = {
       company: 'UIT',
       amount: '$9.38',
       status: 'Hủy',
+      id:'KH_03'
     },
     {
       invoice: 'KH_04',
@@ -27,6 +30,8 @@ const data = {
       company: 'UIT',
       amount: '$9.38',
       status: 'Hoàn Thành',
+      id:'KH_04'
+
     },
   ],
   Product_data: [
