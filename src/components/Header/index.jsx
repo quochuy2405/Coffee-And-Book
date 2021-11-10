@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { actionKM } from '../../app/KMOpen';
 import ListTicket from '../listTicket';
+import Nav_mobile from '../Nav_Mobile';
 import { HandleLogin } from './../../app/Login';
 import './styles.scss';
 
@@ -106,11 +107,9 @@ function Header(props) {
 
   return (
     <>
-         <input type="checkbox" name="" id="nav_hamber" />
-      <div className="main_navhamber">
-           âssasas
-      </div>
+
     <div className='Header'>
+        <Nav_mobile/>
       <input
         id='check_choose'
         type='checkbox'

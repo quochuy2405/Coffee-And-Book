@@ -17,6 +17,7 @@ import { default as Product } from './Page/Product';
 import Store from './Page/Store/index.';
 import './responsive.css';
 import SignIn from './Page/SignIn/index';
+import Nav_mobile from './components/Nav_Mobile/index';
 
 function App() {
   useEffect(() => {
@@ -24,7 +25,10 @@ function App() {
     AOS.refresh();
   }, []);
   return (
+    <>   
+
     <div className='App'>
+   
       <Header />
       <Switch>
         <Route path='/' component={Home} exact />
@@ -38,8 +42,10 @@ function App() {
         <Route path='/auth/admin' component={Admin} exact />
         <Route path='/:slug' component={NotFound} />
       </Switch>
+     
       <MessengerCustomerChat pageId='111223271362400' appId='477337363536411' />
     </div>
+    </>
   );
 }
 

@@ -263,15 +263,3 @@ margin-top: -2px;
 .btn-success{
   width: 110px;
 }
-.main_navhamber{
-  position: absolute;
-  background-color: white;
-  width:  100vh ;
-  height:  calc( 100vw + var(--height-header));
-  z-index: 9999;
-  transform: translateX(-100%);
-  
-}
-#nav_hamber:checked ~ .main_navhamber{
-  transform: translateX(0);
-}

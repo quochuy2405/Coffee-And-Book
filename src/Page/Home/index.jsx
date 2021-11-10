@@ -36,7 +36,7 @@ function Home() {
           <Slider />
         </div>
         
-      </div>
+  
       <div className="GoiY">
         <div className="Tags">
           <ul>
@@ -103,6 +103,7 @@ function Home() {
         </div>
       </div>
       <Footer />
+      </div>
     </div>
   );
 }
