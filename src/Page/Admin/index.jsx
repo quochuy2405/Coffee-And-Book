@@ -22,9 +22,9 @@ function Admin(props) {
     });
   },);
   useLayoutEffect(() => {  
-    if( document.getElementById('#fb-root'))
+    if( document.querySelector('body div#fb-root'))
     {
-      document.getElementById('#fb-root').style.display=`none`;
+      document.querySelector('body div#fb-root').style.display=`none`;
     }
    
     document.querySelector('#root .App .Header').style.display = `none`;
