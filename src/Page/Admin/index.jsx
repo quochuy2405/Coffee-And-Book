@@ -21,9 +21,14 @@ function Admin(props) {
       });
     });
   },);
-  useLayoutEffect(() => {
+  useLayoutEffect(() => {  
+    if( document.getElementById('#fb-root'))
+    {
+      document.getElementById('#fb-root').style.display=`none`;
+    }
+   
     document.querySelector('#root .App .Header').style.display = `none`;
-    document.querySelector('.fb_reset').style.display=`none`
+  
   }, []);
   useEffect(() => {
     ListTag.forEach((item) => {
