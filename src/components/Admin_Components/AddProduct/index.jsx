@@ -10,12 +10,22 @@ function AddProduct(props) {
   const [urlImage, setUrlimage] = useState(undefined);
   var HandleChange = (e) => {
     const file = e.target.files[0];
-    if (file) {
+    const  fileType = file['type'];
+    const validImageTypes = ['image/gif', 'image/jpeg', 'image/png'];
+    if (!validImageTypes.includes(fileType)) {
+      enqueueSnackbar('Sai định dạng', { variant: 'error' });
+      setUrlimage(undefined)
+    }else
+    {
+       if (file) {
       file.preview = URL.createObjectURL(file);
       setImage(file);
+       }
     }
+   
   };
   const HandleUpload = () => {
+    
     if (image) {
       enqueueSnackbar('Tải lên thành công', { variant: 'success' });
       // const UploadTask = storage.ref(`imageProducts/${image.name}`).put(image);
