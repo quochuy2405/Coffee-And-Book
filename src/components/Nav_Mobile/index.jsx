@@ -49,7 +49,7 @@ function Nav_mobile(props) {
           <button
             type='button'
             onClick={handleClickOpenKM}
-            class='btn btn-success'>
+            class='btn nav btn-success'>
             Khuyến Mãi
           </button>
 
