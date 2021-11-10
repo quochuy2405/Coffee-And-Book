@@ -101,9 +101,12 @@
     margin: 0 auto;
   }
 }
+.search_bottom{
+  display: flex;
+}
 .color_orange{
   color:var(--color-main);
-  
+  justify-content: center
 }
 .Search_Store {
   height: 400px;

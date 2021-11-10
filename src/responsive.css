@@ -12,6 +12,9 @@
   .App .Admin_main .body_render .itemTable{
     width: 800px;
  }
+ .App .filter_store{
+  display: block;
+ }
   :root {
     --width-iteam_col: 8.813rem !important;
     --height-iteam_col: 16rem;

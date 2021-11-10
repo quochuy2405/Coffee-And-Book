@@ -81,7 +81,7 @@ function Home() {
         <div>
           <div>
             <div className="filter_store">
-              <div className="d-flex">
+              <div className="search_bottom">
                 <i className="fas fa-home color_orange"></i>
                 <h5>Tìm Một Cửa Hàng</h5>
               </div>
