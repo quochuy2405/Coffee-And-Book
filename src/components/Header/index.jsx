@@ -1,7 +1,6 @@
 import Badge from '@mui/material/Badge';
 import { styled } from '@mui/material/styles';
 import React, { memo, useContext, useLayoutEffect } from 'react';
-import MessengerCustomerChat from 'react-messenger-customer-chat';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { actionKM } from '../../app/KMOpen';
@@ -233,7 +232,7 @@ function Header(props) {
     </div>
      <ListTicket open={KMOpen} />
    
-     <MessengerCustomerChat className="messenger" pageId='111223271362400' appId='477337363536411' />
+
      </>
   );
 }

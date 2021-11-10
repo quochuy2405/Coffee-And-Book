@@ -1,7 +1,7 @@
 import React, { memo, useEffect } from "react";
 import ListStore from "../../components/List_Store";
 import Slider from "../../components/Slider";
-
+import MessengerCustomerChat from 'react-messenger-customer-chat';
 Store.propTypes = {};
 
 function Store(props) {
@@ -16,6 +16,7 @@ function Store(props) {
         </div>
         <ListStore />
       </div>
+      <MessengerCustomerChat pageId='111223271362400' appId='477337363536411' />
     </div>
   );
 }

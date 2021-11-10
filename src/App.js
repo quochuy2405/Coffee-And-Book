@@ -40,8 +40,6 @@ function App() {
         <Route path='/auth/admin' component={Admin} exact />
         <Route path='/:slug' component={NotFound} />
       </Switch>
-     
-
     </div>
     </>
   );

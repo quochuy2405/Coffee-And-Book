@@ -1,6 +1,7 @@
 import React, { memo, useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from './../../app/AuthContext';
+import MessengerCustomerChat from 'react-messenger-customer-chat';
 import './styles.scss';
  function Login(props) {
   const [dataFrom, setDataform] = useState({
@@ -76,6 +77,7 @@ import './styles.scss';
           <div className='dot'></div>
         </div>
       </div>
+      <MessengerCustomerChat pageId='111223271362400' appId='477337363536411' />
     </div>
   );
 }
