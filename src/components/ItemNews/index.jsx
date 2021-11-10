@@ -8,7 +8,7 @@ function ItemNews(props) {
             <div className="New_img">
                 <img src={Item.link_img} alt="" />
             </div>
-            <p>{Item.title}</p>
+            <p className="tilte_new">{Item.title}</p>
             <p className="News_des">{Item.description}</p>
             <div className="btn_watch"></div>
             <div className="btn_news">

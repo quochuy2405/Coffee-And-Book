@@ -20,6 +20,16 @@
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
         overflow: hidden;
+        padding: 0 5px;
+    }
+    & .tilte_new{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 1.0rem;
+        color: black;
+        font-weight: bold;
+        text-align: center;
     }
     & .New_img{
         & img{
