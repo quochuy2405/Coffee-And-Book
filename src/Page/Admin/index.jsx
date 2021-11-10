@@ -15,6 +15,7 @@ function Admin(props) {
   useEffect(() => {
     ListTag.forEach((item) => {
       item.addEventListener('click', () => {
+        document.getElementById('nav_X_admin').click();
         const valueData = item.getAttribute('data-set');
         setfiller_admin(valueData);
       });

@@ -9,6 +9,9 @@
   }
 }
 @media screen and (max-width: 600px) {
+  .App .Admin_main .body_render .itemTable{
+    width: 800px;
+ }
   :root {
     --width-iteam_col: 8.813rem !important;
     --height-iteam_col: 16rem;
@@ -109,10 +112,12 @@
     margin: 20px 0;
   }
   .App .Admin .Admin_main .main_menu{
+    min-width: 100%;
     position: absolute;
     transform: translateX(-100%);
     z-index: 999;
     width: 30%;
+    height: calc(100vh - 44px);
     transition: transform ease 0.3s;
   }
   .App .Admin .Admin_main .close_admin {
@@ -124,8 +129,14 @@
     overflow: hidden;
     text-overflow: ellipsis;
   }
+  .App .Admin .Admin_main .bar_admin{
+    visibility: visible;
+  }
 }
 @media screen and (max-width: 992px) and (min-width: 601px) {
+  .App .Admin_main .body_render .itemTable{
+    width: 800px;
+ }
   .App .Checkout_com .checkout__body {
     width: 93%;
     margin: 0 auto;
@@ -135,18 +146,19 @@
     margin: 20px 0;
   }
   .App .Admin .Admin_main .main_menu{
+    min-width: 300px;
     position: absolute;
     transform: translateX(-100%);
     z-index: 999;
     width: 30%;
+    height:100% ;
     transition: transform ease 0.3s;
   }
   .App .Admin .Admin_main .close_admin {
     visibility: visible;
   }
-  .App .Admin_main .body_render{
-    min-width: 500px;
-
+  .App .Admin .Admin_main .bar_admin{
+    visibility: visible;
   }
   .App .body_page .titlePro{
     max-width: 75px;
