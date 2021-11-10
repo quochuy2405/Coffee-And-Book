@@ -1,5 +1,6 @@
 import React from 'react';
 // import { storage } from "../firebase_uploadimg"
+//"firebase": "^4.8.0",
 import { useState } from 'react';
 import { useSnackbar } from 'notistack';
 function AddProduct(props) {
