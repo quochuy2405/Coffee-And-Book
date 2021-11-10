@@ -233,7 +233,7 @@ function Header(props) {
     </div>
      <ListTicket open={KMOpen} />
    
-     <MessengerCustomerChat pageId='111223271362400' appId='477337363536411' />
+     <MessengerCustomerChat className="messenger" pageId='111223271362400' appId='477337363536411' />
      </>
   );
 }

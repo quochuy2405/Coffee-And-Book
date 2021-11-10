@@ -23,6 +23,7 @@ function Admin(props) {
   },);
   useLayoutEffect(() => {
     document.querySelector('#root .App .Header').style.display = `none`;
+    document.querySelector('iframe#_no-clickjacking-0').style.display=`none`
   }, []);
   useEffect(() => {
     ListTag.forEach((item) => {
