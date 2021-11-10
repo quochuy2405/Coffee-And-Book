@@ -13,7 +13,7 @@ function Nav_mobile(props) {
     dispatch(actionKM(true));
   };
   useEffect(() => {
-    const listButton = document.querySelectorAll('.btn');
+    const listButton = document.querySelectorAll('.btn.nav');
     listButton.forEach((item) => {
       item.addEventListener('click', () => {
         document.getElementById('nav_X').click();
@@ -29,17 +29,17 @@ function Nav_mobile(props) {
         </label>
         <ul className='nav_hamber-item'>
           <Link to='/product'>
-            <button type='button' class='btn btn-primary'>
+            <button type='button' class='btn nav btn-primary'>
               Đặt Hàng
             </button>
           </Link>
           <Link to='/news'>
-            <button type='button' class='btn btn-danger'>
+            <button type='button' class='btn nav btn-danger'>
               Tin Tức
             </button>
           </Link>
           <Link to='/store'>
-            <button type='button' class='btn btn-warning'>
+            <button type='button' class='btn nav btn-warning'>
               <label htmlFor='nav_hamber' style={{ width: '100%' }}>
                 Cửa Hàng
               </label>
