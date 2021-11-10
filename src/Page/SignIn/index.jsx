@@ -3,6 +3,7 @@ import React, { useContext, useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { AuthContext } from './../../app/AuthContext';
 import './styles.scss';
+import MessengerCustomerChat  from 'react-messenger-customer-chat';
 export default function SignIn(props) {
   const { enqueueSnackbar } = useSnackbar();
   const [dataFrom, setDataform] = useState({
@@ -112,6 +113,7 @@ export default function SignIn(props) {
           <div className='dot'></div>
         </div>
       </div>
+      <MessengerCustomerChat pageId='111223271362400' appId='477337363536411' />
     </div>
   );
 }

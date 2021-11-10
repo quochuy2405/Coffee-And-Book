@@ -1,19 +1,11 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
-
-BillSeach.propTypes = {
-    
-};
-
-function BillSeach(props) {
-    useEffect(() => {
-        window.scrollTo(0, 0)
-      }, [])
+function Bill_Search(props) {
     return (
         <div>
-        
+            
         </div>
     );
 }
 
-export default BillSeach;
+export default Bill_Search;

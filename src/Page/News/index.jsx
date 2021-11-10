@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import Footer from "../../components/Footer";
 import ListItemNews from "../../components/ListItemNews";
 import "./styles.scss";
+import  MessengerCustomerChat  from 'react-messenger-customer-chat';
 
 News.propTypes = {};
 
@@ -15,6 +16,7 @@ function News(props) {
         <ListItemNews />
       </div>
       <Footer />
+      <MessengerCustomerChat pageId='111223271362400' appId='477337363536411' />
     </div>
   );
 }

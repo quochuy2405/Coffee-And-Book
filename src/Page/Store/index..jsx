@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import MessengerCustomerChat from "react-messenger-customer-chat";
 import ListStore from "../../components/List_Store";
 import Slider from "../../components/Slider";
 
@@ -16,6 +17,7 @@ function Store(props) {
         </div>
         <ListStore />
       </div>
+      <MessengerCustomerChat pageId='111223271362400' appId='477337363536411' />
     </div>
   );
 }
