@@ -1,5 +1,4 @@
 import React, { memo, useEffect } from 'react';
-import MessengerCustomerChat from 'react-messenger-customer-chat';
 import { useSelector } from 'react-redux';
 import { Redirect } from 'react-router';
 import CheckoutCom from '../../components/CheckoutCom';
@@ -17,8 +16,6 @@ function Checkout(props) {
          <Footer/>
      </div>
         }
-        
-        <MessengerCustomerChat pageId='111223271362400' appId='477337363536411' />
         </>
     );
 }

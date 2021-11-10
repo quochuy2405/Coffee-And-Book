@@ -1,5 +1,4 @@
 import React, { memo, useContext, useState } from 'react';
-import MessengerCustomerChat from 'react-messenger-customer-chat/lib/MessengerCustomerChat';
 import { Link } from 'react-router-dom';
 import { AuthContext } from './../../app/AuthContext';
 import './styles.scss';
@@ -77,7 +76,6 @@ import './styles.scss';
           <div className='dot'></div>
         </div>
       </div>
-      <MessengerCustomerChat pageId='111223271362400' appId='477337363536411' />
     </div>
   );
 }

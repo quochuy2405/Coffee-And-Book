@@ -2,7 +2,6 @@ import React, { memo, useEffect } from "react";
 import Footer from "../../components/Footer";
 import SanPhamTuNha from "../../components/SanPhamTuNha";
 import "./styles.scss";
-import  MessengerCustomerChat  from 'react-messenger-customer-chat';
 function Product(props) {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -13,7 +12,6 @@ function Product(props) {
         <SanPhamTuNha />
       </div>
       <Footer />
-      <MessengerCustomerChat pageId='111223271362400' appId='477337363536411' />
     </div>
   );
 }

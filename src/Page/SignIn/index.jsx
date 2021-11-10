@@ -1,9 +1,8 @@
 import { useSnackbar } from 'notistack';
 import React, { memo, useContext, useState } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { AuthContext } from './../../app/AuthContext';
 import './styles.scss';
-import MessengerCustomerChat  from 'react-messenger-customer-chat';
  function SignIn(props) {
   const { enqueueSnackbar } = useSnackbar();
   const [dataFrom, setDataform] = useState({
@@ -113,7 +112,6 @@ import MessengerCustomerChat  from 'react-messenger-customer-chat';
           <div className='dot'></div>
         </div>
       </div>
-      <MessengerCustomerChat pageId='111223271362400' appId='477337363536411' />
     </div>
   );
 }
