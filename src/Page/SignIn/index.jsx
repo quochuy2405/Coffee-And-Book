@@ -8,12 +8,13 @@ import './styles.scss';
   const { enqueueSnackbar } = useSnackbar();
   const [dataFrom, setDataform] = useState({
     username: '',
+    email: '',
     sdt:'',
     password: '',
     confirm: '',
   });
   var rediect=useHistory();
-  const { username,sdt, password,confirm } = dataFrom;
+  const { username,sdt, password,confirm,email } = dataFrom;
   const OnchangedataForm = (event) =>
     setDataform({ ...dataFrom, [event.target.name]: event.target.value });
   const { signInUser } = useContext(AuthContext);
@@ -67,6 +68,18 @@ import './styles.scss';
                 />
               </div>
               <div className='input_signin input_username'>
+              <i class="fad fa-envelope"></i>
+                <input
+                  type='email'
+                  id='email'
+                  name='email'
+                  placeholder='Email'
+                  onChange={OnchangedataForm}
+                  value={email}
+                  required
+                />
+              </div>
+              <div className='input_signin input_email'>
               <i class="fas fa-mobile-alt"></i>
                 <input
                   type='text'
