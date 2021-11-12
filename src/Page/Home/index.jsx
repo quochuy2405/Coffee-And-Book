@@ -5,7 +5,6 @@ import ListItem from "../../components/ListItem";
 import ListItemNews from "../../components/ListItemNews";
 import SanPhamTuNha from "../../components/SanPhamTuNha";
 import Slider from "../../components/Slider";
-import MessengerCustomerChat from 'react-messenger-customer-chat';
 import "./styles.scss";
 
 function Home() {
@@ -106,7 +105,7 @@ function Home() {
       </div>
     
     </div>
-    <MessengerCustomerChat pageId='111223271362400' appId='477337363536411' />
+
       </>
   );
 }
