@@ -2,13 +2,26 @@
 @import "../../variables.css";
 .bodyDetails{
     display: flex;
-
+    & .Details_des{
+        display: inline;
+        -webkit-line-clamp: 5;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        word-wrap: break-word;
+    }
     & .imgDetail img{
     width: 200px;
     height: 200px;
     margin-right: 20px;
     object-fit: contain;
-        }   
+        } 
+    & .Details{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }  
 & .btn_number{
     width: 100px;
     line-height: 20px;

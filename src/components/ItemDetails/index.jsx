@@ -106,9 +106,12 @@ export default function CustomizedDialogs(Props) {
             <div className='imgDetail'>
               <img src={Item.link_img} alt='' />
             </div>
-            <div className='Details_des'>
+            <div className='Details'>
+              <div>
               <b className='Details_Title'>{Item.title}</b>
-              <p>{Item.des}</p>
+              <p className="Details_des">{Item.des}</p>
+              </div>
+             
               <div className='price_number d-flex justify-content-left'>
                 <p className='price'>
                   {(Item.price * 1).toLocaleString(undefined, {
