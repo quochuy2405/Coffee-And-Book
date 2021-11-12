@@ -35,8 +35,8 @@ import './styles.scss';
             />
           </div>
           <div className='login'>
-  
-            <form action="/auth/admin"  > {/* onSubmit={Login} */}
+
+            <form action="/"  > {/* onSubmit={Login} */}
               <h2 className='title'>Đăng nhập</h2>
               <div className='input_login input_username'>
               <i className='fas fa-user-astronaut'></i>

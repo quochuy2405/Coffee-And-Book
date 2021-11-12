@@ -5,7 +5,6 @@ import { memo, useEffect } from 'react';
 import { Route, Switch } from 'react-router';
 import './App.css';
 import Header from './components/Header';
-import Admin from './Page/Admin/index';
 import Bill_Search from './Page/Bill_Search';
 import Checkout from './Page/Checkout';
 import Home from './Page/Home';
@@ -37,7 +36,6 @@ function App() {
         <Route path='/checkout' component={Checkout} exact />
         <Route path='/login' component={Login} exact />
         <Route path='/signin' component={SignIn} exact />
-        <Route path='/auth/admin' component={Admin} exact />
         <Route path='/:slug' component={NotFound} />
       </Switch>
     </div>
