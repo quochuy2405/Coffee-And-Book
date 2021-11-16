@@ -1,21 +1,40 @@
-import React from 'react';
-import "./styles.scss"
+import React, { useState } from 'react';
+import NewsRender from '../NewsRender';
+import './styles.scss';
 
 function ItemNews(props) {
-    const {Item}=props;
-    return (
-        <div data-aos="zoom-in-down" data-aos-duration="800" data-aos-once="true" className="New">
-            <div className="New_img">
-                <img src={Item.link_img} alt="" />
-            </div>
-            <p className="tilte_new">{Item.title}</p>
-            <p className="News_des">{Item.description}</p>
-            <div className="btn_watch"></div>
-            <div className="btn_news">
-                <p>Xem</p>
-            </div>
+  const [open, setOpen] = useState(false);
+  const [scroll, setScroll] = useState('body');
+  const handleClickOpen = (scrollType) => () => {
+    setOpen(true);
+    setScroll(scrollType);
+  };
+  const { Item } = props;
+  return (
+    <>
+      <div
+        data-aos='zoom-in-down'
+        data-aos-duration='800'
+        data-aos-once='true'
+        className='New'>
+        <div className='New_img'>
+          <img src={Item.link_img} alt='' />
         </div>
-    );
+        <p className='tilte_new'>{Item.title}</p>
+        <p className='News_des'>{Item.description}</p>
+        <div className='btn_watch'></div>
+        <div className='btn_news'>
+          <p onClick={handleClickOpen('body')}>Xem</p>
+        </div>
+      </div>
+      <NewsRender
+        open={open}
+        setOpen={setOpen}
+        scroll={scroll}
+        Item={Item}
+      />
+    </>
+  );
 }
 
 export default ItemNews;

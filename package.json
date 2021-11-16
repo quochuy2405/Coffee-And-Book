@@ -52,5 +52,6 @@
   },
   "devDependencies": {
     "react-messenger-customer-chat": "^0.8.0"
-  }
+  },
+  "proxy": "http://localhost:4000"
 }

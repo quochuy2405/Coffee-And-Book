@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import CustomizedDialogs from '../ItemDetails';
 import './styles.scss';
 import { PropTypes } from 'prop-types';
+import 'dotenv';
 Iteam.propTypes = {
   Item: PropTypes.array.isRequired,
 };

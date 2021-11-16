@@ -1,10 +1,11 @@
 import React, { memo } from "react";
 import { Col, Row } from "react-bootstrap";
+import data from "../../data";
 import ItemNews from "../ItemNews";
 import "./styles.scss";
-import data from "../../data";
 const List_News = data.listBao;
 function ListItemNews(props) {
+
   return (
     <div className="ListItemNews">
       <div className="tiltle_ListNews">
@@ -19,6 +20,7 @@ function ListItemNews(props) {
           </Col>
         ))}
       </Row>
+ 
     </div>
   );
 }

@@ -3,9 +3,19 @@ import { Col, Row } from 'react-bootstrap';
 import Iteam from '../Item';
 import './styles.scss';
 import data from '../../data';
-import { memo } from 'react';
+import { memo, useEffect } from 'react';
+import axios from 'axios';
+
 const List_Goiy = data.GoiY;
 function ListItem(props) {
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  // useEffect(async () => {
+  //   try {
+  //     const response = await axios.get('/weatherforecast');
+  //     console.log(response.status);
+  //   } catch (error) { console.log(error)}
+  // }, []);
+
   const { Filter, List_Fillter } = props;
   return (
     <Row>
