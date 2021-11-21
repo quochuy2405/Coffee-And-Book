@@ -1,34 +1,35 @@
 import { useSnackbar } from 'notistack';
 import React, { memo, useContext, useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import { AuthContext } from './../../app/AuthContext';
+import { AuthContext } from '../../app/AuthContext';
 import './styles.scss';
  function SignIn(props) {
   const { enqueueSnackbar } = useSnackbar();
   const [dataFrom, setDataform] = useState({
-    username: '',
-    email: '',
-    sdt:'',
-    password: '',
-    confirm: '',
+    Username: '',
+    Password: '',
+    Email: '',
+    Phone:'',
+    ConfirmPassword: '',
   });
+
   var rediect=useHistory();
-  const { username,sdt, password,confirm,email } = dataFrom;
+  const { Username,Phone, Password,ConfirmPassword,Email } = dataFrom;
   const OnchangedataForm = (event) =>
     setDataform({ ...dataFrom, [event.target.name]: event.target.value });
-  const { signInUser } = useContext(AuthContext);
+  const { signUpUser } = useContext(AuthContext);
   const SignIn = async (event) => {
     event.preventDefault();
-    if(password.length>0 && password===confirm)
+    if(Password.length>0 && Password===ConfirmPassword)
     {
       
           try {
-            const signindata = await signInUser(dataFrom);
+            const signindata = await signUpUser(dataFrom);
             console.log(signindata);
-            enqueueSnackbar('Đăng ký thành công', { variant: 'success' });
+            enqueueSnackbar(signindata, { variant: 'success' });
             rediect.push("/login")
           } catch (error) {
-            console.log(error``);
+            console.log(error);
           }
     }
     else{
@@ -59,57 +60,57 @@ import './styles.scss';
                 <input
                   type='text'
                   id='username'
-                  name='username'
+                  name='Username'
                   placeholder='Tên đăng nhập'
                   onChange={OnchangedataForm}
-                  value={username}
+                  value={Username}
                   required
                 />
               </div>
               <div className='input_signin input_username'>
-              <i class="fad fa-envelope"></i>
+              <i className="fad fa-envelope"></i>
                 <input
                   type='email'
                   id='email'
-                  name='email'
+                  name='Email'
                   placeholder='Email'
                   onChange={OnchangedataForm}
-                  value={email}
+                  value={Email}
                   required
                 />
               </div>
               <div className='input_signin input_email'>
-              <i class="fas fa-mobile-alt"></i>
+              <i className="fas fa-mobile-alt"></i>
                 <input
                   type='text'
-                  id='sdt'
-                  name='sdt'
+                  id='Phone'
+                  name='Phone'
                   placeholder='Số điện thoại'
                   onChange={OnchangedataForm}
-                  value={sdt}
+                  value={Phone}
                   required
                 />
               </div>
               <div className='input_signin input_password'>
-              <i class="fal fa-lock-alt"></i>
+              <i className="fal fa-lock-alt"></i>
                 <input
                   type='password'
                   className='input_password'
-                  name='password'
+                  name='Password'
                   placeholder='Mật khẩu'
-                  value={password}
+                  value={Password}
                   onChange={OnchangedataForm}
                   required
                 />
               </div>
               <div className='input_signin input_password'>
-              <i class="far fa-check-circle"></i>
+              <i className="far fa-check-circle"></i>
                 <input
                   type='password'
                   className='input_password'
-                  name='confirm'
+                  name='ConfirmPassword'
                   placeholder='Nhập lại mật khẩu'
-                  value={confirm}
+                  value={ConfirmPassword}
                   onChange={OnchangedataForm}
                   required
                 />

@@ -31,9 +31,9 @@ export default function NewsRender({open, setOpen,scroll,Item}) {
         aria-labelledby="scroll-dialog-title"
         aria-describedby="scroll-dialog-description"
       >
-        <DialogTitle id="scroll-dialog-title">{Item.title}</DialogTitle>
+        <DialogTitle id="scroll-dialog-title">{Item.Title}</DialogTitle>
         <DialogContent dividers={scroll === 'paper'}>
-        <img src={Item.link_img} alt="" />
+        <img src={Item.Thumbnail} alt="" />
           <DialogContentText
             id="scroll-dialog-description"
             ref={descriptionElementRef}
@@ -42,7 +42,7 @@ export default function NewsRender({open, setOpen,scroll,Item}) {
   
           {[...new Array(50)]
               .map(
-                () => Item.description
+                () => Item.Content
 
               )
               .join('\n')}

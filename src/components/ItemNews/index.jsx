@@ -18,21 +18,16 @@ function ItemNews(props) {
         data-aos-once='true'
         className='New'>
         <div className='New_img'>
-          <img src={Item.link_img} alt='' />
+          <img src={Item.Thumbnail} alt='' />
         </div>
-        <p className='tilte_new'>{Item.title}</p>
-        <p className='News_des'>{Item.description}</p>
+        <p className='tilte_new'>{Item.Title}</p>
+        <p className='News_des'>{Item.Content}</p>
         <div className='btn_watch'></div>
         <div className='btn_news'>
           <p onClick={handleClickOpen('body')}>Xem</p>
         </div>
       </div>
-      <NewsRender
-        open={open}
-        setOpen={setOpen}
-        scroll={scroll}
-        Item={Item}
-      />
+      <NewsRender open={open} setOpen={setOpen} scroll={scroll} Item={Item} />
     </>
   );
 }

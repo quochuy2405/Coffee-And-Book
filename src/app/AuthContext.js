@@ -1,20 +1,20 @@
 import axios from 'axios';
-import { createContext, useReducer } from 'react';
-import { authReducer } from './authReduce';
+import { createContext } from 'react';
 
 export const AuthContext = createContext();
 const AuthContextProvider = ({ children }) => {
-  const [authstate, dispatch] = useReducer(authReducer, {
-    authLoading: true,
-    isAuthenticated: false,
-    user: null,
-  });
+  // const [authstate, dispatch] = useReducer(authReducer, {
+  //   authLoading: true,
+  //   isAuthenticated: false,
+  //   user: null,
+  // });
 
   const loginUser = async datafrom=> {
     try {
-      const response = await axios.get('https://jsonplaceholder.typicode.com/todos/1');
-      // const response = await axios.post('https://jsonplaceholder.typicode.com/todos/1',datafrom);
+      const response = await axios('/user');
+      
       if (response.data.userId) {
+        console.log(response.data)
         localStorage.setItem('accessToken', response.data.userId);
       }
       return response.data;
@@ -24,14 +24,15 @@ const AuthContextProvider = ({ children }) => {
     }
    
   };
-  const signInUser = async datafrom=> {
+  const signUpUser = async datafrom=> {
     try {
-      const response = await axios.get(
-        'https://jsonplaceholder.typicode.com/todos/1'
-      );
-      // const response = await axios.post('https://jsonplaceholder.typicode.com/todos/1',datafrom);
+      const response = await axios({
+        method: 'post',
+        url: '/signup',
+        data:datafrom
+      })
       if (response.data.userId) {
-        localStorage.setItem('accessToken', response.data.userId);
+        localStorage.setItem('accessToken', response.data);
       }
       return response.data;
     } catch (error) {
@@ -40,7 +41,7 @@ const AuthContextProvider = ({ children }) => {
     }
    
   };
-  const authContextData = { loginUser,signInUser };
+  const authContextData = { loginUser,signUpUser };
   return (
     <AuthContext.Provider value={authContextData}>
       {children}

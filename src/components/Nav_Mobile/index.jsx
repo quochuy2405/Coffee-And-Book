@@ -29,17 +29,17 @@ function Nav_mobile(props) {
         </label>
         <ul className='nav_hamber-item'>
           <Link to='/product'>
-            <button type='button' class='btn nav btn-primary'>
+            <button type='button' className='btn nav btn-primary'>
               Đặt Hàng
             </button>
           </Link>
           <Link to='/news'>
-            <button type='button' class='btn nav btn-danger'>
+            <button type='button' className='btn nav btn-danger'>
               Tin Tức
             </button>
           </Link>
           <Link to='/store'>
-            <button type='button' class='btn nav btn-warning'>
+            <button type='button' className='btn nav btn-warning'>
               <label htmlFor='nav_hamber' style={{ width: '100%' }}>
                 Cửa Hàng
               </label>
@@ -49,7 +49,7 @@ function Nav_mobile(props) {
           <button
             type='button'
             onClick={handleClickOpenKM}
-            class='btn nav btn-success'>
+            className='btn nav btn-success'>
             Khuyến Mãi
           </button>
 

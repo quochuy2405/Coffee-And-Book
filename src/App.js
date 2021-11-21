@@ -12,9 +12,10 @@ import Login from './Page/Login';
 import News from './Page/News';
 import NotFound from './Page/NotFound';
 import { default as Product } from './Page/Product';
-import SignIn from './Page/SignIn/index';
+import SignUp from './Page/SignUp';
 import Store from './Page/Store/index.';
 import './responsive.css';
+import DetailsUser from './Page/DetailsUser/index';
 
 function App() {
   useEffect(() => {
@@ -34,7 +35,8 @@ function App() {
         <Route path='/store' component={Store} exact />
         <Route path='/checkout' component={Checkout} exact />
         <Route path='/login' component={Login} exact />
-        <Route path='/signin' component={SignIn} exact />
+        <Route path='/signin' component={SignUp} exact />
+        <Route path='/user' component={DetailsUser} exact />
         <Route path='/:slug' component={NotFound} />
       </Switch>
     </div>

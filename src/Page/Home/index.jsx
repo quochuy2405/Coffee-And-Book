@@ -10,7 +10,6 @@ import "./styles.scss";
 function Home() {
 
   const [check, SetCheck] = useState();  
- 
   function ChangeActive(tem) {
     const Tagactive = document.querySelector(".Tag.active");
     if (Tagactive) {
@@ -56,14 +55,14 @@ function Home() {
               <Link to="/login">Đăng Nhập</Link>
             </div>
           ) : (
-            <ListItem />
+            <ListItem  numList={4} check={true}/>
           )}
         </div>
       </div>
       <div className="SanPham">
         <SanPhamTuNha />
         <div className="TinTuc">
-          <ListItemNews />
+          <ListItemNews numList={8} />
           <Link className="News_goto" to="/News">
             <p>Xem thêm</p> <i className="fas fa-arrow-right"></i>{" "}
           </Link>

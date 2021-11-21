@@ -1,68 +1,75 @@
-import React from 'react';
+import React, { memo, useEffect, useState } from 'react';
 import { Col, Row } from 'react-bootstrap';
 import Iteam from '../Item';
 import './styles.scss';
-import data from '../../data';
-import { memo, useEffect } from 'react';
 import axios from 'axios';
-
-const List_Goiy = data.GoiY;
 function ListItem(props) {
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  // useEffect(async () => {
-  //   try {
-  //     const response = await axios.get('/weatherforecast');
-  //     console.log(response.status);
-  //   } catch (error) { console.log(error)}
-  // }, []);
+  const { check, numList,filter } = props;
+  const [listFillter, SetListFillter] = useState([]);
+  const [list, SetList] = useState([]);
+ // eslint-disable-next-line react-hooks/exhaustive-deps
+  useEffect(async () => {
+    const res = await axios('/products');
+    SetList(res.data);
 
-  const { Filter, List_Fillter } = props;
+  }, []);
+  
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  useEffect(() => {
+    const Temp = [];
+    list.forEach((item) => {
+      if (item.ProductTypeId === filter) {
+        Temp.push(item);
+      }
+    });
+    SetListFillter(Temp);
+  }, [filter, list]);
   return (
     <Row>
       <div className='ListItems'>
-        {Filter ? (
-          List_Fillter.length === 0 ? (
+        {check ? (
+          !list.length ? (
             <div className='NoIteams'>
               {' '}
               <b>Không có sản phẩm</b>{' '}
             </div>
           ) : (
-            List_Fillter.map((item, index) =>
-              item.Filter === Filter ? (
-                <Col
-                  key={index}
-                  className='Center_Item'
-                  xs={6}
-                  md={6}
-                  lg={3}
-                  xl={2}>
-                  {' '}
-                  <Iteam Item={item} />
-                </Col>
-              ) : (
-                <div key={index}></div>
-              )
-            )
+            list.slice(0, numList).map((item, index) => (
+              <Col
+                key={index}
+                className='Center_Item'
+                xs={12}
+                sm={6}
+                md={4}
+                lg={4}
+                xl={3}>
+                {' '}
+                <Iteam Item={item} />
+              </Col>
+            ))
           )
-        ) : List_Goiy.length === 0 ? (
+        ) : !listFillter.length ? (
           <div className='NoIteams'>
             {' '}
             <b>Không có sản phẩm</b>{' '}
           </div>
         ) : (
-          List_Goiy.map((item, index) => (
-            <Col
-              key={index}
-              className='Center_Item'
-              xs={12}
-              sm={6}
-              md={4}
-              lg={4}
-              xl={3}>
-              {' '}
-              <Iteam Item={item} />
-            </Col>
-          ))
+          listFillter.slice(0, numList).map((item, index) =>
+            item.ProductTypeId === filter ? (
+              <Col
+                key={index}
+                className='Center_Item'
+                xs={6}
+                md={6}
+                lg={3}
+                xl={2}>
+                {' '}
+                <Iteam Item={item} />
+              </Col>
+            ) : (
+              <div key={index}></div>
+            )
+          )
         )}
       </div>
     </Row>

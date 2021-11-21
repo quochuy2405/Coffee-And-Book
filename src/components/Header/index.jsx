@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { actionKM } from '../../app/KMOpen';
 import ListTicket from '../listTicket';
-import Nav_mobile from '../Nav_Mobile';
+import Navmobile from '../Nav_Mobile';
 import { HandleLogin } from './../../app/Login';
 import './styles.scss';
 
@@ -37,7 +37,7 @@ const List_NavLink = [
 ];
 
 function Header(props) {
-  const [LoginSign, setLoginSign] = useContext(HandleLogin);
+  const {LoginSign, setLoginSign} = useContext(HandleLogin);
   const KMOpen = useSelector((state) => state.KMOpen);
   var counterBill = useSelector((state) => state.counterBill);
   const dispatch = useDispatch();
@@ -45,22 +45,21 @@ function Header(props) {
   const handleClickOpenKM = () => {
     dispatch(actionKM(true));
   };
-  const matchLogin = () => {
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const matchLogin=()=> {
     const pathname = window.location.pathname;
     if (pathname.includes('/login')) {
       setLoginSign({
-        name:'Đăng Ký',
-        value:0
-      
+        name: 'Đăng Ký',
+        value: 0
       });
     } else {
       setLoginSign({
-        name:'Đăng Nhập',
-        value:1
-      
+        name: 'Đăng Nhập',
+        value: 1
       });
     }
-  };
+  }
 
   function ChangeActive(class_Name) {
     const Loaiactive = document.querySelector('.chon.active');
@@ -92,7 +91,6 @@ function Header(props) {
   }
   useLayoutEffect(() => {
     matchLogin();
-    return;
   }, [location]);
   useLayoutEffect(() => {
     const changeadrss = document.querySelector('.Hearder__IpAddress');
@@ -109,7 +107,7 @@ function Header(props) {
     <>
 
     <div className='Header'>
-        <Nav_mobile/>
+        <Navmobile/>
       <input
         id='check_choose'
         type='checkbox'

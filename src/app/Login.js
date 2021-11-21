@@ -5,12 +5,15 @@ import { useState } from 'react';
 
 export default function Login ({ children }){
     const [Login,setLogin]=useState({
-      
       name:'Đăng Nhập',
       value:1
       }
       )
+      const Item={
+        LoginSign:Login,
+        setLoginSign:setLogin
+      }
         
     
-  return <HandleLogin.Provider value={[Login,setLogin]}>{children}</HandleLogin.Provider>;
+  return <HandleLogin.Provider value={Item}>{children}</HandleLogin.Provider>;
 };

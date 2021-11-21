@@ -1,3 +1,4 @@
+import { Checkbox, Radio } from '@mui/material';
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
@@ -5,9 +6,9 @@ import { decreaseBill, reset } from '../../app/CounterBill';
 import { actionKM } from '../../app/KMOpen';
 import './styles.scss';
 function CheckoutCom(props) {
-  const [get, SetGet] = useState(
-    JSON.parse(localStorage.getItem('LISTBILL') || '[]')
-  );
+  const [get, SetGet] = useState(JSON.parse(localStorage.getItem('LISTBILL') || '[]'));
+  const [selectedValue, setSelectedValue] = React.useState('tienmat');
+  const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
   const KMOpen = useSelector((state) => state.KMOpen);
   const dispatch = useDispatch();
   var Total = get.reduce((total, item) => {
@@ -23,10 +24,24 @@ function CheckoutCom(props) {
     }
   }
 
+
+  const handleChange = (event) => {
+    setSelectedValue(event.target.value);
+  };
+
+  const controlProps = (item) => ({
+    checked: selectedValue === item,
+    onChange: handleChange,
+    value: item,
+    name: 'color-radio-button-demo',
+    inputProps: { 'aria-label': item },
+  });
+
+
   return (
     <div className='Checkout_com'>
       <div className='Checkout_com_Title'>
-      <i class="fad fa-file"></i>
+      <i className="fad fa-file"></i>
         <h3>Xác nhận đơn hàng</h3>
       </div>
       <div className='checkout__body'>
@@ -102,7 +117,8 @@ function CheckoutCom(props) {
             <div className='pay_for'>
               <p className='type_Name'>Phương thức thanh toán</p>
               <div className='checkpay'>
-                <input type='radio' name='pay' id='tienmat' />
+              <Radio {...controlProps('tienmat')} color="default" name='pay' id='tienmat' />
+            
                 <label htmlFor='tienmat'>
                   <img
                     src='https://minio.thecoffeehouse.com/image/tchmobileapp/1000_photo_2021-04-06_11-17-08.jpg'
@@ -112,7 +128,8 @@ function CheckoutCom(props) {
                 </label>
               </div>
               <div className='checkpay'>
-                <input type='radio' name='pay' id='momo' />
+              <Radio {...controlProps('momo')} color="default" name='pay' id='momo' />
+            
                 <label htmlFor='momo'>
                   <img
                     src='https://minio.thecoffeehouse.com/image/tchmobileapp/386_ic_momo@3x.png'
@@ -123,7 +140,8 @@ function CheckoutCom(props) {
               </div>
 
               <div className='checkpay'>
-                <input type='radio' name='pay' id='zalopay' />
+              <Radio {...controlProps('zalopay')} color="default" name='pay' id='zalopay' />
+            
                 <label htmlFor='zalopay'>
                   <img
                     src='https://minio.thecoffeehouse.com/image/tchmobileapp/388_ic_zalo@3x.png'
@@ -134,7 +152,8 @@ function CheckoutCom(props) {
               </div>
 
               <div className='checkpay'>
-                <input type='radio' name='pay' id='shopeepay' />
+              <Radio {...controlProps('shopeepay')} color="default"  name='pay' id='shopeepay'/>
+            
                 <label htmlFor='shopeepay'>
                   <img
                     src='https://minio.thecoffeehouse.com/image/tchmobileapp/1120_1119_ShopeePay-Horizontal2_O.png'
@@ -145,7 +164,7 @@ function CheckoutCom(props) {
               </div>
             </div>
             <div className='agree'>
-              <input type='checkbox' name='' id='' />{' '}
+            <Checkbox {...label}  color="secondary"   name='agree' />
               <span>
                 {' '}
                 Đồng ý với các điều khoản và{' '}
@@ -170,19 +189,19 @@ function CheckoutCom(props) {
             {get.map((item, index) => (
               <li key={index} className='list__bill-Iteam'>
                 <div className='list_fix'>
-                <i class="fad fa-acorn"></i>
+                <i className="fad fa-acorn"></i>
                 </div>
                 <div className='list_text'>
                   <b className='tilte_item'>{item.title} </b>
 
-                  <p className='size'>{item.size}</p>
+                  <p className='size'>{item.titleSize}</p>
                   <p className='btn_delete' onClick={() => removeItem(index)}>
                     Xóa
                   </p>
                 </div>
                 <div className='list_price'>
                   <p>
-                    {item.price.toLocaleString(undefined, {
+                    {(item.price*1).toLocaleString(undefined, {
                       minimumFractionDigits: 0,
                     })}
                     đ

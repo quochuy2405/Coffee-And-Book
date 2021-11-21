@@ -35,7 +35,7 @@ const BootstrapDialogTitle = (props) => {
             color: (theme) => theme.palette.grey[500],
           }}
         >
-          <i class="fas fa-times"></i>
+          <i className="fas fa-times"></i>
         </IconButton>
       ) : null}
     </DialogTitle>

@@ -4,7 +4,7 @@ import './styles.scss';
 import { PropTypes } from 'prop-types';
 import 'dotenv';
 Iteam.propTypes = {
-  Item: PropTypes.array.isRequired,
+  Item: PropTypes.object.isRequired,
 };
 
 function Iteam(Props) {
@@ -22,12 +22,12 @@ function Iteam(Props) {
         data-aos-once='true'
         className='Item'>
         <div className='Item_img'>
-          <img src={Item.link_img} alt='' />
+          <img src={Item.Photo} alt='' />
         </div>
         <div className='Item_description'>
-          <b className='des'>{Item.title}</b>
+          <b className='des'>{Item.Name}</b>
           <p>
-            {(Item.price * 1).toLocaleString(undefined, {
+            { Item.Price.toLocaleString(undefined, {
               minimumFractionDigits: 0,
             })}
             đ

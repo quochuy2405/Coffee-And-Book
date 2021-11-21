@@ -69,17 +69,35 @@ export default function CustomizedDialogs(Props) {
     setOpen(false);
   };
   function AddItems_Success() {
-    dispatch(increaseBill());
+   
     setOpen(false);
     enqueueSnackbar('Thêm vào giỏ hàng thành công', { variant: 'success' });
     const temp = {
-      title: `${count}x ${Item.title}`,
-      size: size ? `Vừa,x${count}` : `Nhỏ,x${count}`,
-      price: count * Item.price + size * count,
+      id:Item.Id,
+      title: `${count}x ${Item.Name}`,
+      titleSize: size ? `Vừa,x${count}` : `Nhỏ,x${count}`,
+      size:size,
+      count:count,
+      price: count * Item.Price + size * count,
     };
 
     var get = JSON.parse(localStorage.getItem('LISTBILL') || '[]');
-    get.push(temp);
+    var flag=true;
+    get = get.map(item=>{
+        if(item.id===temp.id && item.size===temp.size)
+        {  console.log("yes")
+          item.titleSize = temp.size ? `Vừa,x${item.count+temp.count}` : `Nhỏ,x${item.count+temp.count}`
+          item.count=item.count+temp.count
+          flag=false;
+        }
+        return item;
+    })
+    if(flag)
+    {
+      get.push(temp);
+      dispatch(increaseBill());
+    }
+    
     localStorage.setItem('LISTBILL', JSON.stringify(get));
   }
   function decrease() {
@@ -101,20 +119,20 @@ export default function CustomizedDialogs(Props) {
           onClose={handleClose}>
           Thêm món mới
         </BootstrapDialogTitle>
-        <DialogContent dividers className="Width_details">
+        <DialogContent dividers className='Width_details'>
           <div className='bodyDetails'>
             <div className='imgDetail'>
-              <img src={Item.link_img} alt='' />
+              <img src={Item.Photo} alt='' />
             </div>
             <div className='Details'>
               <div>
-              <b className='Details_Title'>{Item.title}</b>
-              <p className="Details_des">{Item.des}</p>
+                <b className='Details_Title'>{Item.Name}</b>
+                <p className='Details_des'>{Item.Description}</p>
               </div>
-             
+
               <div className='price_number d-flex justify-content-left'>
                 <p className='price'>
-                  {(Item.price * 1).toLocaleString(undefined, {
+                  {Item.Price.toLocaleString(undefined, {
                     minimumFractionDigits: 0,
                   })}
                   đ
@@ -157,7 +175,7 @@ export default function CustomizedDialogs(Props) {
         <DialogActions>
           <Button autoFocus onClick={AddItems_Success} className='btn_choose'>
             {' '}
-            {(count * Item.price + size * count).toLocaleString(undefined, {
+            {(count * Item.Price + size * count).toLocaleString(undefined, {
               minimumFractionDigits: 0,
             })}
             đ- Thêm vào giỏ hàng

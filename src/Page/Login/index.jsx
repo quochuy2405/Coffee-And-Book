@@ -4,20 +4,19 @@ import { AuthContext } from './../../app/AuthContext';
 import './styles.scss';
  function Login(props) {
   const [dataFrom, setDataform] = useState({
-    username: '',
-    password: '',
+    Username: '',
+    Password: '',
   });
-  const { username, password } = dataFrom;
+  const { Username, Password } = dataFrom;
   const OnchangedataForm = (event) =>
     setDataform({ ...dataFrom, [event.target.name]: event.target.value });
   const { loginUser } = useContext(AuthContext);
   const Login = async (event) => {
     event.preventDefault();
     try {
-      const logindata = await loginUser(dataFrom);
-      console.log(logindata);
+       await loginUser(dataFrom);
     } catch (error) {
-      console.log(error``);
+      console.log(error);
     }
   };
 
@@ -35,29 +34,29 @@ import './styles.scss';
           </div>
           <div className='login'>
 
-            <form action="/"  > {/* onSubmit={Login} */}
+            <form  onSubmit={Login} >
               <h2 className='title'>Đăng nhập</h2>
               <div className='input_login input_username'>
               <i className='fas fa-user-astronaut'></i>
                 <input
                   type='text'
-                  id='username'
-                  name='username'
+                  id='Username'
+                  name='Username'
                   placeholder='Tên đăng nhập'
                   onChange={OnchangedataForm}
-                  value={username}
+                  value={Username}
                   required
                 />
               </div>
 
               <div className='input_login input_password'>
-              <i class="fal fa-lock-alt"></i>
+              <i className="fal fa-lock-alt"></i>
                 <input
-                  type='password'
+                  type='Password'
                   className='input_password'
-                  name='password'
+                  name='Password'
                   placeholder='Mật khẩu'
-                  value={password}
+                  value={Password}
                   onChange={OnchangedataForm}
                   required
                 />

@@ -355,37 +355,37 @@ const data = {
         link_img:
           'https://minio.thecoffeehouse.com/image/tch-web-order/category-thumbnails/cg_cpg_web.png',
 
-        Filter: 'phegoi',
+        Filter: 1,
       },
       {
-        title: 'Cà Phê',
+        title:'Cà Phê',
         link_img:
           'https://minio.thecoffeehouse.com/image/tch-web-order/category-thumbnails/cg_coffee_web.png',
-        Filter: 'phepha',
+        Filter: 2,
       },
       {
         title: 'Trà Trái Cây - Trà Sữa',
         link_img:
           'https://minio.thecoffeehouse.com/image/tch-web-order/category-thumbnails/cg_tea_milk_tea_web.png',
-        Filter: 'trasua',
+        Filter: 3,
       },
       {
         title: 'Đá Xay - Choco - Matcha',
         link_img:
           'https://minio.thecoffeehouse.com/image/tch-web-order/category-thumbnails/cg_frappu_web.png',
-        Filter: 'choco',
+        Filter: 4,
       },
       {
         title: 'Bánh - Snack',
         link_img:
           'https://minio.thecoffeehouse.com/image/tch-web-order/category-thumbnails/cg_snack_web.png',
-        Filter: 'banh',
+        Filter: 5,
       },
       {
         title: 'Bộ sưu tập quà tặng',
         link_img:
           'https://minio.thecoffeehouse.com/image/tch-web-order/category-thumbnails/cg_merchandise_web.png',
-        Filter: 'qua',
+        Filter: 6,
       },
     ],
     ListSP: [
