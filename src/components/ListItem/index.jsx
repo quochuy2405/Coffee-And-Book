@@ -10,7 +10,7 @@ function ListItem(props) {
  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(async () => {
     const res = await axios('/products');
-    SetList(res.data);
+    SetList(res?.data);
 
   }, []);
   
@@ -18,7 +18,7 @@ function ListItem(props) {
   useEffect(() => {
     const Temp = [];
     list.forEach((item) => {
-      if (item.ProductTypeId === filter) {
+      if (item?.ProductTypeId === filter) {
         Temp.push(item);
       }
     });
@@ -28,13 +28,13 @@ function ListItem(props) {
     <Row>
       <div className='ListItems'>
         {check ? (
-          !list.length ? (
+          !list?.length ? (
             <div className='NoIteams'>
               {' '}
               <b>Không có sản phẩm</b>{' '}
             </div>
           ) : (
-            list.slice(0, numList).map((item, index) => (
+            list?.slice(0, numList).map((item, index) => (
               <Col
                 key={index}
                 className='Center_Item'
@@ -54,8 +54,8 @@ function ListItem(props) {
             <b>Không có sản phẩm</b>{' '}
           </div>
         ) : (
-          listFillter.slice(0, numList).map((item, index) =>
-            item.ProductTypeId === filter ? (
+          listFillter?.slice(0, numList).map((item, index) =>
+            item?.ProductTypeId === filter ? (
               <Col
                 key={index}
                 className='Center_Item'

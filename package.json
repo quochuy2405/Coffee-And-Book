@@ -5,6 +5,7 @@
   "dependencies": {
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
+    "@mui/icons-material": "^5.1.1",
     "@mui/material": "^5.0.2",
     "@reduxjs/toolkit": "^1.6.1",
     "@testing-library/jest-dom": "^5.11.4",
@@ -53,5 +54,5 @@
   "devDependencies": {
     "react-messenger-customer-chat": "^0.8.0"
   },
-  "proxy": "https://coffee-book-app.vercel.app"
+  "proxy": "http://localhost:5000"
 }

@@ -1,12 +1,12 @@
+import axios from 'axios';
 import React, { memo, useEffect, useState } from 'react';
 import { Col, Row } from 'react-bootstrap';
 import ItemNews from '../ItemNews';
 import './styles.scss';
-import axios from 'axios';
 function ListItemNews({numList}) {
   const [listNews,setListNews]=useState([])
   // eslint-disable-next-line react-hooks/exhaustive-deps
-        useEffect(async() => {
+  useEffect(async() => {
           try {
             const res = await axios('/news');
             setListNews(res.data.slice(0, numList));

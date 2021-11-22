@@ -9,7 +9,19 @@
   }
 }
 @media screen and (max-width: 600px) {
-  
+  .App .DetailsUser .InfoPerson .Info-Center .avata{
+    margin: 0 auto;
+  }
+  .App .DetailsUser .InfoPerson .Info-Center{
+    position: unset;
+    top: unset;
+    left: unset;
+    transform: unset;
+    position: relative;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+  }
  .App .filter_store{
   display: block;
  }

@@ -8,11 +8,10 @@ function SanPhamTuNha(props) {
   const [filter, SetFilter] = useState(1);
   const [ProTypes, SetProTypes] = useState([]);
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  useEffect(async()=>{
-    const res= await axios('/ProductType')
-    SetProTypes(res.data)
-    document.querySelectorAll('.Loai_img')[0].classList.add('active');
-},[])
+  useEffect(async () => {
+    const res = await axios('/ProductType');
+    SetProTypes(res.data);
+  }, []);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   function ChangeActive(index, filter) {
     const Loaiactive = document.querySelector('.Loai_img.active');
@@ -42,9 +41,12 @@ function SanPhamTuNha(props) {
                 data-aos-once='true'
                 className='Loai'>
                 <div
-                  className='Loai_img'
+                  className={`Loai_img ${!index && 'active'}`}
                   onClick={() => ChangeActive(index, item.Id)}>
-                  <img src={`https://minio.thecoffeehouse.com/image/tch-web-order/category-thumbnails/cg_coffee_web.png`} alt='' />
+                  <img
+                    src={`https://minio.thecoffeehouse.com/image/tch-web-order/category-thumbnails/cg_coffee_web.png`}
+                    alt=''
+                  />
                 </div>
                 <p>{item.Name}</p>
               </div>
@@ -52,9 +54,7 @@ function SanPhamTuNha(props) {
           ))}
         </Row>
       </div>
-      <div className='List_Loai-Item'>
-        {<ListItem filter={filter} />}
-      </div>
+      <div className='List_Loai-Item'>{<ListItem filter={filter} />}</div>
     </div>
   );
 }
