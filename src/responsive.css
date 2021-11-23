@@ -12,6 +12,9 @@
   .App .DetailsUser .InfoPerson .Info-Center .avata{
     margin: 0 auto;
   }
+  .App .DetailsUser .infoAcc,  .App .DetailsUser .InfoDetails .bodyInfoDetails,  .App .InfoPerson{
+   width: 100%;
+  }
   .App .DetailsUser .InfoPerson .Info-Center{
     position: unset;
     top: unset;
